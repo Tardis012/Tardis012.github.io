@@ -16,7 +16,7 @@
 
   <!--Open Graph Title-->
   
-      <meta property="og:title" content="RAINFALL01. &#34;How 5G is likely to put weather forecasting at risk&#34; Web Article 翻译">
+      <meta property="og:title" content="SOFTWARE01.R new package recommended from Jan to Mar 2019">
   
   <!--Open Graph Description-->
   
@@ -33,7 +33,7 @@
 
   <!-- Title -->
   
-  <title>RAINFALL01. &#34;How 5G is likely to put weather forecasting at risk&#34; Web Article 翻译 - 小zのGarden</title>
+  <title>SOFTWARE01.R new package recommended from Jan to Mar 2019 - 小zのGarden</title>
 
 
   <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/256/space-rocket-icon.png">
@@ -121,17 +121,17 @@
         <!-- Title date & tags -->
         <div class="post-header">
           <h1 class="entry-title">
-            RAINFALL01. "How 5G is likely to put weather forecasting at risk" Web Article 翻译
+            SOFTWARE01.R new package recommended from Jan to Mar 2019
             
           </h1>
           <p class="posted-on">
-          2019-04-22
+          2019-04-28
           </p>
           <div class="tags-links">
             
               
-                <a href="/tags/Rainfall/" rel="tag">
-                  Rainfall
+                <a href="/tags/R/" rel="tag">
+                  R
                 </a>
               
             
@@ -139,12 +139,34 @@
         </div>
         <!-- Post Main Content -->
         <div class="entry-content has_line_number">
-          <p>觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。</p>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为网页文章 <a href="https://hackaday.com/2019/04/16/5g-buildout-likely-to-put-weather-forecasting-at-risk/" target="_blank" rel="noopener">How 5G is likely to put weather forecasting at risk!</a> 的阅读笔记。</p>
-<h3 id="Article-Abstract"><a href="#Article-Abstract" class="headerlink" title="Article Abstract"></a>Article Abstract</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。</p>
-<h3 id="Article-Content"><a href="#Article-Content" class="headerlink" title="Article Content"></a>Article Content</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;天气主要是气团差异的结果。大气压力、温度、湿度，分别由太阳的能量输入决定，以复杂方式组合决定云的形成时间、风向。远程感知这些差异是准确预报天气的关键。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;观测天气的卫星大部分是被动传感器平台，测量下方物体反射或发射的能量，通过用不同的波长观测地球来收集温度和湿度的数据（大气压力主要通过surface measurements和radiosondes测量）。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;温度主要在可见光和红外光的波长下测量，水蒸气有点难以测量，涉及到微波。微波辐射计作为<strong>无源</strong>微波接收机，通过查看在不同波长下接收的信号和添加有关信号极化的信息，微波辐射测量可以告诉我们在大气层的垂直柱内发生了什么。对于水蒸气，23.8GHz非常有用，由于接近的频率有可能从5G获得干扰，在5G噪音海洋中丢失微弱但可靠的水汽信号是天气预报员面临的基本问题。</p>
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇记录2019年1-3月R新包中自己觉得有用的。</p>
+<h3 id="R-New-Package-Recommended-in-Jan-2019"><a href="#R-New-Package-Recommended-in-Jan-2019" class="headerlink" title="R New Package Recommended in Jan 2019"></a>R New Package Recommended in Jan 2019</h3><ol>
+<li>ecmwfr：针对欧洲中期天气预报中心(<em>ECMWF</em>)的公共和限制数据集和哥白尼的气候数据(<em>CDS</em>)，提供程序化操作界面，同时允许用户下载天气预报和气候数据。</li>
+<li>nhdR: 提供使用国家水文数据集(<em>NHD</em>)的工具，包括查询、下载和联网<em>NHD</em>与<em>NHDPlus</em>数据集。</li>
+<li>FiRE: 提供在海量数据集中查找异常值和稀有实体的算法。</li>
+<li>foto: 实现傅立叶变换纹理排序方法，该方法使用径向平均二维傅立叶谱的主成分分析来表征图像纹理。</li>
+<li>zoomgrid: 实现了一种带缩放的网格搜索算法，以帮助解决目标函数域内存在多个局部最优的困难优化问题。-划重点。</li>
+<li>apcf: 实现了自适应对相关函数，将对相关函数的概念从点模式转移到有限尺寸和不规则形状的对象。</li>
+<li>concurve: 提供函数来计算各种统计测试的置信区间(相容性/协调性)，以及它们对应的P值和S值。</li>
+<li>mimi: 提供函数，用以估计具有缺失值的混合数据集中的主要影响。</li>
+<li>tor: 提供允许用户同时导入多个文件的功能。</li>
+<li>vitae: 提供多个模板和功能以简化简历的制作和维护。</li>
+</ol>
+<h3 id="R-New-Package-Recommended-in-Feb-2019"><a href="#R-New-Package-Recommended-in-Feb-2019" class="headerlink" title="R New Package Recommended in Feb 2019"></a>R New Package Recommended in Feb 2019</h3><ol>
+<li>noaaoceans: 提供访问国家海洋和大气管理局(NOAA) API的工具。</li>
+<li>fastNaiveBayes: 提供朴素贝叶斯分类器的快速实现，主要基于Schneider(2003)的论文。</li>
+<li>r.blip: 提供从包含数千个变量的数据集中学习贝叶斯网络的功能，包括父集识别、一般结构优化、有界树宽度结构的算法优化、不完整数据集的结构学习等。</li>
+<li>RTML: 实现10种正则化多任务学习算法的有效求解器，适用于回归、分类、联合特征选择、低秩学习、稀疏学习和网络合并等。</li>
+<li>Spectrum: 为单视图和多视图数据实现快速、自适应的谱聚类算法。</li>
+<li>geosample: 提供构建抽样设计的功能。</li>
+<li>missCompare: 提供方法用于测试和比较模拟、实际数据上的各种缺失数据插补算法。</li>
+<li>OutlierDetection: 提供多种方法来检测异常值，包括基于模型的方法、基于距离的方法、基于密度的方法等。</li>
+<li>Rlgt: 提供使用rstan的函数，用于拟合全局趋势模型进行时间序列预测，这些模型是贝叶斯归纳和某些指数平滑模型的扩展。</li>
+</ol>
+<blockquote>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>1) 精选|2019年1月R新包推荐 <a href="https://blog.csdn.net/kmd8d5r/article/details/88083943" target="_blank" rel="noopener">https://blog.csdn.net/kmd8d5r/article/details/88083943</a></p>
+<p>2) 精选| 2019年2月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/88859086" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/88859086</a></p>
+</blockquote>
 
         </div>
       </article>
@@ -163,13 +185,9 @@
     <!-- Pre or Next -->
     <div class="nav-links">
       
-        <div class="nav-previous">
-          <a href="/2019/04/28/SOFTWARE01.R new package recommended from Jan to Mar 2019/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
-        </div>
-      
       
         <div class="nav-next">
-          <a href="/2019/02/16/SHM01.“Structural Health Monitoring of Large Civil Engineering Structures” Book Reading Note 1/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+          <a href="/2019/04/22/RAINFALL01. “How 5G is likely to put weather forecasting at risk” Web Article /" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
         </div>
       
     </div>
