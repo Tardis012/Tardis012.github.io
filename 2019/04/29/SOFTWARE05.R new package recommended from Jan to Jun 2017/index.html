@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言本篇记录2017年1-3月R新包中自己觉得有用的。 R New Package Recommended in Jan 20171月份，共有251个R新包收录于CRAN。 Hydrometeorology getCRUCLdata v.1.1: Provides functions that automate downloading and importing climatology data">
+<meta name="keywords" content="R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SOFTWARE05.R new package recommended from Jan to Mar 2017">
+<meta property="og:url" content="https://tardis012.github.io/2019/04/29/SOFTWARE05.R new package recommended from Jan to Jun 2017/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="前言本篇记录2017年1-3月R新包中自己觉得有用的。 R New Package Recommended in Jan 20171月份，共有251个R新包收录于CRAN。 Hydrometeorology getCRUCLdata v.1.1: Provides functions that automate downloading and importing climatology data">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-30T03:44:36.020Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SOFTWARE05.R new package recommended from Jan to Mar 2017">
+<meta name="twitter:description" content="前言本篇记录2017年1-3月R新包中自己觉得有用的。 R New Package Recommended in Jan 20171月份，共有251个R新包收录于CRAN。 Hydrometeorology getCRUCLdata v.1.1: Provides functions that automate downloading and importing climatology data">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://tardis012.github.io/2019/04/29/SOFTWARE05.R new package recommended from Jan to Jun 2017/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>SOFTWARE05.R new package recommended from Jan to Mar 2017 | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/04/29/SOFTWARE05.R new package recommended from Jan to Jun 2017/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href=" https:="" tardis012.github.io="" "="" target="_blank">https://tardis012.github.io，未经博主允许不得转载。"/>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SOFTWARE05.R new package recommended from Jan to Mar 2017
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-29 17:56:39" itemprop="dateCreated datePublished" datetime="2019-04-29T17:56:39+08:00">2019-04-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-30 11:44:36" itemprop="dateModified" datetime="2019-04-30T11:44:36+08:00">2019-04-30</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录2017年1-3月R新包中自己觉得有用的。</p>
+<h2 id="R-New-Package-Recommended-in-Jan-2017"><a href="#R-New-Package-Recommended-in-Jan-2017" class="headerlink" title="R New Package Recommended in Jan 2017"></a>R New Package Recommended in Jan 2017</h2><p>1月份，共有251个R新包收录于CRAN。</p>
+<h3 id="Hydrometeorology"><a href="#Hydrometeorology" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
+<li><a href="https://cran.rstudio.com/web/packages/getCRUCLdata/" target="_blank" rel="noopener">getCRUCLdata</a> v.1.1: Provides functions that automate downloading and importing climatology data from University of East Anglia Climate Research Unit <a href="http://www.cru.uea.ac.uk/" target="_blank" rel="noopener">(CRU)</a>. There is <a href="https://cran.rstudio.com/web/packages/getCRUCLdata/vignettes/getCRUCLdata.html" target="_blank" rel="noopener">vignette</a> to get you started.</li>
+<li><a href="https://cran.rstudio.com/web/packages/metScanR/metScanR.pdf" target="_blank" rel="noopener">metScanR</a> v0.0.1: Provides functions for mapping, and gathering meteorological data from various US surface networks: COOP, USCRN, USRCRN, AL-USRCRN, ASOS, AWOS, SNOTEL, SNOTELLITE, SCAN, SNOW, and NEON.</li>
+</ol>
+<h3 id="Statistics-and-Machine-learning"><a href="#Statistics-and-Machine-learning" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li><a href="https://cran.rstudio.com/web/packages/MAVE/" target="_blank" rel="noopener">MAVE</a> v0.1.7: Implements the MAVE (Minimum Average Variance Estimation) method of dimension reduction. Look <a href="https://cran.rstudio.com/web/packages/MAVE/vignettes/Short_introduction_to_method_MAVE.pdf" target="_blank" rel="noopener">here</a> for the math and <a href="https://cran.rstudio.com/web/packages/MAVE/vignettes/Short_introduction_to_package_MAVE.pdf" target="_blank" rel="noopener">here</a> for examples.</li>
+<li><a href="https://cran.rstudio.com/web/packages/EnsCat/" target="_blank" rel="noopener">EnsCat</a> v1.1: Implements various clustering methods for categorical data. See the <a href="https://github.com/jlp2duke/EnsCat/wiki/How-To-with-Examples" target="_blank" rel="noopener">website</a> for examples and the <a href="https://arxiv.org/pdf/1506.07930.pdf" target="_blank" rel="noopener">paper</a> for the details.</li>
+<li><a href="https://cran.rstudio.com/web/packages/mfe/" target="_blank" rel="noopener">mfe</a> v0.1.0: Provides functions to extract meta-features from datasets to support the design of recommendation systems. The <a href="https://cran.rstudio.com/web/packages/mfe/vignettes/mfe-vignette.html" target="_blank" rel="noopener">vignette</a> provides examples.</li>
+<li><a href="https://cran.rstudio.com/web/packages/tsdecomp/" target="_blank" rel="noopener">tsdecomp</a> v0.2: Implements ARIMA model-based decompositions for quarterly and monthly time series data. The <a href="https://www.jalobe.com/doc/tsdecomp.pdf" target="_blank" rel="noopener">vignette</a> describes the math.</li>
+</ol>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a><em>Others</em></h3><ol>
+<li><a href="https://cran.rstudio.com/web/packages/PeriodicTable/" target="_blank" rel="noopener">PeriodicTable</a> v0.1.1: Contains a dataset of the properties of chemical elements.</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Feb-2017"><a href="#R-New-Package-Recommended-in-Feb-2017" class="headerlink" title="R New Package Recommended in Feb 2017"></a>R New Package Recommended in Feb 2017</h2><p>2月份，共有145个R新包收录于CRAN。</p>
+<h3 id="Hydrometeorology-1"><a href="#Hydrometeorology-1" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
+<li><a href="https://cran.rstudio.com/web/packages/rnaturalearthdata/" target="_blank" rel="noopener">rnaturalearthdata</a> v0.1.0: Contains the world vector map data used in <a href="http://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>.</li>
+</ol>
+<h3 id="Statistics-and-Machine-learning-1"><a href="#Statistics-and-Machine-learning-1" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li><a href="https://cran.rstudio.com/web/packages/liquidSVM/" target="_blank" rel="noopener">liquidSVM</a> v1.0.1: Provides several functions to support a fast support vector machine implementation. There is a <a href="https://cran.rstudio.com/web/packages/liquidSVM/vignettes/demo.html" target="_blank" rel="noopener">demo vignette</a> and supplemental installation <a href="https://cran.rstudio.com/web/packages/liquidSVM/vignettes/documentation.html" target="_blank" rel="noopener">documentation</a>.</li>
+<li><a href="https://cran.rstudio.com/web/packages/OOBCurve/" target="_blank" rel="noopener">OOBCurve</a> v0.1: Provides a function to calculate the out-of-bag learning curve for random forest models built with the <a href="https://cran.r-project.org/web/packages/randomForest/index.html" target="_blank" rel="noopener">randomForest</a> or <a href="https://cran.r-project.org/web/packages/ranger/index.html" target="_blank" rel="noopener">ranger</a> packages.</li>
+<li><a href="https://cran.rstudio.com/web/packages/BayesCombo/" target="_blank" rel="noopener">BayesCombo</a> v1.0: Implements Bayesian meta-analysis methods to combine diverse evidence from multiple studies. The <a href="https://cran.rstudio.com/web/packages/BayesCombo/vignettes/BayesCombo_vignette.html" target="_blank" rel="noopener">vignette</a> provides a detailed example.</li>
+<li><a href="https://cran.rstudio.com/web/packages/BayesianTools/" target="_blank" rel="noopener">BayesianTools</a> v0.1.0: Implements various Metropolis MCMC variants (including adaptive and/or delayed rejection MH), the T-walk, differential evolution MCMCs, DREAM MCMCs, and a sequential Monte Carlo particle filter, along with diagnostic and plot functions. The <a href="https://cran.rstudio.com/web/packages/BayesianTools/vignettes/BayesianTools.html" target="_blank" rel="noopener">vignette</a> will get you started.</li>
+<li><a href="https://cran.rstudio.com/web/packages/IMIFA/" target="_blank" rel="noopener">IMIFA</a> v1.1.0: Provides flexible Gibbs sampler functions for fitting Infinite Mixtures of Infinite Factor Analysers and related models, introduced by Murphy et al. in a 2017 <a href="https://arxiv.org/pdf/1701.07010.pdf" target="_blank" rel="noopener">paper</a>. The <a href="https://cran.rstudio.com/web/packages/IMIFA/vignettes/IMIFA.html" target="_blank" rel="noopener">vignette</a> shows examples.</li>
+<li><a href="https://cran.rstudio.com/web/packages/lmvar/" target="_blank" rel="noopener">lmvar</a> v1.0.0: Provides functions to run linear regressions in which both the expected value and variance can vary by observation. Vignettes provide an <a href="https://cran.rstudio.com/web/packages/lmvar/vignettes/Intro.html" target="_blank" rel="noopener">introduction</a> and explain the details of the <a href="https://cran.rstudio.com/web/packages/lmvar/vignettes/Math.pdf" target="_blank" rel="noopener">math</a>.</li>
+<li><a href="https://cran.rstudio.com/web/packages/fpp2/" target="_blank" rel="noopener">fpp2</a> v2.0: Provides all of the data sets used in the online book <a href="https://www.otexts.org/fpp2/" target="_blank" rel="noopener">Forecasting: Principles and Practice</a>.</li>
+<li><a href="https://cran.rstudio.com/web/packages/sonify/" target="_blank" rel="noopener">sonify</a> v0.1-0: Contains a function to transform univariate data, sampled at regular or irregular intervals, into a continuous sound with time-varying frequency. The function is intended as a substitute for R’s <code>plot</code> function to simplify data analysis for the visually impaired.</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Mar-2017"><a href="#R-New-Package-Recommended-in-Mar-2017" class="headerlink" title="R New Package Recommended in Mar 2017"></a>R New Package Recommended in Mar 2017</h2><p>3月份，共有216个R新包收录于CRAN。</p>
+<h3 id="Statistics-and-Machine-learning-2"><a href="#Statistics-and-Machine-learning-2" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li><a href="https://cran.r-project.org/web/packages/kerasR/index.html" target="_blank" rel="noopener">kerasR</a> v0.4.1: Provides an interface to the <a href="https://keras.io/" target="_blank" rel="noopener">Keras</a> Deep Learning Library, which provides specifications for describing dense neural networks, convolution neural networks (CNN), and recurrent neural networks (RNN) running on top of either <a href="https://www.tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> or <a href="http://deeplearning.net/software/theano/" target="_blank" rel="noopener">Theano</a>. The <a href="https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html" target="_blank" rel="noopener">vignette</a> contains examples.</li>
+<li><a href="https://cran.r-project.org/web/packages/modeval/index.html" target="_blank" rel="noopener">modeval</a> v0.1.2: Allows users to easily compare multiple classifications models built with caret functions for small data sets. The <a href="https://cran.r-project.org/web/packages/modeval/vignettes/modeval.html" target="_blank" rel="noopener">vignette</a> provides examples.</li>
+<li><a href="https://cran.r-project.org/web/packages/supc/index.html" target="_blank" rel="noopener">supc</a> v0.1: Implements the self-updating process clustering algorithms proposed in <a href="doi:10.1080/00949655.2015.1049605" target="_blank" rel="noopener">Shiu and Chen</a>. The <a href="https://cran.r-project.org/web/packages/supc/vignettes/supc.html" target="_blank" rel="noopener">vignette</a>contains examples.</li>
+<li><a href="https://cran.r-project.org/web/packages/mlrMBO/index.html" target="_blank" rel="noopener">mlrMBO</a> v1.0.0: Provides a toolbox for Bayesian, model-based optimization. There is an <a href="https://cran.r-project.org/web/packages/mlrMBO/vignettes/mlrMBO.html" target="_blank" rel="noopener">introduction</a> and vignettes for <a href="https://cran.r-project.org/web/packages/mlrMBO/vignettes/mixed_space_optimization.html" target="_blank" rel="noopener">Mixed Space Optimization</a>, <a href="https://cran.r-project.org/web/packages/mlrMBO/vignettes/noisy_optimization.html" target="_blank" rel="noopener">Noisy Optimization</a>, and <a href="https://cran.r-project.org/web/packages/mlrMBO/vignettes/parallelization.html" target="_blank" rel="noopener">Parallelization</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/rjmcmc/index.html" target="_blank" rel="noopener">rjmcmc</a> v0.2.2: Provides functions to perform <a href="doi:10.2307/2337340" target="_blank" rel="noopener">reversible-jump MCMC</a> with the restriction introduced by <a href="doi:10.1080/00031305.2013.791644" target="_blank" rel="noopener">Barker &amp; Link</a>. The <a href="https://cran.r-project.org/web/packages/rjmcmc/vignettes/rjmcmcVignette.pdf" target="_blank" rel="noopener">vignette</a> shows how to calculate posterior probabilities from the MCMC output.</li>
+<li><a href="https://cran.r-project.org/web/packages/MonteCarlo/index.html" target="_blank" rel="noopener">MonteCarlo</a> v1.0.0: Simplifies Monte Carlo simulation studies by providing functions that automatically set up loops to run over parameter grids, parallelize the computations, and generate output in LaTeX tables. The <a href="https://cran.r-project.org/web/packages/MonteCarlo/vignettes/MonteCarlo-Vignette.html" target="_blank" rel="noopener">vignette</a> shows how to use it.</li>
+</ol>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li>January New Data Packages <a href="https://rviews.rstudio.com/2017/02/17/january-new-data-packages/" target="_blank" rel="noopener">https://rviews.rstudio.com/2017/02/17/january-new-data-packages/</a></li>
+<li>More January Package Picks <a href="https://rviews.rstudio.com/2017/02/24/more-january-package-picks/" target="_blank" rel="noopener">https://rviews.rstudio.com/2017/02/24/more-january-package-picks/</a></li>
+<li>February 2017 New Package Picks <a href="https://rviews.rstudio.com/2017/03/22/february-2017-new-package-picks/" target="_blank" rel="noopener">https://rviews.rstudio.com/2017/03/22/february-2017-new-package-picks/</a></li>
+<li>March ‘17 New Package Picks <a href="https://rviews.rstudio.com/2017/04/14/march-17-new-package-picks/" target="_blank" rel="noopener">https://rviews.rstudio.com/2017/04/14/march-17-new-package-picks/</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/29/SOFTWARE04.R new package recommended from Jul to Dec 2017/" rel="next" title="SOFTWARE04.R new package recommended from Jul to Dec 2017">
+                <i class="fa fa-chevron-left"></i> SOFTWARE04.R new package recommended from Jul to Dec 2017
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/29/MS01.Study Note 1 for “Probability distribution” Topic/" rel="prev" title="MS01.Study Note 1 for " probability="" distribution"="" topic"="">
+                MS01.Study Note 1 for "Probability distribution" Topic <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <div class="site-description motion-element" itemprop="description">个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href="https://tardis012.github.io/" target="_blank">https://tardis012.github.io</a>，未经博主允许不得转载。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Jan-2017"><span class="nav-number">2.</span> <span class="nav-text">R New Package Recommended in Jan 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology"><span class="nav-number">2.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning"><span class="nav-number">2.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">2.3.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Feb-2017"><span class="nav-number">3.</span> <span class="nav-text">R New Package Recommended in Feb 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology-1"><span class="nav-number">3.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-1"><span class="nav-number">3.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Mar-2017"><span class="nav-number">4.</span> <span class="nav-text">R New Package Recommended in Mar 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-2"><span class="nav-number">4.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">5.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
