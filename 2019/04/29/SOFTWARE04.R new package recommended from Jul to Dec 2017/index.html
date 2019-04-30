@@ -1,161 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
-  <!--Description-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
 
-  <!--Author-->
-  
-  <meta name="author" content="Tardis012">
-  
-
-  <!--Open Graph Title-->
-  
-      <meta property="og:title" content="SOFTWARE04.R new package recommended from Jul to Dec 2017">
-  
-  <!--Open Graph Description-->
-  
-  <!--Open Graph Site Name-->
-  <meta property="og:site_name" content="小zのGarden">
-  <!--Type page-->
-  
-      <meta property="og:type" content="article">
-  
-  <!--Page Cover-->
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- Title -->
-  
-  <title>SOFTWARE04.R new package recommended from Jul to Dec 2017 - 小zのGarden</title>
 
 
-  <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/256/space-rocket-icon.png">
 
-  <!-- Custom CSS/Sass -->
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="前言本篇记录2017年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20177月份，共有251个R新包收录于CRAN。 Hydrometeorology weathercan v0.2.7: Provides tools for downloading historical weather data from the Environment">
+<meta name="keywords" content="R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SOFTWARE04.R new package recommended from Jul to Dec 2017">
+<meta property="og:url" content="https://tardis012.github.io/2019/04/29/SOFTWARE04.R new package recommended from Jul to Dec 2017/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="前言本篇记录2017年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20177月份，共有251个R新包收录于CRAN。 Hydrometeorology weathercan v0.2.7: Provides tools for downloading historical weather data from the Environment">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-30T03:44:21.341Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SOFTWARE04.R new package recommended from Jul to Dec 2017">
+<meta name="twitter:description" content="前言本篇记录2017年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20177月份，共有251个R新包收录于CRAN。 Hydrometeorology weathercan v0.2.7: Provides tools for downloading historical weather data from the Environment">
 
-  <!----------------------------
-  https://github.com/GallenHu/hexo-theme-Daily
 
- _____            _   _
-|  __ \          (_) | |
-| |  | |   __ _   _  | |  _   _
-| |  | |  / _` | | | | | | | | |
-| |__| | | (_| | | | | | | |_| |
-|_____/   \__,_| |_| |_|  \__, |
-                          __/ |
-                         |___/
 
-    --------------------------->
+
+
+  
+  
+  <link rel="canonical" href="https://tardis012.github.io/2019/04/29/SOFTWARE04.R new package recommended from Jul to Dec 2017/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>SOFTWARE04.R new package recommended from Jul to Dec 2017 | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
 
-<body>
+  
+  
+    
+  
 
-  <!-- Nav -->
-  <header class="site-header">
-  <div class="header-inside">
-    <div class="logo">
-      <a href="/" rel="home">
-        
-        <img src="http://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/256/space-rocket-icon.png" alt="小zのGarden" height="60">
-        
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse">
-        <ul class="navbar-nav">
-          
-          
-            <li>
-              <a href="/.">
-                
-                  Home
-                
-              </a>
-            </li>
-          
-            <li>
-              <a href="/archives">
-                
-                  Archive
-                
-              </a>
-            </li>
-          
-            <li>
-              <a href="/categories">
-                
-                  Categories
-                
-              </a>
-            </li>
-          
-            <li>
-              <a href="/tags">
-                
-                  Tags
-                
-              </a>
-            </li>
-          
-            <li>
-              <a href="/.">
-                
-                  About
-                
-              </a>
-            </li>
-          
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </nav>
-    <div class="button-wrap">
-      <button class="menu-toggle">Primary Menu</button>
-    </div>
+    
+    
   </div>
-</header>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
 
-  <!-- Main Content -->
-  <div class="content-area">
-  <div class="post">
-    <!-- Post Content -->
-    <div class="container">
-      <article>
-        <!-- Title date & tags -->
-        <div class="post-header">
-          <h1 class="entry-title">
-            SOFTWARE04.R new package recommended from Jul to Dec 2017
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/04/29/SOFTWARE04.R new package recommended from Jul to Dec 2017/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SOFTWARE04.R new package recommended from Jul to Dec 2017
+
+              
             
           </h1>
-          <p class="posted-on">
-          2019-04-29
-          </p>
-          <div class="tags-links">
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-29 15:35:04" itemprop="dateCreated datePublished" datetime="2019-04-29T15:35:04+08:00">2019-04-29</time>
+            
+
             
               
-                <a href="/tags/R/" rel="tag">
-                  R
-                </a>
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-30 11:44:21" itemprop="dateModified" datetime="2019-04-30T11:44:21+08:00">2019-04-30</time>
               
             
-          </div>
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-        <!-- Post Main Content -->
-        <div class="entry-content has_line_number">
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录2017年7-12月R新包中自己觉得有用的。</p>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录2017年7-12月R新包中自己觉得有用的。</p>
 <h2 id="R-New-Package-Recommended-in-Jul-2017"><a href="#R-New-Package-Recommended-in-Jul-2017" class="headerlink" title="R New Package Recommended in Jul 2017"></a>R New Package Recommended in Jul 2017</h2><p>7月份，共有251个R新包收录于CRAN。</p>
 <h3 id="Hydrometeorology"><a href="#Hydrometeorology" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
 <li><a href="https://cran.r-project.org/package=weathercan" target="_blank" rel="noopener">weathercan</a> v0.2.7: Provides tools for downloading historical weather data from the Environment and <a href="http://climate.weather.gc.ca/historical_data/search_historic_data_e.html" target="_blank" rel="noopener">Climate Change Canada</a> website. Data can be downloaded from multiple stations over large date ranges, and automatically processed into a single dataset. There is an <a href="https://cran.r-project.org/web/packages/weathercan/vignettes/weathercan.html" target="_blank" rel="noopener">Introduction</a>, a <a href="https://cran.r-project.org/web/packages/weathercan/vignettes/glossary.html" target="_blank" rel="noopener">Glossary</a>, and vignettes on <a href="https://cran.r-project.org/web/packages/weathercan/vignettes/flags.html" target="_blank" rel="noopener">Flags</a> and <a href="https://cran.r-project.org/web/packages/weathercan/vignettes/interpolate_data.html" target="_blank" rel="noopener">Interpolation</a>.</li>
@@ -236,102 +483,401 @@
 <li>Dec 2017: “Top 40” New Package Picks <a href="https://rviews.rstudio.com/2018/01/25/dec-2017-new-package-picks/" target="_blank" rel="noopener">https://rviews.rstudio.com/2018/01/25/dec-2017-new-package-picks/</a></li>
 </ul>
 
-        </div>
-      </article>
-    </div>
-    <!-- Comments -->
-    <div class="container">
       
-<section id="comment">
-  <!-- <h1 class="title">Comments</h1> -->
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/29/SOFTWARE03.R new package recommended from Jan to Jun 2018/" rel="next" title="SOFTWARE03.R new package recommended from Jan to Jun 2018">
+                <i class="fa fa-chevron-left"></i> SOFTWARE03.R new package recommended from Jan to Jun 2018
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/29/SOFTWARE05.R new package recommended from Jan to Jun 2017/" rel="prev" title="SOFTWARE05.R new package recommended from Jan to Mar 2017">
+                SOFTWARE05.R new package recommended from Jan to Mar 2017 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
 
   
-</section>
 
 
-    </div>
-    <!-- Pre or Next -->
-    <div class="nav-links">
-      
-        <div class="nav-previous">
-          <a href="/2019/04/29/SOFTWARE05.R new package recommended from Jan to Jun 2017/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+
         </div>
-      
-      
-        <div class="nav-next">
-          <a href="/2019/04/29/SOFTWARE03.R new package recommended from Jan to Jun 2018/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
-        </div>
-      
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Jul-2017"><span class="nav-number">2.</span> <span class="nav-text">R New Package Recommended in Jul 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology"><span class="nav-number">2.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning"><span class="nav-number">2.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">2.3.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Aug-2017"><span class="nav-number">3.</span> <span class="nav-text">R New Package Recommended in Aug 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-1"><span class="nav-number">3.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others-1"><span class="nav-number">3.2.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Sep-2017"><span class="nav-number">4.</span> <span class="nav-text">R New Package Recommended in Sep 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-2"><span class="nav-number">4.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Oct-2017"><span class="nav-number">5.</span> <span class="nav-text">R New Package Recommended in Oct 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-3"><span class="nav-number">5.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Nov-2017"><span class="nav-number">6.</span> <span class="nav-text">R New Package Recommended in Nov 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-4"><span class="nav-number">6.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others-2"><span class="nav-number">6.2.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Dec-2017"><span class="nav-number">7.</span> <span class="nav-text">R New Package Recommended in Dec 2017</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology-1"><span class="nav-number">7.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-5"><span class="nav-number">7.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">8.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+
+  
 </div>
 
 
-  <!-- Footer -->
-  <!-- Footer-widgets -->
-<div class="footer-widgets">
-  <div class="row inside-wrapper">
-    <div class="col-1-3">
-      <aside>
-        <h1 class="widget-title">About This Site</h1>
-        <div class="custom-widget-content">
-          
-          个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href="https://tardis012.github.io/" target="_blank">https://tardis012.github.io</a>，未经博主允许不得转载。
-        </div>
-      </aside>
-    </div>
-    <div class="col-1-3">
-      <aside>
-        <h1 class="widget-title">Contact</h1>
-        <div class="widget-text">
-          
-            
-              <a href="https://github.com/Tardis012" class="icon icon-github" target="_blank">github</a>
-            
-              <a href="http://mail.163.com/" class="icon icon-mail" target="_blank">mail</a>
-            
-              <a href="http://weibo.com/" class="icon icon-weibo" target="_blank">weibo</a>
-            
-          
-        </div>
-      </aside>
-    </div>
-    <div class="col-1-3">
-      <aside>
-        <h1 class="widget-title">Search</h1>
-        <div class="widget-text">
-          <form onsubmit="return appDaily.submitSearch('')">
-            <p>
-              <input type="text" placeholder="search..." id="homeSearchInput">
-            </p>
-            <!-- <input type="submit" value="GO"> -->
-          </form>
-        </div>
-      </aside>
-    </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
   </div>
-</div>
-<!-- Footer -->
-<footer class="site-info">
-  <p>
-    <span>小zのGarden &copy; 2019</span>
-    
-      <span class="split">|</span>
-      <span>Powered by Hexo</span>
-    
-  </p>
-</footer>
 
+  
 
-  <!-- After footer scripts -->
-  <!-- scripts -->
-<script src="/js/app.js"></script>
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 </body>
-
 </html>
