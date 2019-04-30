@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="http://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/256/space-rocket-icon.png?v=7.1.0">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。 前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 Article Abstract&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。 Article">
+<meta name="keywords" content="Rainfall">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAINFALL01.Reading Note for &quot;How 5G is likely to put weather forecasting at risk&quot; Web Article">
+<meta property="og:url" content="https://tardis012.github.io/2019/04/22/RAINFALL01.Reading Note for “How 5G is likely to put weather forecasting at risk” Web Article/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。 前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 Article Abstract&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。 Article">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-30T03:43:17.912Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RAINFALL01.Reading Note for &quot;How 5G is likely to put weather forecasting at risk&quot; Web Article">
+<meta name="twitter:description" content="觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。 前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 Article Abstract&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。 Article">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://tardis012.github.io/2019/04/22/RAINFALL01.Reading Note for “How 5G is likely to put weather forecasting at risk” Web Article/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>RAINFALL01.Reading Note for "How 5G is likely to put weather forecasting at risk" Web Article | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/04/22/RAINFALL01.Reading Note for “How 5G is likely to put weather forecasting at risk” Web Article/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href=" https:="" tardis012.github.io="" "="" target="_blank">https://tardis012.github.io，未经博主允许不得转载。"/>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">RAINFALL01.Reading Note for "How 5G is likely to put weather forecasting at risk" Web Article
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-22 18:34:58" itemprop="dateCreated datePublished" datetime="2019-04-22T18:34:58+08:00">2019-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-30 11:43:17" itemprop="dateModified" datetime="2019-04-30T11:43:17+08:00">2019-04-30</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Major/" itemprop="url" rel="index"><span itemprop="name">Major</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为网页文章 <a href="https://hackaday.com/2019/04/16/5g-buildout-likely-to-put-weather-forecasting-at-risk/" target="_blank" rel="noopener">How 5G is likely to put weather forecasting at risk!</a> 的阅读笔记。</p>
+<h3 id="Article-Abstract"><a href="#Article-Abstract" class="headerlink" title="Article Abstract"></a>Article Abstract</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。</p>
+<h3 id="Article-Content"><a href="#Article-Content" class="headerlink" title="Article Content"></a>Article Content</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;天气主要是气团差异的结果。大气压力、温度、湿度，分别由太阳的能量输入决定，以复杂方式组合决定云的形成时间、风向。远程感知这些差异是准确预报天气的关键。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;观测天气的卫星大部分是被动传感器平台，测量下方物体反射或发射的能量，通过用不同的波长观测地球来收集温度和湿度的数据（大气压力主要通过surface measurements和radiosondes测量）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;温度主要在可见光和红外光的波长下测量，水蒸气有点难以测量，涉及到微波。微波辐射计作为<strong>无源</strong>微波接收机，通过查看在不同波长下接收的信号和添加有关信号极化的信息，微波辐射测量可以告诉我们在大气层的垂直柱内发生了什么。对于水蒸气，23.8GHz非常有用，由于接近的频率有可能从5G获得干扰，在5G噪音海洋中丢失微弱但可靠的水汽信号是天气预报员面临的基本问题。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Rainfall/" rel="tag"># Rainfall</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/16/SHM01.Reading Note 1 for “Structural Health Monitoring of Large Civil Engineering Structures” Book/" rel="next" title="SHM01.Reading Note 1 for " structural="" health="" monitoring="" of="" large="" civil="" engineering="" structures"="" book"="">
+                <i class="fa fa-chevron-left"></i> SHM01.Reading Note 1 for "Structural Health Monitoring of Large Civil Engineering Structures" Book
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/28/SOFTWARE01.R new package recommended from Jan to Mar 2019/" rel="prev" title="SOFTWARE01.R new package recommended from Jan to Mar 2019">
+                SOFTWARE01.R new package recommended from Jan to Mar 2019 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <div class="site-description motion-element" itemprop="description">个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href="https://tardis012.github.io/" target="_blank">https://tardis012.github.io</a>，未经博主允许不得转载。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article-Abstract"><span class="nav-number">2.</span> <span class="nav-text">Article Abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article-Content"><span class="nav-number">3.</span> <span class="nav-text">Article Content</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

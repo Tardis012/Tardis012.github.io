@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="http://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/256/space-rocket-icon.png?v=7.1.0">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言本篇记录2018年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20187月份，大约有251个R新包收录于CRAN。 Hydrometeorology weathercan： 提供从加拿大环境和气候变化网站下载历史天气数据的工具，可以在特定日期范围内从多个工作站下载数据，并自动处理为单个数据集。  Statistics and Machi">
+<meta name="keywords" content="R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SOFTWARE02.R new package recommended from Jul to Dec 2018">
+<meta property="og:url" content="https://tardis012.github.io/2019/04/29/SOFTWARE02.R new package recommended from Jul to Dec 2018/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="前言本篇记录2018年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20187月份，大约有251个R新包收录于CRAN。 Hydrometeorology weathercan： 提供从加拿大环境和气候变化网站下载历史天气数据的工具，可以在特定日期范围内从多个工作站下载数据，并自动处理为单个数据集。  Statistics and Machi">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-30T03:43:53.544Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SOFTWARE02.R new package recommended from Jul to Dec 2018">
+<meta name="twitter:description" content="前言本篇记录2018年7-12月R新包中自己觉得有用的。 R New Package Recommended in Jul 20187月份，大约有251个R新包收录于CRAN。 Hydrometeorology weathercan： 提供从加拿大环境和气候变化网站下载历史天气数据的工具，可以在特定日期范围内从多个工作站下载数据，并自动处理为单个数据集。  Statistics and Machi">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://tardis012.github.io/2019/04/29/SOFTWARE02.R new package recommended from Jul to Dec 2018/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>SOFTWARE02.R new package recommended from Jul to Dec 2018 | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/04/29/SOFTWARE02.R new package recommended from Jul to Dec 2018/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href=" https:="" tardis012.github.io="" "="" target="_blank">https://tardis012.github.io，未经博主允许不得转载。"/>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SOFTWARE02.R new package recommended from Jul to Dec 2018
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-29 00:20:25" itemprop="dateCreated datePublished" datetime="2019-04-29T00:20:25+08:00">2019-04-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-30 11:43:53" itemprop="dateModified" datetime="2019-04-30T11:43:53+08:00">2019-04-30</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录2018年7-12月R新包中自己觉得有用的。</p>
+<h2 id="R-New-Package-Recommended-in-Jul-2018"><a href="#R-New-Package-Recommended-in-Jul-2018" class="headerlink" title="R New Package Recommended in Jul 2018"></a>R New Package Recommended in Jul 2018</h2><p>7月份，大约有251个R新包收录于CRAN。</p>
+<h3 id="Hydrometeorology"><a href="#Hydrometeorology" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
+<li>weathercan： 提供从加拿大环境和气候变化网站下载历史天气数据的工具，可以在特定日期范围内从多个工作站下载数据，并自动处理为单个数据集。</li>
+</ol>
+<h3 id="Statistics-and-Machine-learning"><a href="#Statistics-and-Machine-learning" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li><p>adaptMT： 实现了自适应的p值阈值(AdaPT)，包括一个允许用户指定任何算法来学习本地错误发现率的框架、以及一个实现特定算法的便捷函数池。</p>
+</li>
+<li><p>MultiFit： 提供测试两个随机向量的独立性的功能。</p>
+</li>
+<li><p>robmixglm： 使用混合方法实现稳健的广义线性模型(GLM)，如Beath(2018)中所述。</p>
+</li>
+<li><p>bigdatadist： 提供函数来计算概率、曲线样本的熵、函数数据的距离和深度度量以及高维数据的广义马氏核距离。</p>
+</li>
+<li><p>L0Learn： 提供了一个优化的工具包，用于近似解决L0规则化的学习问题。</p>
+</li>
+</ol>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a><em>Others</em></h3><ol>
+<li><p>dbx： 提供选择、插入、更新和删除数据操作的功能，目前支持的数据库主要有<code>PostgreSQL</code>，<code>MySQL</code>， <code>SQLite</code>。</p>
+</li>
+<li><p>metaDigitise： 提供从研究论文中的已发表数据中提取、汇总和数字化数据的功能。</p>
+</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Aug-2018"><a href="#R-New-Package-Recommended-in-Aug-2018" class="headerlink" title="R New Package Recommended in Aug 2018"></a>R New Package Recommended in Aug 2018</h2><p>8月份，共有160个R新包收录于CRAN。</p>
+<h3 id="Statistics-and-Machine-learning-1"><a href="#Statistics-and-Machine-learning-1" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li>bcaboot： 提供函数以一种几乎自动的方式计算bootstrap置信区间。</li>
+<li>bivariate ： 提供用于构造、绘制双变量概率分布的便捷函数。</li>
+<li>dials： 提供用于创建无法从数据直接估计模型参数的工具。</li>
+<li><p>fieldRS： 利用Olofsson等人提出的最佳实践，为遥感现场工作提供支持。</p>
+</li>
+<li><p>Rnmr1D ： 提供从自由感应衰变的原始数据处理质子核磁共振谱的功能，参见Jacob et al. (2017) 。</p>
+</li>
+</ol>
+<h3 id="Others-1"><a href="#Others-1" class="headerlink" title="Others"></a><em>Others</em></h3><ol>
+<li>tidybayes： 提供组合数据的功能，以整齐的数据格式从贝叶斯模型(<code>JAGS</code>、<code>Stan</code>、<code>rstanarm</code>、<code>brms</code>…)中提取、操作和可视化。</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Sep-2018"><a href="#R-New-Package-Recommended-in-Sep-2018" class="headerlink" title="R New Package Recommended in Sep 2018"></a>R New Package Recommended in Sep 2018</h2><p>9月份，共有126个R新包收录于CRAN。</p>
+<h3 id="Statistics-and-Machine-learning-2"><a href="#Statistics-and-Machine-learning-2" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li>ahpsurvey ：实现层次分析过程，一个由Saaty(1987)引入的通用多准则决策工具，它允许决策者权衡属性并评估呈现给属性的备选方案。</li>
+<li>survivalAnalysis ：实现高级接口封装以支持生存分析，包括Kaplan-Meier分析、对数秩检验、Cox回归。</li>
+<li>salty ：允许用户获取真实或模拟数据，并将其与常见的错误相结合，例如伪OCR错误、Unicode问题、带有荒谬标点符号的数字字段、错误日期等。</li>
+<li>ungroup ：提供实现惩罚复合链路模型的功能，有效地估计粗略分箱数据的平滑分布。</li>
+<li>empirical ：实现经验单变量概率密度函数（连续函数）和经验累积分布函数（阶梯函数或连续函数）。</li>
+<li>rmatalog ：实现了metalog分布，这是一种现代的、高度灵活的、数据驱动的分布。</li>
+<li>basisMCMCplots ：提供用于检查来自<code>NIMBLE</code>软件包接口的单链、多链后验MCMC样本的功能。</li>
+<li>samplingBigData ：提供对大数据集进行采样的方法，包括在多维空间中进行空间平衡采样。</li>
+<li>embed ：提供使用简单的广义线性模型、非线性模型将因子预测变量转换为一个或多个数值表示的函数。</li>
+<li>Opt4PL ：提供获取和评估3、4和5种参数逻辑回归模型的各种最佳设计的功能。</li>
+<li>splinetree ：提供使用样条投影方法构建回归树、随机森林的功能。</li>
+<li>rwavelet ：提供执行小波分析（正交和平移不变变换）的功能，同时进行数据压缩、去噪声。</li>
+<li>bayesdfa ：使用<code>Stan</code>实现贝叶斯动态因子分析，这是一种多变量时间序列的降维工具。</li>
+<li>tbrf ：提供基于日期和时间窗口的滚动统计函数，而不是n-滞后观察。</li>
+<li>UKgrid ：提供自2011年以来英国国家电网需求数据（高压电力传输网络）。</li>
+</ol>
+<h3 id="Others-2"><a href="#Others-2" class="headerlink" title="Others"></a><em>Others</em></h3><ol>
+<li>customLayout ：提供了graphics::layout()的扩展版本，允许用户通过组合更简单的布局为多个元素创建复杂的绘图区域。</li>
+<li>ggTimeSeries ：提供其他时间序列可视化，如日历热图、<em>Steam</em> <em>Graph</em>流图等。</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Oct-2018"><a href="#R-New-Package-Recommended-in-Oct-2018" class="headerlink" title="R New Package Recommended in Oct 2018"></a>R New Package Recommended in Oct 2018</h2><p>10月份，185个R新包收录于CRAN。</p>
+<h3 id="Hydrometeorology-1"><a href="#Hydrometeorology-1" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
+<li>nasapower v1.02：实现POWER（全球能源资源预测），NASA全球气象，地面太阳能和气候数据API的接口。</li>
+<li>ClimProjDiags v0.0.1：提供用于计算气候分析的度量和指数，比较模型以及将它们组合成集合的功能。关于异常协议，昼夜温度，极端指数以及热浪和冷波持续时间都有一些小插曲。</li>
+</ol>
+<h3 id="Statistics-and-Machine-learning-3"><a href="#Statistics-and-Machine-learning-3" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li>lognorm v0.1.3：估计分布参数并计算对数正态分布的矩和其他基本统计量Limpert et al.(2001)，并且还提供了几个相关的对数正态分布变量Lo(2013)之和的分布的近似值。关于聚合相关随机变量和另一个关于近似和的小插图。</li>
+<li>matrixNormal v0.0.0：提供计算Matrix Normal分布的密度，概率和随机偏差的函数。见Iranmanesh et al.(2010)。</li>
+<li>ppgmmga v1.0.1：基于高斯混合模型实现降维的投影追踪算法。该小品提供了封装的快速浏览。</li>
+<li>SAMpack v0.1.1：实现随机逼近蒙特卡罗(SAMC)采样器，能够从多模或双重难处理分布中采样。参见Liang et al. (2010)对该方法的完整介绍，以及介绍该软件包的插图。</li>
+<li>gcForest v0.2.7：提供深度森林的Python实现的API接口，深度学习的替代方法。该算法在Zhou和Feng(2017)中有描述，并有一个简短的包教程。</li>
+<li>sboost v0.1.0：提供基于C ++的快速实现Freund和Schapire的Adaptive Boosting(AdaBoost)算法，并包括分类器评估，预测和交叉验证的方法。</li>
+<li>RcppEnsmallen v0.1.10.0.1：实现基于C ++的Ensmallen数学优化库的接口，该库提供了一组简单的抽象，用于编写要优化的目标函数。优化器包括完整批次梯度下降技术，小批量技术，无梯度优化和约束优化。</li>
+<li>MachineShop v0.2.0：为机器学习模型拟合，预测，性能评估和结果表示提供通用接口。有一个简介和一份关于实施公约的说明。</li>
+<li>mlflow v0.8.0：提供一个<code>MLflow</code>开源平台的接口，用于完整的机器学习生命周期，支持安装，跟踪实验，运行项目和保存模型。</li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Nov-2018"><a href="#R-New-Package-Recommended-in-Nov-2018" class="headerlink" title="R New Package Recommended in Nov 2018"></a>R New Package Recommended in Nov 2018</h2><p>11月份，171个R新包收录于CRAN。</p>
+<h3 id="Statistics-and-Machine-learning-4"><a href="#Statistics-and-Machine-learning-4" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li>Riembase：实现了多种算法来估计基本统计量，包括用于多值数据的Frechet均值和几何中值。</li>
+<li>LindleyPowerSeries：提供计算Lindley Power Series分布的概率密度函数、累积分布函数、危险率函数、分位数函数等功能。</li>
+<li>mixsqp：提供基于序列二次规划(SQP)的优化算法(Kim et al. 2012)，用于有限混合模型（成分密度已知）中混合比例的最大似然估计。</li>
+<li>modi：实现将样本设计考虑在内的算法来检测多元异常值。</li>
+<li>polylabelr：对C ++库polylabel进行封装，提供了一个有效的例程来查找多边形不可访问的近似极点。</li>
+<li>pivmet：为了解决贝叶斯混合模型中的标签切换问题，提供了一组关键算法来重新标记MCMC链，同时提供函数初始化经典k均值算法的中心，以便获得更好的聚类解决方案。</li>
+</ol>
+<h3 id="Others-3"><a href="#Others-3" class="headerlink" title="Others"></a><em>Others</em></h3><ol>
+<li>countcolors：提供计算图像中颜色的相关函数，以及将目标像素更改为不同颜色图像的掩码版本。 </li>
+</ol>
+<h2 id="R-New-Package-Recommended-in-Dec-2018"><a href="#R-New-Package-Recommended-in-Dec-2018" class="headerlink" title="R New Package Recommended in Dec 2018"></a>R New Package Recommended in Dec 2018</h2><p>12月份，157个R新包收录于CRAN。</p>
+<h3 id="Hydrometeorology-2"><a href="#Hydrometeorology-2" class="headerlink" title="Hydrometeorology"></a><em>Hydrometeorology</em></h3><ol>
+<li>bioRad ：提供从天气雷达数据中提取、可视化和汇总鸟类和昆虫在空中运动行为的功能。</li>
+<li>traitdataform ：提供帮助处理生态特征数据，同时支持应用Schneider等人描述的生态特征数据标准术语(2018年)。</li>
+<li>solartime ：提供计算太阳位置、日出和日落时间的功能。</li>
+</ol>
+<h3 id="Statistics-and-Machine-learning-5"><a href="#Statistics-and-Machine-learning-5" class="headerlink" title="Statistics and Machine learning"></a><em>Statistics and Machine learning</em></h3><ol>
+<li>mistr ：提供混合分布的计算框架，重点关注复合模型。</li>
+<li>mulitRDPG ：提供适合多随机点积图模型的函数，并测试两个网络是否来自同一个分布。</li>
+<li>ocp ：针对单变量或多变量数据，实现了Adams和Mackay(2007)的贝叶斯在线变点检测方法及高斯和泊松概率模型。</li>
+<li>probably ：提供用于后处理类概率估计的工具。</li>
+<li>ar.matrix：支持借助精度矩阵、Choleski分解来模拟自回归数据.</li>
+<li>MTLR ：实现了Yu等人提出的多任务Logistic回归(MTLR)(2011年)。</li>
+<li>pomdp：提供 <code>pomdp-solve</code>的接口， 它是部分可观察马尔可夫决策过程(POMDP)的求解器。</li>
+<li>ParBayesianOptimization ：提供了一个框架，用于根据Snoek等人(2012)描述的方法优化贝叶斯超参数。</li>
+<li>mfbvar ：提供用于估计明尼苏达或稳态先验的混合频率贝叶斯向量自回归(var)模型的函数，如Schorfheide和Song(2015)或Ankargren、Unosson和Yang(2018)使用的模型。</li>
+<li>NTS ：提供模拟、估计、预测和识别非线性时间序列模型的函数。</li>
+</ol>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li>精选|2018年7月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/82156717" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/82156717</a></li>
+<li>精选|2018年8月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/82881568" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/82881568</a></li>
+<li>精选|2018年9月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/83353504" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/83353504</a></li>
+<li>October 2018: “Top 40” New Packages <a href="https://rviews.rstudio.com/2018/11/29/october-2018-top-40-new-packages/" target="_blank" rel="noopener">https://rviews.rstudio.com/2018/11/29/october-2018-top-40-new-packages/</a></li>
+<li>精选|2018年11月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/85240969" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/85240969</a></li>
+<li>精选|2018年12月R新包推荐 <a href="https://blog.csdn.net/kMD8d5R/article/details/86762091" target="_blank" rel="noopener">https://blog.csdn.net/kMD8d5R/article/details/86762091</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/28/SOFTWARE01.R new package recommended from Jan to Mar 2019/" rel="next" title="SOFTWARE01.R new package recommended from Jan to Mar 2019">
+                <i class="fa fa-chevron-left"></i> SOFTWARE01.R new package recommended from Jan to Mar 2019
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/29/SOFTWARE03.R new package recommended from Jan to Jun 2018/" rel="prev" title="SOFTWARE03.R new package recommended from Jan to Jun 2018">
+                SOFTWARE03.R new package recommended from Jan to Jun 2018 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <div class="site-description motion-element" itemprop="description">个人学习记录。What's Past is Prologue.<br>版权声明：本博客为博主原创文章，博客地址<a href="https://tardis012.github.io/" target="_blank">https://tardis012.github.io</a>，未经博主允许不得转载。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Jul-2018"><span class="nav-number">2.</span> <span class="nav-text">R New Package Recommended in Jul 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology"><span class="nav-number">2.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning"><span class="nav-number">2.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">2.3.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Aug-2018"><span class="nav-number">3.</span> <span class="nav-text">R New Package Recommended in Aug 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-1"><span class="nav-number">3.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others-1"><span class="nav-number">3.2.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Sep-2018"><span class="nav-number">4.</span> <span class="nav-text">R New Package Recommended in Sep 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-2"><span class="nav-number">4.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others-2"><span class="nav-number">4.2.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Oct-2018"><span class="nav-number">5.</span> <span class="nav-text">R New Package Recommended in Oct 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology-1"><span class="nav-number">5.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-3"><span class="nav-number">5.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Nov-2018"><span class="nav-number">6.</span> <span class="nav-text">R New Package Recommended in Nov 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-4"><span class="nav-number">6.1.</span> <span class="nav-text">Statistics and Machine learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others-3"><span class="nav-number">6.2.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-New-Package-Recommended-in-Dec-2018"><span class="nav-number">7.</span> <span class="nav-text">R New Package Recommended in Dec 2018</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrometeorology-2"><span class="nav-number">7.1.</span> <span class="nav-text">Hydrometeorology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Statistics-and-Machine-learning-5"><span class="nav-number">7.2.</span> <span class="nav-text">Statistics and Machine learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">8.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
