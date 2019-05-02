@@ -93,8 +93,10 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_5.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png">
-<meta property="og:updated_time" content="2019-05-02T10:25:26.878Z">
+<meta property="og:updated_time" content="2019-05-02T10:43:03.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Note 1 for &quot;Probability&quot; Topic">
 <meta name="twitter:description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
@@ -444,160 +446,11 @@
 <h4 id="Table-of-distributions"><a href="#Table-of-distributions" class="headerlink" title="Table of distributions"></a>Table of distributions</h4><ul>
 <li>Discrete Distributions</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Distribution</th>
-<th style="text-align:left">PMF and Support</th>
-<th style="text-align:center">Moment generating function</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bernoulli<br>Bern$(p)$</td>
-<td style="text-align:left">$P(X=1)=p$<br>$P(X=0)=q=1-p$</td>
-<td style="text-align:center">$q+p e^{t}$</td>
-</tr>
-<tr>
-<td>Binomial<br>Bin$(n,p)$</td>
-<td style="text-align:left">$P(X=k)=\left( \begin{array}{c}{n} \ {k}\end{array}\right) p^{k} q^{n-k}$<br>$k \in{0,1,2, \ldots n}$</td>
-<td style="text-align:center">$\left(q+p e^{t}\right)^{n}$</td>
-</tr>
-<tr>
-<td>Geometric<br>Geom$(p)$</td>
-<td style="text-align:left">$P(X=k)=q^{k} p$<br>$k \in{0,1,2, \ldots}$</td>
-<td style="text-align:center">$\frac{p}{1-q e^{t}}, q e^{t}&lt;1$</td>
-</tr>
-<tr>
-<td>Negative Binomial<br>NBin$(r,p)$</td>
-<td style="text-align:left">$P(X=n)=\left( \begin{array}{c}{r+n-1} \ {r-1}\end{array}\right) p^{r} q^{n}$<br>$n \in{0,1,2, \ldots}$</td>
-<td style="text-align:center">$\left(\frac{p}{1-q e^{t}}\right)^{r}, q e^{t}&lt;1$</td>
-</tr>
-<tr>
-<td>Hypergeometric HGeom$(w,b,n)$</td>
-<td style="text-align:left">$P(X=k)=\left( \begin{array}{c}{w} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {n-k}\end{array}\right) / \left( \begin{array}{c}{w+b} \ {n}\end{array}\right)$<br>$k \in{0,1,2, \ldots, n}$</td>
-<td style="text-align:center">$messy$</td>
-</tr>
-<tr>
-<td>Poisson<br>Pois$(\lambda)$</td>
-<td style="text-align:left">$P(X=k)=\frac{e^{-\lambda} \lambda^{k}}{k !}$<br>$k \in{0,1,2, \ldots}$</td>
-<td style="text-align:center">$e^{\lambda\left(e^{t}-1\right)}$</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Distribution</th>
-<th>Expected Value</th>
-<th>Variance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bernoulli<br>Bern$(p)$</td>
-<td>$p$</td>
-<td>$pq$</td>
-</tr>
-<tr>
-<td>Binomial<br>Bin$(n,p)$</td>
-<td>$np$</td>
-<td>$npq$</td>
-</tr>
-<tr>
-<td>Geometric<br>Geom$(p)$</td>
-<td>$q / p$</td>
-<td>$q / p^{2}$</td>
-</tr>
-<tr>
-<td>Negative Binomial<br>NBin$(r,p)$</td>
-<td>$r q / p$</td>
-<td>$r q / p^{2}$</td>
-</tr>
-<tr>
-<td>Hypergeometric<br>HGeom$(w,b,n)$</td>
-<td>$\mu=\frac{n w}{b+w}$</td>
-<td>$\left(\frac{w+b-n}{w+b-1}\right) n \frac{\mu}{n}\left(1-\frac{\mu}{n}\right)$</td>
-</tr>
-<tr>
-<td>Poisson<br>Pois$(\lambda)$</td>
-<td>$\lambda$</td>
-<td>$\lambda$</td>
-</tr>
-</tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_4.png" alt="StudyNote1forProbabilityTopic_4"></p>
 <ul>
 <li>Continuous Distributions</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Distribution</th>
-<th>PDF and Support</th>
-<th>Expected Value</th>
-<th>Variance</th>
-<th>Moment generating function</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Uniform<br>Unif$(a,b)$</td>
-<td>$f(x)=\frac{1}{b-a}$<br>$x \in(a, b)$</td>
-<td>$\frac{a+b}{2}$</td>
-<td>$\frac{(b-a)^{2}}{12}$</td>
-<td>$\frac{e^{t b}-e^{t a}}{t(b-a)}$</td>
-</tr>
-<tr>
-<td>Normal<br>$\mathcal{N}\left(\mu, \sigma^{2}\right)$</td>
-<td>$f(x)=\frac{1}{\sigma \sqrt{2 \pi}} e^{-(x-\mu)^{2} /\left(2 \sigma^{2}\right)}$<br>$x \in(-\infty, \infty)$</td>
-<td>$\mu$</td>
-<td>$\sigma^{2}$</td>
-<td>$e^{t \mu+\frac{\sigma^{2} t^{2}}{2}}$</td>
-</tr>
-<tr>
-<td>Exponential<br>Expo$(\lambda)$</td>
-<td>$f(x)=\lambda e^{-\lambda x}$<br>$\quad x \in(0, \infty)$</td>
-<td>$\frac{1}{\lambda}$</td>
-<td>$\frac{1}{\lambda^{2}}$</td>
-<td>$\frac{\lambda}{\lambda-t}, t&lt;\lambda$</td>
-</tr>
-<tr>
-<td>Gamma<br>Gamma$(a,\lambda)$</td>
-<td>$f(x)=\frac{1}{\Gamma(a)}(\lambda x)^{a} e^{-\lambda x} \frac{1}{x}$<br>$x \in(0, \infty)$</td>
-<td>$\frac{a}{\lambda}$</td>
-<td>$\frac{a}{\lambda^{2}}$</td>
-<td>$\left(\frac{\lambda}{\lambda-t}\right)^{a}, t&lt;\lambda$</td>
-</tr>
-<tr>
-<td>Beta<br>Beta$(a,b)$</td>
-<td>$f(x)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} x^{a-1}(1-x)^{b-1}$<br>$x \in(0,1)$</td>
-<td>$\mu=\frac{a}{a+b}$</td>
-<td>$\frac{\mu(1-\mu)}{(a+b+1)}$</td>
-<td>$messy$</td>
-</tr>
-<tr>
-<td>Log-Normal<br>$\mathcal{L} \mathcal{N}\left(\mu, \sigma^{2}\right)$</td>
-<td>$\frac{1}{x \sigma \sqrt{2 \pi}} e^{-(\log x-\mu)^{2} /\left(2 \sigma^{2}\right)}$<br>$x \in(0, \infty)$</td>
-<td>$\theta=e^{\mu+\sigma^{2} / 2}$</td>
-<td>$\theta^{2}\left(e^{\sigma^{2}}-1\right)$</td>
-<td>doesn’t exist</td>
-</tr>
-<tr>
-<td>Chi-Square<br>$\chi_{n}^{2}$</td>
-<td>$\frac{1}{2^{n / 2} \Gamma(n / 2)} x^{n / 2-1} e^{-x / 2}$<br>$x \in(0, \infty)$</td>
-<td>$n$</td>
-<td>$2n$</td>
-<td>$(1-2 t)^{-n / 2}$<br>$t&lt;1 / 2$</td>
-</tr>
-<tr>
-<td>Student-t<br>$t_{n}$</td>
-<td>$\frac{\Gamma((n+1) / 2)}{\sqrt{n \pi} \Gamma(n / 2)}\left(1+x^{2} / n\right)^{-(n+1) / 2}$<br>$x \in(-\infty, \infty)$</td>
-<td>0 if $n&gt;1$</td>
-<td>$\frac{n}{n-2}$ if $n&gt;2$</td>
-<td>doesn’t exist​</td>
-</tr>
-</tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_5.png" alt="StudyNote1forProbabilityTopic_5"></p>
 <h4 id="Distributions-in-R"><a href="#Distributions-in-R" class="headerlink" title="Distributions in R"></a>Distributions in R</h4><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png" alt="StudyNote1forProbabilityTopic_3"></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li>Blitzstein J K, Hwang J. Introduction to probability[M]. Chapman and Hall &amp; CRC, 2019.</li>
