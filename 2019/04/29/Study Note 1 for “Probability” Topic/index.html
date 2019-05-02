@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png">
-<meta property="og:updated_time" content="2019-05-02T09:29:55.720Z">
+<meta property="og:updated_time" content="2019-05-02T09:32:10.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Note 1 for &quot;Probability&quot; Topic">
 <meta name="twitter:description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
@@ -385,7 +385,7 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png" alt="StudyNote1forProbabilityTopic_2.png"></p>
 <h3 id="Conditional-probability"><a href="#Conditional-probability" class="headerlink" title="Conditional probability"></a>Conditional probability</h3><p>We have introduced probability as a language for expressing our degrees of belief or uncertainties about events. Whenever we observe new evidence (i.e., obtain data), we acquire information that may affect our uncertainties. A new observation that is consistent with an existing belief could make us more sure of that belief, while a surprising observation could throw that belief into question. <strong>Conditional probability is the concept that addresses this fundamental question: how should we update our beliefs in light of the evidence we observe?</strong> A useful perspective is that all probabilities are conditional; whether or not it’s written explicitly, there is always background knowledge (or assumptions) built into every probability. <em>Conditioning is the soul of statistics.</em></p>
-<h4 id="1-nbsp-Definition-of-Conditional-probability"><a href="#1-nbsp-Definition-of-Conditional-probability" class="headerlink" title="1.&nbsp;Definition of Conditional probability"></a>1.&nbsp;Definition of Conditional probability</h4><p>Definition (Conditional probability):  If $A$ and $B$ are events with $P(B) &gt; 0$, then the conditional probability of $A$ given $B$, denoted by $P(A|B)$, is defined as<br>​                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(A | B)=\frac{P(A \cap B)}{P(B)}$</p>
+<h4 id="Definition-of-Conditional-probability"><a href="#Definition-of-Conditional-probability" class="headerlink" title="Definition of Conditional probability"></a>Definition of Conditional probability</h4><p>Definition (Conditional probability):  If $A$ and $B$ are events with $P(B) &gt; 0$, then the conditional probability of $A$ given $B$, denoted by $P(A|B)$, is defined as<br>​                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(A | B)=\frac{P(A \cap B)}{P(B)}$</p>
 <ul>
 <li>$A$ is the event whose uncertainty we want to update.</li>
 <li>$B$ is the evidence we observe (or want to treat as given).</li>
@@ -397,7 +397,7 @@
 <li>For any event $A$, $P(A | A)=P(A \cap A) / P(A)=1$.</li>
 <li>When we calculate conditional probabilities, we are considering what information observing one event provides about another event, not whether one event causes another.</li>
 </ul>
-<h4 id="2-nbsp-Two-main-theorems"><a href="#2-nbsp-Two-main-theorems" class="headerlink" title="2.&nbsp;Two main theorems"></a>2.&nbsp;Two main theorems</h4><p><strong>Two main theorems of—Bayes’ rule and the law of total probability—which will allow us to compute conditional probabilities in a wide range of problems.</strong></p>
+<h4 id="Two-main-theorems"><a href="#Two-main-theorems" class="headerlink" title="Two main theorems"></a>Two main theorems</h4><p><strong>Two main theorems of—Bayes’ rule and the law of total probability—which will allow us to compute conditional probabilities in a wide range of problems.</strong></p>
 <ul>
 <li>Theorem (Bayes’ rule):  $P(A | B)=\frac{P(B | A) P(A)}{P(B)}$</li>
 <li>Theorem (Law of total probability): Let $A_{1}, \ldots, A_{n}$ be a partition of the sample space $S$ (i.e., the $A_{i}$ are disjoint events and their union is $S$), with $P(A_{i})&gt; 0$  for all $i$. Then</li>
@@ -412,7 +412,7 @@
 </ul>
 <p><strong>An important property of Bayes’ rule is that it is coherent</strong>: if we receive multiple pieces of information and wish to update our probabilities to incorporate all the information, it does not matter whether we update sequentially, taking each piece of evidence into account one at a time, or simultaneously, using all the evidence at once.</p>
 <p>Conditioning is extremely helpful for problem-solving because it allows us to break a problem into smaller pieces, consider all possible cases separately, and then combine them. When using this strategy, we should try to condition on the information that, if known, would make the problem simpler, hence the saying condition on what you wish you knew. When a problem involves multiple stages, it can be helpful to condition on the first step to obtain a recursive relationship.</p>
-<h3 id="Random-variables-and-their-distributions"><a href="#Random-variables-and-their-distributions" class="headerlink" title="Random variables and their distributions"></a>Random variables and their distributions</h3><h4 id="1-nbsp-Definition-of-random-variable"><a href="#1-nbsp-Definition-of-random-variable" class="headerlink" title="1.&nbsp;Definition of random variable"></a>1.&nbsp;Definition of random variable</h4><p>Definition (Random variable): Given an experiment with sample space $\Omega$, a random variable is a function from the sample space $\Omega$ to the real numbers $\mathbb{R}$.</p>
+<h3 id="Random-variables-and-their-distributions"><a href="#Random-variables-and-their-distributions" class="headerlink" title="Random variables and their distributions"></a>Random variables and their distributions</h3><h4 id="Definition-of-random-variable"><a href="#Definition-of-random-variable" class="headerlink" title="Definition of random variable"></a>Definition of random variable</h4><p>Definition (Random variable): Given an experiment with sample space $\Omega$, a random variable is a function from the sample space $\Omega$ to the real numbers $\mathbb{R}$.</p>
 <p><strong>To make the notion of <em>random variable</em> precise, we define it as a function mapping the sample space to the real line</strong>, as shown in Figure 3.1.</p>
 <p>Note: </p>
 <ul>
@@ -420,7 +420,7 @@
 <li>The randomness comes from the fact that we have a random experiment (with probabilities described by the probability function P); <u>the mapping itself is deterministic</u>.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png" alt="StudyNote1forProbabilityTopic_1"></p>
-<h4 id="2-nbsp-Nomenclature-for-probability-distributions"><a href="#2-nbsp-Nomenclature-for-probability-distributions" class="headerlink" title="2.&nbsp;Nomenclature for probability distributions"></a>2.&nbsp;Nomenclature for probability distributions</h4><table>
+<h4 id="Nomenclature-for-probability-distributions"><a href="#Nomenclature-for-probability-distributions" class="headerlink" title="Nomenclature for probability distributions"></a>Nomenclature for probability distributions</h4><table>
 <thead>
 <tr>
 <th></th>
@@ -441,7 +441,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3-nbsp-Table-of-distributions"><a href="#3-nbsp-Table-of-distributions" class="headerlink" title="3.&nbsp;Table of distributions"></a>3.&nbsp;Table of distributions</h4><ul>
+<h4 id="Table-of-distributions"><a href="#Table-of-distributions" class="headerlink" title="Table of distributions"></a>Table of distributions</h4><ul>
 <li>Discrete Distributions</li>
 </ul>
 <table>
@@ -598,7 +598,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="4-nbsp-Distributions-in-R"><a href="#4-nbsp-Distributions-in-R" class="headerlink" title="4.&nbsp;Distributions in R"></a>4.&nbsp;Distributions in R</h4><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png" alt="StudyNote1forProbabilityTopic_3"></p>
+<h4 id="Distributions-in-R"><a href="#Distributions-in-R" class="headerlink" title="Distributions in R"></a>Distributions in R</h4><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png" alt="StudyNote1forProbabilityTopic_3"></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li>Blitzstein J K, Hwang J. Introduction to probability[M]. Chapman and Hall &amp; CRC, 2019.</li>
 <li>Marc Peter Deisenroth, A Aldo Faisal, and Cheng Soon Ong. Mathematics for Machine Learning[M]. Cambridge University Press, 2018.</li>
@@ -790,7 +790,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Construction-of-a-probability-space"><span class="nav-number">2.</span> <span class="nav-text">Construction of a probability space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-probability"><span class="nav-number">3.</span> <span class="nav-text">Conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-nbsp-Definition-of-Conditional-probability"><span class="nav-number">3.1.</span> <span class="nav-text">1. Definition of Conditional probability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-nbsp-Two-main-theorems"><span class="nav-number">3.2.</span> <span class="nav-text">2. Two main theorems</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random-variables-and-their-distributions"><span class="nav-number">4.</span> <span class="nav-text">Random variables and their distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-nbsp-Definition-of-random-variable"><span class="nav-number">4.1.</span> <span class="nav-text">1. Definition of random variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-nbsp-Nomenclature-for-probability-distributions"><span class="nav-number">4.2.</span> <span class="nav-text">2. Nomenclature for probability distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-nbsp-Table-of-distributions"><span class="nav-number">4.3.</span> <span class="nav-text">3. Table of distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-nbsp-Distributions-in-R"><span class="nav-number">4.4.</span> <span class="nav-text">4. Distributions in R</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Construction-of-a-probability-space"><span class="nav-number">2.</span> <span class="nav-text">Construction of a probability space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-probability"><span class="nav-number">3.</span> <span class="nav-text">Conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-Conditional-probability"><span class="nav-number">3.1.</span> <span class="nav-text">Definition of Conditional probability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-main-theorems"><span class="nav-number">3.2.</span> <span class="nav-text">Two main theorems</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random-variables-and-their-distributions"><span class="nav-number">4.</span> <span class="nav-text">Random variables and their distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-random-variable"><span class="nav-number">4.1.</span> <span class="nav-text">Definition of random variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nomenclature-for-probability-distributions"><span class="nav-number">4.2.</span> <span class="nav-text">Nomenclature for probability distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Table-of-distributions"><span class="nav-number">4.3.</span> <span class="nav-text">Table of distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Distributions-in-R"><span class="nav-number">4.4.</span> <span class="nav-text">Distributions in R</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
