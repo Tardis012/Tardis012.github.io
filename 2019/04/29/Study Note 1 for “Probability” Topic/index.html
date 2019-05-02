@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_5.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png">
-<meta property="og:updated_time" content="2019-05-02T10:43:03.521Z">
+<meta property="og:updated_time" content="2019-05-02T10:47:31.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Note 1 for &quot;Probability&quot; Topic">
 <meta name="twitter:description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
@@ -387,7 +387,7 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png" alt="StudyNote1forProbabilityTopic_2.png"></p>
 <h3 id="Conditional-probability"><a href="#Conditional-probability" class="headerlink" title="Conditional probability"></a>Conditional probability</h3><p>We have introduced probability as a language for expressing our degrees of belief or uncertainties about events. Whenever we observe new evidence (i.e., obtain data), we acquire information that may affect our uncertainties. A new observation that is consistent with an existing belief could make us more sure of that belief, while a surprising observation could throw that belief into question. <strong>Conditional probability is the concept that addresses this fundamental question: how should we update our beliefs in light of the evidence we observe?</strong> A useful perspective is that all probabilities are conditional; whether or not it’s written explicitly, there is always background knowledge (or assumptions) built into every probability. <em>Conditioning is the soul of statistics.</em></p>
-<h4 id="Definition-of-Conditional-probability"><a href="#Definition-of-Conditional-probability" class="headerlink" title="Definition of Conditional probability"></a>Definition of Conditional probability</h4><p>Definition (Conditional probability):  If $A$ and $B$ are events with $P(B) &gt; 0$, then the conditional probability of $A$ given $B$, denoted by $P(A|B)$, is defined as<br>​                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(A | B)=\frac{P(A \cap B)}{P(B)}$</p>
+<h4 id="Definition-of-Conditional-probability"><a href="#Definition-of-Conditional-probability" class="headerlink" title="Definition of Conditional probability"></a>Definition of Conditional probability</h4><p>Definition (Conditional probability):  If $A$ and $B$ are events with $P(B) &gt; 0$, then the conditional probability of $A$ given $B$, denoted by $P(A|B)$, is defined as<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(A | B)=\frac{P(A \cap B)}{P(B)}$</p>
 <ul>
 <li>$A$ is the event whose uncertainty we want to update.</li>
 <li>$B$ is the evidence we observe (or want to treat as given).</li>
@@ -404,7 +404,7 @@
 <li>Theorem (Bayes’ rule):  $P(A | B)=\frac{P(B | A) P(A)}{P(B)}$</li>
 <li>Theorem (Law of total probability): Let $A_{1}, \ldots, A_{n}$ be a partition of the sample space $S$ (i.e., the $A_{i}$ are disjoint events and their union is $S$), with $P(A_{i})&gt; 0$  for all $i$. Then</li>
 </ul>
-<p>​                                                                     $P(B)=\sum_{i=1}^{n} P\left(B | A_{i}\right) P\left(A_{i}\right)$</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(B)=\sum_{i=1}^{n} P\left(B | A_{i}\right) P\left(A_{i}\right)$</p>
 <p>Note:</p>
 <ul>
 <li><p>In “Chapter 6.3 Sum Rule, Product Rule and Bayes’ Theorem” of “Mathematics for Machine Learning” book(Marc Peter Deisenroth et al., 2018), the author points out that there are only two fundamental rules, <strong><em>the sum rule and the product rule</em></strong>, that govern probabilistic inference. And Bayes’ theorem is a direct consequence of the sum and product rules.</p>
