@@ -83,22 +83,22 @@
 
 
 
-<meta name="description" content="mathjax: true 前言本篇为”Probability” Topic的第1篇学习笔记。">
+<meta name="description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
 <meta name="keywords" content="Statistics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Study Note 1 for &quot;Probability&quot; Topic">
 <meta property="og:url" content="https://tardis012.github.io/2019/04/29/Study Note 1 for “Probability” Topic/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="mathjax: true 前言本篇为”Probability” Topic的第1篇学习笔记。">
+<meta property="og:description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://tardis012.github.io/2019/04/29/Study%20Note%201%20for%20“Probability”%20Topic/assets/StudyNote1forProbabilityTopic_2.png">
-<meta property="og:image" content="https://tardis012.github.io/2019/04/29/Study%20Note%201%20for%20“Probability”%20Topic/assets/StudyNote1forProbabilityTopic_1.png">
-<meta property="og:image" content="https://tardis012.github.io/2019/04/29/Study%20Note%201%20for%20“Probability”%20Topic/assets/StudyNote1forProbabilityTopic_3.png">
-<meta property="og:updated_time" content="2019-05-02T08:32:38.104Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png">
+<meta property="og:updated_time" content="2019-05-02T09:29:55.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Note 1 for &quot;Probability&quot; Topic">
-<meta name="twitter:description" content="mathjax: true 前言本篇为”Probability” Topic的第1篇学习笔记。">
-<meta name="twitter:image" content="https://tardis012.github.io/2019/04/29/Study%20Note%201%20for%20“Probability”%20Topic/assets/StudyNote1forProbabilityTopic_2.png">
+<meta name="twitter:description" content="前言本篇为”Probability” Topic的第1篇学习笔记。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
 
 
 
@@ -360,8 +360,7 @@
       
 
       
-        <p>mathjax: true</p>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为”Probability” Topic的第1篇学习笔记。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为”Probability” Topic的第1篇学习笔记。</p>
 <a id="more"></a>
 <h3 id="Construction-of-a-probability-space"><a href="#Construction-of-a-probability-space" class="headerlink" title="Construction of a probability space"></a>Construction of a probability space</h3><p>Probability provides a logical framework for quantifying uncertainty and randomness in a principled way.</p>
 <p><u>The mathematical framework for probability</u> is built around <u><em>sets</em></u>.</p>
@@ -384,7 +383,7 @@
 <li>If $A \subseteq B,$ then $P(A) \leq P(B)$</li>
 <li>$P(A \cup B)=P(A)+P(B)-P(A \cap B)$</li>
 </ul>
-<p><img src="assets/StudyNote1forProbabilityTopic_2.png" alt="StudyNote1forProbabilityTopic_2"></p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png" alt="StudyNote1forProbabilityTopic_2.png"></p>
 <h3 id="Conditional-probability"><a href="#Conditional-probability" class="headerlink" title="Conditional probability"></a>Conditional probability</h3><p>We have introduced probability as a language for expressing our degrees of belief or uncertainties about events. Whenever we observe new evidence (i.e., obtain data), we acquire information that may affect our uncertainties. A new observation that is consistent with an existing belief could make us more sure of that belief, while a surprising observation could throw that belief into question. <strong>Conditional probability is the concept that addresses this fundamental question: how should we update our beliefs in light of the evidence we observe?</strong> A useful perspective is that all probabilities are conditional; whether or not it’s written explicitly, there is always background knowledge (or assumptions) built into every probability. <em>Conditioning is the soul of statistics.</em></p>
 <h4 id="1-nbsp-Definition-of-Conditional-probability"><a href="#1-nbsp-Definition-of-Conditional-probability" class="headerlink" title="1.&nbsp;Definition of Conditional probability"></a>1.&nbsp;Definition of Conditional probability</h4><p>Definition (Conditional probability):  If $A$ and $B$ are events with $P(B) &gt; 0$, then the conditional probability of $A$ given $B$, denoted by $P(A|B)$, is defined as<br>​                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$P(A | B)=\frac{P(A \cap B)}{P(B)}$</p>
 <ul>
@@ -412,7 +411,7 @@
 </li>
 </ul>
 <p><strong>An important property of Bayes’ rule is that it is coherent</strong>: if we receive multiple pieces of information and wish to update our probabilities to incorporate all the information, it does not matter whether we update sequentially, taking each piece of evidence into account one at a time, or simultaneously, using all the evidence at once.</p>
-<p>Conditioning is extremely helpful for problem-solving because it allows us to break a problem into smaller pieces, consider all possible cases separately, and then combine them. When using this strategy, we should try to condition on the information that, if known, would make the problem simpler, hence the saying condition on what you wish you knew. When a problem involves multiple stages, it can be helpful to<br>condition on the first step to obtain a recursive relationship.</p>
+<p>Conditioning is extremely helpful for problem-solving because it allows us to break a problem into smaller pieces, consider all possible cases separately, and then combine them. When using this strategy, we should try to condition on the information that, if known, would make the problem simpler, hence the saying condition on what you wish you knew. When a problem involves multiple stages, it can be helpful to condition on the first step to obtain a recursive relationship.</p>
 <h3 id="Random-variables-and-their-distributions"><a href="#Random-variables-and-their-distributions" class="headerlink" title="Random variables and their distributions"></a>Random variables and their distributions</h3><h4 id="1-nbsp-Definition-of-random-variable"><a href="#1-nbsp-Definition-of-random-variable" class="headerlink" title="1.&nbsp;Definition of random variable"></a>1.&nbsp;Definition of random variable</h4><p>Definition (Random variable): Given an experiment with sample space $\Omega$, a random variable is a function from the sample space $\Omega$ to the real numbers $\mathbb{R}$.</p>
 <p><strong>To make the notion of <em>random variable</em> precise, we define it as a function mapping the sample space to the real line</strong>, as shown in Figure 3.1.</p>
 <p>Note: </p>
@@ -420,7 +419,7 @@
 <li>The name “random variable” is a great source of misunderstanding as it is neither random nor is it a variable. <u>It is a function.</u></li>
 <li>The randomness comes from the fact that we have a random experiment (with probabilities described by the probability function P); <u>the mapping itself is deterministic</u>.</li>
 </ul>
-<p><img src="assets/StudyNote1forProbabilityTopic_1.png" alt="StudyNote1forProbabilityTopic_1"></p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png" alt="StudyNote1forProbabilityTopic_1"></p>
 <h4 id="2-nbsp-Nomenclature-for-probability-distributions"><a href="#2-nbsp-Nomenclature-for-probability-distributions" class="headerlink" title="2.&nbsp;Nomenclature for probability distributions"></a>2.&nbsp;Nomenclature for probability distributions</h4><table>
 <thead>
 <tr>
@@ -442,61 +441,94 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3-nbsp-Table-of-distributions"><a href="#3-nbsp-Table-of-distributions" class="headerlink" title="3.&nbsp;Table of distributions"></a>3.&nbsp;Table of distributions</h4><table>
+<h4 id="3-nbsp-Table-of-distributions"><a href="#3-nbsp-Table-of-distributions" class="headerlink" title="3.&nbsp;Table of distributions"></a>3.&nbsp;Table of distributions</h4><ul>
+<li>Discrete Distributions</li>
+</ul>
+<table>
 <thead>
 <tr>
 <th>Distribution</th>
-<th>PMF and Support</th>
-<th>Expected Value</th>
-<th>Variance</th>
-<th>Moment generating function</th>
+<th style="text-align:left">PMF and Support</th>
+<th style="text-align:center">Moment generating function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Bernoulli<br>Bern$(p)$</td>
-<td>$P(X=1)=p$<br>$P(X=0)=q=1-p$</td>
-<td>$p$</td>
-<td>$pq$</td>
-<td>$q+p e^{t}$</td>
+<td style="text-align:left">$P(X=1)=p$<br>$P(X=0)=q=1-p$</td>
+<td style="text-align:center">$q+p e^{t}$</td>
 </tr>
 <tr>
 <td>Binomial<br>Bin$(n,p)$</td>
-<td>$\begin{aligned} P(X&amp;=k )=\left( \begin{array}{c}{n} \ {k}\end{array}\right) p^{k} q^{n-k} \ k &amp; \in{0,1,2, \ldots n} \end{aligned}$</td>
-<td>$np$</td>
-<td>$npq$</td>
-<td>$\left(q+p e^{t}\right)^{n}$</td>
+<td style="text-align:left">$\begin{aligned} P(X&amp;=k )=\left( \begin{array}{c}{n} \ {k}\end{array}\right) p^{k} q^{n-k} \ k &amp; \in{0,1,2, \ldots n} \end{aligned}$</td>
+<td style="text-align:center">$\left(q+p e^{t}\right)^{n}$</td>
 </tr>
 <tr>
 <td>Geometric<br>Geom$(p)$</td>
-<td>$P(X=k)=q^{k} p$<br>$k \in{0,1,2, \ldots}$</td>
-<td>$q / p$</td>
-<td>$q / p^{2}$</td>
-<td>$\frac{p}{1-q e^{t}}, q e^{t}&lt;1$</td>
+<td style="text-align:left">$P(X=k)=q^{k} p$<br>$k \in{0,1,2, \ldots}$</td>
+<td style="text-align:center">$\frac{p}{1-q e^{t}}, q e^{t}&lt;1$</td>
 </tr>
 <tr>
 <td>Negative Binomial<br>NBin$(r,p)$</td>
-<td>$P(X=n)=\left( \begin{array}{c}{r+n-1} \ {r-1}\end{array}\right) p^{r} q^{n}$<br>$n \in{0,1,2, \ldots}$</td>
-<td>$r q / p$</td>
-<td>$r q / p^{2}$</td>
-<td>$\left(\frac{p}{1-q e^{t}}\right)^{r}, q e^{t}&lt;1$</td>
+<td style="text-align:left">$P(X=n)=\left( \begin{array}{c}{r+n-1} \ {r-1}\end{array}\right) p^{r} q^{n}$<br>$n \in{0,1,2, \ldots}$</td>
+<td style="text-align:center">$\left(\frac{p}{1-q e^{t}}\right)^{r}, q e^{t}&lt;1$</td>
 </tr>
 <tr>
 <td>Hypergeometric HGeom$(w,b,n)$</td>
-<td>$P(X=k)=\left( \begin{array}{c}{w} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {n-k}\end{array}\right) / \left( \begin{array}{c}{w+b} \ {n}\end{array}\right)$<br>$k \in{0,1,2, \ldots, n}$</td>
-<td>$\mu=\frac{n w}{b+w}$</td>
-<td>$\left(\frac{w+b-n}{w+b-1}\right) n \frac{\mu}{n}\left(1-\frac{\mu}{n}\right)$</td>
-<td>$messy$</td>
+<td style="text-align:left">$P(X=k)=\left( \begin{array}{c}{w} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {k}\end{array}\right) \left( \begin{array}{c}{b} \ {n-k}\end{array}\right) / \left( \begin{array}{c}{w+b} \ {n}\end{array}\right)$<br>$k \in{0,1,2, \ldots, n}$</td>
+<td style="text-align:center">$messy$</td>
 </tr>
 <tr>
 <td>Poisson<br>Pois$(\lambda)$</td>
-<td>$P(X=k)=\frac{e^{-\lambda} \lambda^{k}}{k !}$<br>$k \in{0,1,2, \ldots}$</td>
-<td>$\lambda$</td>
-<td>$\lambda$</td>
-<td>$e^{\lambda\left(e^{t}-1\right)}$</td>
+<td style="text-align:left">$P(X=k)=\frac{e^{-\lambda} \lambda^{k}}{k !}$<br>$k \in{0,1,2, \ldots}$</td>
+<td style="text-align:center">$e^{\lambda\left(e^{t}-1\right)}$</td>
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Expected Value</th>
+<th>Variance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bernoulli<br>Bern$(p)$</td>
+<td>$p$</td>
+<td>$pq$</td>
+</tr>
+<tr>
+<td>Binomial<br>Bin$(n,p)$</td>
+<td>$np$</td>
+<td>$npq$</td>
+</tr>
+<tr>
+<td>Geometric<br>Geom$(p)$</td>
+<td>$q / p$</td>
+<td>$q / p^{2}$</td>
+</tr>
+<tr>
+<td>Negative Binomial<br>NBin$(r,p)$</td>
+<td>$r q / p$</td>
+<td>$r q / p^{2}$</td>
+</tr>
+<tr>
+<td>Hypergeometric<br>HGeom$(w,b,n)$</td>
+<td>$\mu=\frac{n w}{b+w}$</td>
+<td>$\left(\frac{w+b-n}{w+b-1}\right) n \frac{\mu}{n}\left(1-\frac{\mu}{n}\right)$</td>
+</tr>
+<tr>
+<td>Poisson<br>Pois$(\lambda)$</td>
+<td>$\lambda$</td>
+<td>$\lambda$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Continuous Distributions</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -555,7 +587,7 @@
 <td>$\frac{1}{2^{n / 2} \Gamma(n / 2)} x^{n / 2-1} e^{-x / 2}$<br>$x \in(0, \infty)$</td>
 <td>$n$</td>
 <td>$2n$</td>
-<td>$(1-2 t)^{-n / 2}, t&lt;1 / 2$</td>
+<td>$(1-2 t)^{-n / 2}$<br>$t&lt;1 / 2$</td>
 </tr>
 <tr>
 <td>Student-t<br>$t_{n}$</td>
@@ -566,7 +598,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="4-nbsp-Distributions-in-R"><a href="#4-nbsp-Distributions-in-R" class="headerlink" title="4.&nbsp;Distributions in R"></a>4.&nbsp;Distributions in R</h4><p><img src="assets/StudyNote1forProbabilityTopic_3.png" alt="StudyNote1forProbabilityTopic_3"></p>
+<h4 id="4-nbsp-Distributions-in-R"><a href="#4-nbsp-Distributions-in-R" class="headerlink" title="4.&nbsp;Distributions in R"></a>4.&nbsp;Distributions in R</h4><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_3.png" alt="StudyNote1forProbabilityTopic_3"></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li>Blitzstein J K, Hwang J. Introduction to probability[M]. Chapman and Hall &amp; CRC, 2019.</li>
 <li>Marc Peter Deisenroth, A Aldo Faisal, and Cheng Soon Ong. Mathematics for Machine Learning[M]. Cambridge University Press, 2018.</li>
