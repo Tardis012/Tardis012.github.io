@@ -83,18 +83,20 @@
 
 
 
-<meta name="description" content="What&apos;s Past is Prologue.版权声明：本博客为博主原创文章，未经博主允许不得转载。">
+<meta name="description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
 <meta name="keywords" content="Statistics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Explore how to estimate probability distribution in Python">
 <meta property="og:url" content="https://tardis012.github.io/2019/05/02/Explore how to estimate probability distribution in Python/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="What&apos;s Past is Prologue.版权声明：本博客为博主原创文章，未经博主允许不得转载。">
+<meta property="og:description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-02T13:06:51.941Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png">
+<meta property="og:updated_time" content="2019-05-02T16:42:28.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Explore how to estimate probability distribution in Python">
-<meta name="twitter:description" content="What&apos;s Past is Prologue.版权声明：本博客为博主原创文章，未经博主允许不得转载。">
+<meta name="twitter:description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png">
 
 
 
@@ -356,7 +358,255 @@
       
 
       
-        
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。</p>
+<a id="more"></a>
+<h2 id="Overview-of-Scipy"><a href="#Overview-of-Scipy" class="headerlink" title="Overview of Scipy"></a>Overview of Scipy</h2><p><u><em>SciPy</em></u> is an extensive library for applied mathematics and scientific computation. The following is <u>the complete list of all the modules available</u> in the library (Martins L F, 2014).</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cluster</td>
+<td>Clustering algorithms</td>
+</tr>
+<tr>
+<td>constants</td>
+<td>Physical and mathematical constants</td>
+</tr>
+<tr>
+<td>fftpack</td>
+<td>Fast Fourier Transform</td>
+</tr>
+<tr>
+<td>integrate</td>
+<td>Integration and ordinary differential equations</td>
+</tr>
+<tr>
+<td>interpolate</td>
+<td>Interpolation and splines</td>
+</tr>
+<tr>
+<td>io</td>
+<td>Input and output</td>
+</tr>
+<tr>
+<td>linalg</td>
+<td>Linear algebra</td>
+</tr>
+<tr>
+<td><strong>ndimage</strong></td>
+<td>Image processing</td>
+</tr>
+<tr>
+<td>odr</td>
+<td>Orthogonal distance regression</td>
+</tr>
+<tr>
+<td><strong>optimize</strong></td>
+<td>Optimization and root-finding</td>
+</tr>
+<tr>
+<td>signal</td>
+<td>Signal processing</td>
+</tr>
+<tr>
+<td>sparse</td>
+<td>Sparse matrices</td>
+</tr>
+<tr>
+<td><strong>spatial</strong></td>
+<td>Spatial data structures</td>
+</tr>
+<tr>
+<td>special</td>
+<td>Special functions</td>
+</tr>
+<tr>
+<td><strong>stats</strong></td>
+<td>Statistical distributions</td>
+</tr>
+<tr>
+<td>weave</td>
+<td>C/C++ integration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="The-“stats”-module"><a href="#The-“stats”-module" class="headerlink" title="The “stats” module"></a>The “stats” module</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br></pre></td></tr></table></figure>
+<p>Statistical methods are built on the foundation provided by probability theory, with which we can model uncertainty and incomplete information using probabilistic, random variables. </p>
+<p>There are two general distribution classes that have been implemented for encapsulating continuous random variables and discrete random variables. A summary of selected methods for discrete and continuous random variables is given in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pdf/pmf</td>
+<td>Probability distribution function (continuous) or probability mass function<br>(discrete).</td>
+</tr>
+<tr>
+<td>cdf</td>
+<td>Cumulative distribution function</td>
+</tr>
+<tr>
+<td>sf</td>
+<td>Survival Function (1-CDF)</td>
+</tr>
+<tr>
+<td>ppf</td>
+<td>Percent Point Function (Inverse of CDF)</td>
+</tr>
+<tr>
+<td>moment</td>
+<td>Noncentral moments of <em>n</em> th order</td>
+</tr>
+<tr>
+<td>stats</td>
+<td>Statistics of the distribution (typically the mean and variance, sometimes<br>additional statistics)</td>
+</tr>
+<tr>
+<td>fit</td>
+<td>Fit distribution to data using a numerical maximum likelihood optimization (for continuous distributions)</td>
+</tr>
+<tr>
+<td>expect</td>
+<td>Expectation value of a function with respect to the distribution</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>The endpoints of the interval that contains a given percentage of the distribution(confidence interval)</td>
+</tr>
+<tr>
+<td>rvs</td>
+<td>Random variable samples. Takes as argument the size of the resulting array of samples</td>
+</tr>
+<tr>
+<td>mean, median, std, var</td>
+<td>Descriptive statistics: mean, median, standard deviation, and the variance of the distribution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Parameter-distribution"><a href="#Parameter-distribution" class="headerlink" title="Parameter distribution"></a>Parameter distribution</h3><p>Given the sampled data, we can fit a distribution function using maximum likelihood optimization with respect to the distribution parameters.</p>
+<p>The SciPy <em>stats</em> module provides classes for representing random variables with a large number of probability distributions. At the time of writing, there are classes for 13 discrete and 98 continuous distributions (Robert Johansson, 2019).</p>
+<p>Remark: Currently, in the <a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html" target="_blank" rel="noopener">tutorial of SciPy <em>stats</em> module</a>, 12 discrete and 82 continuous distributions are listed.</p>
+<h4 id="12-discrete-distributions"><a href="#12-discrete-distributions" class="headerlink" title="12 discrete distributions"></a><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete.html" target="_blank" rel="noopener">12 discrete distributions</a></h4><ol>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_bernoulli.html" target="_blank" rel="noopener">Bernoulli Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_binom.html" target="_blank" rel="noopener">Binomial Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_boltzmann.html" target="_blank" rel="noopener">Boltzmann (truncated Planck) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_planck.html" target="_blank" rel="noopener">Planck (discrete exponential) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_poisson.html" target="_blank" rel="noopener">Poisson Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_geom.html" target="_blank" rel="noopener">Geometric Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_nbinom.html" target="_blank" rel="noopener">Negative Binomial Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_hypergeom.html" target="_blank" rel="noopener">Hypergeometric Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_zipf.html" target="_blank" rel="noopener">Zipf (Zeta) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_logser.html" target="_blank" rel="noopener">Logarithmic (Log-Series, Series) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_randint.html" target="_blank" rel="noopener">Discrete Uniform (randint) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_dlaplace.html" target="_blank" rel="noopener">Discrete Laplacian Distribution</a></li>
+</ol>
+<h4 id="82-continuous-distributions"><a href="#82-continuous-distributions" class="headerlink" title="82 continuous distributions"></a><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete.html" target="_blank" rel="noopener">82 continuous distributions</a></h4><ol>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_alpha.html" target="_blank" rel="noopener">Alpha Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_anglit.html" target="_blank" rel="noopener">Anglit Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_arcsine.html" target="_blank" rel="noopener">Arcsine Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_beta.html" target="_blank" rel="noopener">Beta Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_betaprime.html" target="_blank" rel="noopener">Beta Prime Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_bradford.html" target="_blank" rel="noopener">Bradford Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_burr.html" target="_blank" rel="noopener">Burr Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_cauchy.html" target="_blank" rel="noopener">Cauchy Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_chi.html" target="_blank" rel="noopener">Chi Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_chi2.html" target="_blank" rel="noopener">Chi-squared Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_cosine.html" target="_blank" rel="noopener">Cosine Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_dgamma.html" target="_blank" rel="noopener">Double Gamma Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_dweibull.html" target="_blank" rel="noopener">Double Weibull Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_erlang.html" target="_blank" rel="noopener">Erlang Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_expon.html" target="_blank" rel="noopener">Exponential Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_exponweib.html" target="_blank" rel="noopener">Exponentiated Weibull Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_exponpow.html" target="_blank" rel="noopener">Exponential Power Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_fatiguelife.html" target="_blank" rel="noopener">Fatigue Life (Birnbaum-Saunders) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_fisk.html" target="_blank" rel="noopener">Fisk (Log Logistic) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_foldcauchy.html" target="_blank" rel="noopener">Folded Cauchy Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_foldnorm.html" target="_blank" rel="noopener">Folded Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_f.html" target="_blank" rel="noopener">Fratio (or F) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gamma.html" target="_blank" rel="noopener">Gamma Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_genlogistic.html" target="_blank" rel="noopener">Generalized Logistic Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_genpareto.html" target="_blank" rel="noopener">Generalized Pareto Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_genexpon.html" target="_blank" rel="noopener">Generalized Exponential Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_genextreme.html" target="_blank" rel="noopener">Generalized Extreme Value Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gengamma.html" target="_blank" rel="noopener">Generalized Gamma Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_genhalflogistic.html" target="_blank" rel="noopener">Generalized Half-Logistic Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gennorm.html" target="_blank" rel="noopener">Generalized Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gilbrat.html" target="_blank" rel="noopener">Gilbrat Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gompertz.html" target="_blank" rel="noopener">Gompertz (Truncated Gumbel) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gumbel_r.html" target="_blank" rel="noopener">Gumbel (LogWeibull, Fisher-Tippetts, Type I Extreme Value) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gumbel_l.html" target="_blank" rel="noopener">Gumbel Left-skewed (for minimum order statistic) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_halfcauchy.html" target="_blank" rel="noopener">HalfCauchy Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_halfnorm.html" target="_blank" rel="noopener">HalfNormal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_halflogistic.html" target="_blank" rel="noopener">Half-Logistic Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_hypsecant.html" target="_blank" rel="noopener">Hyperbolic Secant Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_gausshyper.html" target="_blank" rel="noopener">Gauss Hypergeometric Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_invgamma.html" target="_blank" rel="noopener">Inverted Gamma Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_invgauss.html" target="_blank" rel="noopener">Inverse Normal (Inverse Gaussian) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_invweibull.html" target="_blank" rel="noopener">Inverted Weibull Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_johnsonsb.html" target="_blank" rel="noopener">Johnson SB Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_johnsonsu.html" target="_blank" rel="noopener">Johnson SU Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_ksone.html" target="_blank" rel="noopener">KSone Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_kstwobign.html" target="_blank" rel="noopener">KStwo Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_laplace.html" target="_blank" rel="noopener">Laplace (Double Exponential, Bilateral Exponential) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_levy_l.html" target="_blank" rel="noopener">Left-skewed Lévy Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_levy.html" target="_blank" rel="noopener">Lévy Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_logistic.html" target="_blank" rel="noopener">Logistic (Sech-squared) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_loglaplace.html" target="_blank" rel="noopener">Log Double Exponential (Log-Laplace) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_loggamma.html" target="_blank" rel="noopener">Log Gamma Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_lognorm.html" target="_blank" rel="noopener">Log Normal (Cobb-Douglass) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_maxwell.html" target="_blank" rel="noopener">Maxwell Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_mielke.html" target="_blank" rel="noopener">Mielke’s Beta-Kappa Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_nakagami.html" target="_blank" rel="noopener">Nakagami Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_ncx2.html" target="_blank" rel="noopener">Noncentral chi-squared Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_ncf.html" target="_blank" rel="noopener">Noncentral F Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_nct.html" target="_blank" rel="noopener">Noncentral t Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_norm.html" target="_blank" rel="noopener">Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_pareto.html" target="_blank" rel="noopener">Pareto Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_lomax.html" target="_blank" rel="noopener">Pareto Second Kind (Lomax) Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_powerlognorm.html" target="_blank" rel="noopener">Power Log Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_powernorm.html" target="_blank" rel="noopener">Power Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_powerlaw.html" target="_blank" rel="noopener">Power-function Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_rdist.html" target="_blank" rel="noopener">R-distribution Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_rayleigh.html" target="_blank" rel="noopener">Rayleigh Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_rice.html" target="_blank" rel="noopener">Rice Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_reciprocal.html" target="_blank" rel="noopener">Reciprocal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_recipinvgauss.html" target="_blank" rel="noopener">Reciprocal Inverse Gaussian Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_semicircular.html" target="_blank" rel="noopener">Semicircular Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_t.html" target="_blank" rel="noopener">Student t Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_triang.html" target="_blank" rel="noopener">Triangular Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_truncexpon.html" target="_blank" rel="noopener">Truncated Exponential Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_truncnorm.html" target="_blank" rel="noopener">Truncated Normal Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_tukeylambda.html" target="_blank" rel="noopener">Tukey-Lambda Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_uniform.html" target="_blank" rel="noopener">Uniform Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_vonmises.html" target="_blank" rel="noopener">Von Mises Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_wald.html" target="_blank" rel="noopener">Wald Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_weibull_max.html" target="_blank" rel="noopener">Weibull Maximum Extreme Value Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_weibull_min.html" target="_blank" rel="noopener">Weibull Minimum Extreme Value Distribution</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_wrapcauchy.html" target="_blank" rel="noopener">Wrapped Cauchy Distribution</a></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png" alt="StudyNote1forProbabilityTopic_6"></p>
+<h3 id="Nonparametric-distribution"><a href="#Nonparametric-distribution" class="headerlink" title="Nonparametric distribution"></a>Nonparametric distribution</h3><p>We may even fit the best probability density function without specifying any particular distribution, thanks to a non-parametric technique, kernel density estimation(KDE). In SciPy’s the KDE method using a Gaussian kernel is implemented in the function <em>stats.kde.gaussian_kde</em>.  </p>
+<p>Given kernel-density estimate, we can also use it to generate new random numbers using the resample method, which takes the number of data points as arguments.</p>
+<p>Once we have a KDE that represents the probability distribution for a statistical problem, we can proceed with many of the same methods as we use in parametric statistics. The advantage of nonparametric methods is that we do not necessarily need to make assumptions about the shape of the distribution function. However, because nonparametric methods use less information (weaker assumptions)<br>than parametric methods, their statistical power is lower. Therefore, if we can justify using a parametric method, then that is usually the best approach. Nonparametric methods offer a versatile generic approach that we can fall back on when parametric methods are not feasible.</p>
+<h2 id="The-“PyMC3”-module"><a href="#The-“PyMC3”-module" class="headerlink" title="The “PyMC3” module"></a>The “PyMC3” module</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">import</span> pymc3 <span class="keyword">as</span> mc</span><br></pre></td></tr></table></figure>
+<p><a href="https://docs.pymc.io/nb_tutorials/index.html" target="_blank" rel="noopener">The PyMC library</a>, currently known as PyMC3, provides a framework for doing probabilistic programming – that is, solving statistical problems using simulation with Bayesian methods.</p>
+<p>Bayesian statistics, in contrast to the frequentist’s statistics, treats probability as a degree of belief rather than as a measure of proportions of observed outcomes.</p>
+<p>Although Bayes’ theorem describes how to compute the posterior distribution from the prior distribution, for most realistic problems, the calculations involve evaluating high-dimensional integrals that can be prohibitively difficult to compute, both analytically and numerically. This has until recently hindered Bayesian statistics from being widely used in practice. However, with the advent of computational statistics, and the development of efficient simulation methods that allows us to sample directly from the posterior distributions (rather than directly compute it), Bayesian methods are becoming increasingly popular.</p>
+<p>The methods that enable us to sample from the posterior distribution are, first and foremost, the so-called Markov chain Monte Carlo (MCMC) methods. Several alternative implementations of MCMC methods are available. For instance, traditional MCMC methods include Gibbs sampling and the Metropolis-Hastings algorithm, and more recent methods include Hamiltonian and No-U-Turn algorithms.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li>Martins L F. IPython notebook essentials[M]. Packt Publishing Ltd, 2014.</li>
+<li>Robert Johansson. Numerical Python-Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib[M]. Apress, 2019.</li>
+</ul>
+
       
     </div>
     
@@ -446,8 +696,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -523,6 +782,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-Scipy"><span class="nav-number">2.</span> <span class="nav-text">Overview of Scipy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“stats”-module"><span class="nav-number">3.</span> <span class="nav-text">The “stats” module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameter-distribution"><span class="nav-number">3.1.</span> <span class="nav-text">Parameter distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-discrete-distributions"><span class="nav-number">3.1.1.</span> <span class="nav-text">12 discrete distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#82-continuous-distributions"><span class="nav-number">3.1.2.</span> <span class="nav-text">82 continuous distributions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nonparametric-distribution"><span class="nav-number">3.2.</span> <span class="nav-text">Nonparametric distribution</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“PyMC3”-module"><span class="nav-number">4.</span> <span class="nav-text">The “PyMC3” module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
