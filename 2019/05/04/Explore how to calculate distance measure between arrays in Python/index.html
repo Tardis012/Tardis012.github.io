@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小zのGarden">
 <meta property="og:description" content="前言本篇为近期学习如何采用Python进行矩阵元素距离计算的总结笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-05T04:31:37.918Z">
+<meta property="og:updated_time" content="2019-05-05T04:36:29.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Explore how to calculate distance measure between arrays in Python">
 <meta name="twitter:description" content="前言本篇为近期学习如何采用Python进行矩阵元素距离计算的总结笔记。">
@@ -374,7 +374,7 @@
 <td>Pairwise distances between observations in n-dimensional space.</td>
 </tr>
 <tr>
-<td><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html#scipy.spatial.distance.cdist" target="_blank" rel="noopener"><code>cdist</code></a>(XA, XB[, metric])</td>
+<td>cdist(XA, XB[, metric])</td>
 <td>Compute distance between each pair of the two collections of inputs.</td>
 </tr>
 <tr>
@@ -387,11 +387,11 @@
 </tr>
 </tbody>
 </table>
-<p>备注：我的理解是scipy.spatial.distance模块拿来算矩阵元素之间距离。pdist用来计算矩阵距离的时候，行数要一样，<em>cdist</em>中可以不一样。</p>
+<p>备注：我的理解是scipy.spatial.distance模块拿来算矩阵元素之间距离。<em>pdist</em>用来计算矩阵距离的时候，行数要一样，<em>cdist</em>中可以不一样。</p>
 <p><em>pdist</em>中包含的距离函数有<code>braycurtis</code>, <code>canberra</code>, <code>chebyshev</code>, <code>cityblock</code>, <code>correlation</code>, <code>cosine</code>, <code>dice</code>, <code>euclidean</code>, <code>hamming</code>, <code>jaccard</code>, <code>jensenshannon</code>, <code>kulsinski</code>, <code>mahalanobis</code>, <code>matching</code>, <code>minkowski</code>, <code>rogerstanimoto</code>, <code>russellrao</code>, <code>seuclidean</code>, <code>sokalmichener</code>, <code>sokalsneath</code>, <code>sqeuclidean</code>, <code>yule</code> （共22个，<code>matching</code>为<code>hamming</code>同义词，所以一共21个）。</p>
 <p><em>cdist</em>除了<em>pdist</em>中的21个之外，还有一个<code>wminkowski</code>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> pdist</span><br><span class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> cdist</span><br></pre></td></tr></table></figure>
-<h3 id="Distance-functions-in-pdist-amp-cdist"><a href="#Distance-functions-in-pdist-amp-cdist" class="headerlink" title="Distance functions in pdist &amp; cdist"></a>Distance functions in pdist &amp; cdist</h3><h4 id="Distance-functions-between-two-numeric-vectors-u-and-v"><a href="#Distance-functions-between-two-numeric-vectors-u-and-v" class="headerlink" title="Distance functions between two ==numeric== vectors u and v."></a>Distance functions between two <strong>==numeric==</strong> vectors <code>u</code> and <code>v</code>.</h4><table>
+<h3 id="Distance-functions-in-pdist-amp-cdist"><a href="#Distance-functions-in-pdist-amp-cdist" class="headerlink" title="Distance functions in pdist &amp; cdist"></a>Distance functions in pdist &amp; cdist</h3><h4 id="Distance-functions-between-two-numeric-vectors-u-and-v"><a href="#Distance-functions-between-two-numeric-vectors-u-and-v" class="headerlink" title="Distance functions between two numeric vectors u and v."></a>Distance functions between two <strong><u>numeric</u></strong> vectors <code>u</code> and <code>v</code>.</h4><table>
 <thead>
 <tr>
 <th style="text-align:center">No.</th>
@@ -517,7 +517,7 @@
 </tbody>
 </table>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用示例</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x=np.random.random(<span class="number">10</span>)</span><br><span class="line">y=np.random.random(<span class="number">10</span>)</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> pdist</span><br><span class="line">X=np.vstack([x,y])</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">d=pdist(X,<span class="string">'euclidean'</span>)</span><br><span class="line">d=pdist(X,<span class="string">'minkowski'</span>,p=<span class="number">2</span>)</span><br><span class="line">d=<span class="number">1</span>-pdist(X,<span class="string">'cosine'</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="Distance-functions-between-two-boolean-vectors-u-and-v"><a href="#Distance-functions-between-two-boolean-vectors-u-and-v" class="headerlink" title="Distance functions between two ==boolean== vectors u and v."></a>Distance functions between two <strong>==boolean==</strong> vectors <code>u</code> and <code>v</code>.</h4><table>
+<h4 id="Distance-functions-between-two-boolean-vectors-u-and-v"><a href="#Distance-functions-between-two-boolean-vectors-u-and-v" class="headerlink" title="Distance functions between two boolean vectors u and v."></a>Distance functions between two <strong><u>boolean</u></strong> vectors <code>u</code> and <code>v</code>.</h4><table>
 <thead>
 <tr>
 <th style="text-align:center">No.</th>
@@ -589,7 +589,7 @@
 </tbody>
 </table>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>SciPy官方文档 <a href="https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance" target="_blank" rel="noopener">https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance</a></li>
+<li>SciPy官方文档  <a href="https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance" target="_blank" rel="noopener">https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance</a></li>
 </ul>
 
       
@@ -777,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-Distance"><span class="nav-number">2.</span> <span class="nav-text">Definition of Distance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“scipy-spatial-distance”-module"><span class="nav-number">3.</span> <span class="nav-text">The “scipy.spatial.distance” module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduce-of-module"><span class="nav-number">3.1.</span> <span class="nav-text">Introduce of module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distance-functions-in-pdist-amp-cdist"><span class="nav-number">3.2.</span> <span class="nav-text">Distance functions in pdist &amp; cdist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Distance-functions-between-two-numeric-vectors-u-and-v"><span class="nav-number">3.2.1.</span> <span class="nav-text">Distance functions between two ==numeric== vectors u and v.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Distance-functions-between-two-boolean-vectors-u-and-v"><span class="nav-number">3.2.2.</span> <span class="nav-text">Distance functions between two ==boolean== vectors u and v.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-Distance"><span class="nav-number">2.</span> <span class="nav-text">Definition of Distance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“scipy-spatial-distance”-module"><span class="nav-number">3.</span> <span class="nav-text">The “scipy.spatial.distance” module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduce-of-module"><span class="nav-number">3.1.</span> <span class="nav-text">Introduce of module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distance-functions-in-pdist-amp-cdist"><span class="nav-number">3.2.</span> <span class="nav-text">Distance functions in pdist &amp; cdist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Distance-functions-between-two-numeric-vectors-u-and-v"><span class="nav-number">3.2.1.</span> <span class="nav-text">Distance functions between two numeric vectors u and v.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Distance-functions-between-two-boolean-vectors-u-and-v"><span class="nav-number">3.2.2.</span> <span class="nav-text">Distance functions between two boolean vectors u and v.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
