@@ -83,19 +83,19 @@
 
 
 
-<meta name="description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
+<meta name="description" content="[TOC] 前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
 <meta name="keywords" content="Statistics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Explore how to estimate probability distribution in Python">
 <meta property="og:url" content="https://tardis012.github.io/2019/05/02/Explore how to estimate probability distribution in Python/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
+<meta property="og:description" content="[TOC] 前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png">
-<meta property="og:updated_time" content="2019-05-05T04:21:42.630Z">
+<meta property="og:updated_time" content="2019-05-05T08:05:25.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Explore how to estimate probability distribution in Python">
-<meta name="twitter:description" content="前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
+<meta name="twitter:description" content="[TOC] 前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png">
 
 
@@ -358,76 +358,94 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。</p>
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为近期学习如何采用Python进行概率分布拟合的总结笔记。</p>
 <a id="more"></a>
+<p>Statistical methods are built on the foundation provided by probability theory, with which we can model uncertainty and incomplete information using probabilistic, random variables. </p>
 <h2 id="Overview-of-SciPy"><a href="#Overview-of-SciPy" class="headerlink" title="Overview of SciPy"></a>Overview of SciPy</h2><p><u><em>SciPy</em></u> is an extensive library for applied mathematics and scientific computation. The following is <u>the complete list of all the modules available</u> in the library (Martins L F, 2014).</p>
 <table>
 <thead>
 <tr>
 <th>Module</th>
 <th>Functionality</th>
+<th>Functionality(ch)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>cluster</td>
 <td>Clustering algorithms</td>
+<td>聚类算法</td>
 </tr>
 <tr>
 <td>constants</td>
 <td>Physical and mathematical constants</td>
+<td>物理和数学常量</td>
 </tr>
 <tr>
 <td>fftpack</td>
 <td>Fast Fourier Transform</td>
+<td>傅立叶变换</td>
 </tr>
 <tr>
 <td>integrate</td>
 <td>Integration and ordinary differential equations</td>
+<td>积分和常微分方程</td>
 </tr>
 <tr>
 <td>interpolate</td>
 <td>Interpolation and splines</td>
+<td>插值</td>
 </tr>
 <tr>
 <td>io</td>
 <td>Input and output</td>
+<td>数据输入输出</td>
 </tr>
 <tr>
 <td>linalg</td>
 <td>Linear algebra</td>
+<td>线性代数程序</td>
 </tr>
 <tr>
 <td><strong>ndimage</strong></td>
 <td>Image processing</td>
+<td>多维图像处理</td>
 </tr>
 <tr>
 <td>odr</td>
 <td>Orthogonal distance regression</td>
+<td>正交距离回归</td>
 </tr>
 <tr>
 <td><strong>optimize</strong></td>
 <td>Optimization and root-finding</td>
+<td>优化</td>
 </tr>
 <tr>
 <td>signal</td>
 <td>Signal processing</td>
+<td>信号处理</td>
 </tr>
 <tr>
 <td>sparse</td>
 <td>Sparse matrices</td>
+<td>稀疏矩阵</td>
 </tr>
 <tr>
 <td><strong>spatial</strong></td>
 <td>Spatial data structures</td>
+<td>空间数据结构和算法</td>
 </tr>
 <tr>
 <td>special</td>
 <td>Special functions</td>
+<td>一些特殊的数学函数</td>
 </tr>
 <tr>
 <td><strong>stats</strong></td>
 <td>Statistical distributions</td>
+<td>统计</td>
 </tr>
 <tr>
 <td>weave</td>
@@ -435,8 +453,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="The-“stats”-module"><a href="#The-“stats”-module" class="headerlink" title="The “stats” module"></a>The “stats” module</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br></pre></td></tr></table></figure>
-<p>Statistical methods are built on the foundation provided by probability theory, with which we can model uncertainty and incomplete information using probabilistic, random variables. </p>
+<h2 id="Fitting-parameter-distribution"><a href="#Fitting-parameter-distribution" class="headerlink" title="Fitting parameter distribution"></a>Fitting parameter distribution</h2><h3 id="Frequentist-频率学派"><a href="#Frequentist-频率学派" class="headerlink" title="Frequentist(频率学派)"></a>Frequentist(频率学派)</h3><h4 id="The-“stats”-module-introduction"><a href="#The-“stats”-module-introduction" class="headerlink" title="The “stats” module introduction"></a>The “stats” module introduction</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br></pre></td></tr></table></figure>
 <p>There are two general distribution classes that have been implemented for encapsulating continuous random variables and discrete random variables. A summary of selected methods for discrete and continuous random variables is given in the following table.</p>
 <table>
 <thead>
@@ -448,7 +465,7 @@
 <tbody>
 <tr>
 <td>pdf/pmf</td>
-<td>Probability distribution function (continuous) or probability mass function<br>(discrete).</td>
+<td>Probability distribution function (continuous) or probability mass function (discrete).</td>
 </tr>
 <tr>
 <td>cdf</td>
@@ -468,11 +485,11 @@
 </tr>
 <tr>
 <td>stats</td>
-<td>Statistics of the distribution (typically the mean and variance, sometimes<br>additional statistics)</td>
+<td>Statistics of the distribution (typically the mean and variance, sometimes additional statistics)</td>
 </tr>
 <tr>
 <td>fit</td>
-<td>Fit distribution to data using a numerical maximum likelihood optimization (for continuous distributions)</td>
+<td>Fit distribution to data using a numerical maximum likelihood optimization</td>
 </tr>
 <tr>
 <td>expect</td>
@@ -492,8 +509,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="Parameter-distribution"><a href="#Parameter-distribution" class="headerlink" title="Parameter distribution"></a>Parameter distribution</h3><p>Given the sampled data, we can fit a distribution function using maximum likelihood optimization with respect to the distribution parameters.</p>
-<p>The SciPy <em>stats</em> module provides classes for representing random variables with a large number of probability distributions. At the time of writing, there are classes for 13 discrete and 98 continuous distributions (Robert Johansson, 2019).</p>
+<h4 id="Parameter-distribution-provided-in-the-“stats”-module"><a href="#Parameter-distribution-provided-in-the-“stats”-module" class="headerlink" title="Parameter distribution provided in the “stats” module"></a>Parameter distribution provided in the “stats” module</h4><p>The SciPy <em>stats</em> module provides classes for representing random variables with a large number of probability distributions. At the time of writing, there are classes for 13 discrete and 98 continuous distributions (Robert Johansson, 2019).</p>
 <p>Remark: Currently, in the <a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html" target="_blank" rel="noopener">tutorial of SciPy <em>stats</em> module</a>, 12 discrete and 82 continuous distributions are listed.</p>
 <h4 id="12-discrete-distributions"><a href="#12-discrete-distributions" class="headerlink" title="12 discrete distributions"></a><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete.html" target="_blank" rel="noopener">12 discrete distributions</a></h4><ol>
 <li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/discrete_bernoulli.html" target="_blank" rel="noopener">Bernoulli Distribution</a></li>
@@ -594,13 +610,17 @@
 <li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats/continuous_wrapcauchy.html" target="_blank" rel="noopener">Wrapped Cauchy Distribution</a></li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png" alt="StudyNote1forProbabilityTopic_6"></p>
-<h3 id="Nonparametric-distribution"><a href="#Nonparametric-distribution" class="headerlink" title="Nonparametric distribution"></a>Nonparametric distribution</h3><p>We may even fit the best probability density function without specifying any particular distribution, thanks to a non-parametric technique, kernel density estimation(KDE). In SciPy’s the KDE method using a Gaussian kernel is implemented in the function <em>stats.kde.gaussian_kde</em>.  </p>
+<h4 id="Parameter-calculation-method-for-parameter-distribution-in-the-“stats”-module"><a href="#Parameter-calculation-method-for-parameter-distribution-in-the-“stats”-module" class="headerlink" title="Parameter calculation method for parameter distribution in the “stats” module"></a>Parameter calculation method for parameter distribution in the “stats” module</h4><p>Given the sampled data, we can fit a distribution function using maximum likelihood optimization (<strong>Maximum Likelihood Estimation, MLE</strong>) with respect to the distribution parameters.</p>
+<h3 id="Bayesian-贝叶斯学派"><a href="#Bayesian-贝叶斯学派" class="headerlink" title="Bayesian(贝叶斯学派)"></a>Bayesian(贝叶斯学派)</h3><p>Bayesian statistics, in contrast to the frequentist’s statistics, treats probability as a degree of belief rather than as a measure of proportions of observed outcomes.</p>
+<h4 id="The-“PyMC3”-module-introduction"><a href="#The-“PyMC3”-module-introduction" class="headerlink" title="The “PyMC3” module introduction"></a>The “PyMC3” module introduction</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">import</span> pymc3 <span class="keyword">as</span> mc</span><br></pre></td></tr></table></figure>
+<p><a href="https://docs.pymc.io/nb_tutorials/index.html" target="_blank" rel="noopener">The PyMC library</a>, currently known as PyMC3, provides a framework for doing probabilistic programming – that is, solving statistical problems using simulation with Bayesian methods.</p>
+<h4 id="Parameter-calculation-method-for-the-posterior-distribution"><a href="#Parameter-calculation-method-for-the-posterior-distribution" class="headerlink" title="Parameter calculation method for the posterior distribution"></a>Parameter calculation method for the posterior distribution</h4><p>Parameters of the posterior distribution can be estimated based on <strong>Maximum A Posteriori (MAP)</strong>.</p>
+<p>Note: </p>
+<p>From the point of view of Bayesian inference, MLE is a special case of maximum a posteriori estimation (MAP) that assumes a uniform prior distribution of the parameters.</p>
+<p>Although Bayes’ theorem describes how to compute the posterior distribution from the prior distribution, for most realistic problems, the calculations involve evaluating high-dimensional integrals that can be prohibitively difficult to compute, both analytically and numerically. This has until recently hindered Bayesian statistics from being widely used in practice. However, with the advent of computational statistics, and the development of efficient simulation methods that allows us to sample directly from the posterior distributions (rather than directly compute it), Bayesian methods are becoming increasingly popular.</p>
+<h2 id="Fitting-nonparametric-distribution"><a href="#Fitting-nonparametric-distribution" class="headerlink" title="Fitting nonparametric distribution"></a>Fitting nonparametric distribution</h2><p>We may even fit the best probability density function without specifying any particular distribution, thanks to a non-parametric technique, <strong>kernel density estimation(KDE)</strong>. In SciPy’s the KDE method using a Gaussian kernel is implemented in the function <em><u>stats.kde.gaussian_kde</u></em>.  </p>
 <p>Given kernel-density estimate, we can also use it to generate new random numbers using the resample method, which takes the number of data points as arguments.</p>
 <p>Once we have a KDE that represents the probability distribution for a statistical problem, we can proceed with many of the same methods as we use in parametric statistics. The advantage of nonparametric methods is that we do not necessarily need to make assumptions about the shape of the distribution function. However, because nonparametric methods use less information (weaker assumptions)<br>than parametric methods, their statistical power is lower. Therefore, if we can justify using a parametric method, then that is usually the best approach. Nonparametric methods offer a versatile generic approach that we can fall back on when parametric methods are not feasible.</p>
-<h2 id="The-“PyMC3”-module"><a href="#The-“PyMC3”-module" class="headerlink" title="The “PyMC3” module"></a>The “PyMC3” module</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">import</span> pymc3 <span class="keyword">as</span> mc</span><br></pre></td></tr></table></figure>
-<p><a href="https://docs.pymc.io/nb_tutorials/index.html" target="_blank" rel="noopener">The PyMC library</a>, currently known as PyMC3, provides a framework for doing probabilistic programming – that is, solving statistical problems using simulation with Bayesian methods.</p>
-<p>Bayesian statistics, in contrast to the frequentist’s statistics, treats probability as a degree of belief rather than as a measure of proportions of observed outcomes.</p>
-<p>Although Bayes’ theorem describes how to compute the posterior distribution from the prior distribution, for most realistic problems, the calculations involve evaluating high-dimensional integrals that can be prohibitively difficult to compute, both analytically and numerically. This has until recently hindered Bayesian statistics from being widely used in practice. However, with the advent of computational statistics, and the development of efficient simulation methods that allows us to sample directly from the posterior distributions (rather than directly compute it), Bayesian methods are becoming increasingly popular.</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li>Martins L F. IPython notebook essentials[M]. Packt Publishing Ltd, 2014.</li>
 <li>Robert Johansson. Numerical Python-Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib[M]. Apress, 2019.</li>
@@ -795,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-SciPy"><span class="nav-number">2.</span> <span class="nav-text">Overview of SciPy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“stats”-module"><span class="nav-number">3.</span> <span class="nav-text">The “stats” module</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameter-distribution"><span class="nav-number">3.1.</span> <span class="nav-text">Parameter distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-discrete-distributions"><span class="nav-number">3.1.1.</span> <span class="nav-text">12 discrete distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#82-continuous-distributions"><span class="nav-number">3.1.2.</span> <span class="nav-text">82 continuous distributions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nonparametric-distribution"><span class="nav-number">3.2.</span> <span class="nav-text">Nonparametric distribution</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-“PyMC3”-module"><span class="nav-number">4.</span> <span class="nav-text">The “PyMC3” module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-SciPy"><span class="nav-number">2.</span> <span class="nav-text">Overview of SciPy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fitting-parameter-distribution"><span class="nav-number">3.</span> <span class="nav-text">Fitting parameter distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Frequentist-频率学派"><span class="nav-number">3.1.</span> <span class="nav-text">Frequentist(频率学派)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-“stats”-module-introduction"><span class="nav-number">3.1.1.</span> <span class="nav-text">The “stats” module introduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parameter-distribution-provided-in-the-“stats”-module"><span class="nav-number">3.1.2.</span> <span class="nav-text">Parameter distribution provided in the “stats” module</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-discrete-distributions"><span class="nav-number">3.1.3.</span> <span class="nav-text">12 discrete distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#82-continuous-distributions"><span class="nav-number">3.1.4.</span> <span class="nav-text">82 continuous distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parameter-calculation-method-for-parameter-distribution-in-the-“stats”-module"><span class="nav-number">3.1.5.</span> <span class="nav-text">Parameter calculation method for parameter distribution in the “stats” module</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bayesian-贝叶斯学派"><span class="nav-number">3.2.</span> <span class="nav-text">Bayesian(贝叶斯学派)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-“PyMC3”-module-introduction"><span class="nav-number">3.2.1.</span> <span class="nav-text">The “PyMC3” module introduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parameter-calculation-method-for-the-posterior-distribution"><span class="nav-number">3.2.2.</span> <span class="nav-text">Parameter calculation method for the posterior distribution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fitting-nonparametric-distribution"><span class="nav-number">4.</span> <span class="nav-text">Fitting nonparametric distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
