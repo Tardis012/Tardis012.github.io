@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Rainfall,">
+  <meta name="keywords" content="Machine learning,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。">
-<meta name="keywords" content="Rainfall">
+<meta name="description" content="前言本篇为Python包-SciPy的学习总结。">
+<meta name="keywords" content="Machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Study Note for &quot;How 5G is likely to put weather forecasting at risk&quot; Web Article">
-<meta property="og:url" content="https://tardis012.github.io/2019/04/22/Study Note for “How 5G is likely to put weather forecasting at risk” Web Article/index.html">
+<meta property="og:title" content="Python package learning-SciPy">
+<meta property="og:url" content="https://tardis012.github.io/2019/05/06/Python package learning-SciPy/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。">
+<meta property="og:description" content="前言本篇为Python包-SciPy的学习总结。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-30T06:47:16.417Z">
+<meta property="og:updated_time" content="2019-05-06T07:37:01.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Study Note for &quot;How 5G is likely to put weather forecasting at risk&quot; Web Article">
-<meta name="twitter:description" content="前言本篇为网页文章 How 5G is likely to put weather forecasting at risk! 的阅读笔记。 觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。">
+<meta name="twitter:title" content="Python package learning-SciPy">
+<meta name="twitter:description" content="前言本篇为Python包-SciPy的学习总结。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tardis012.github.io/2019/04/22/Study Note for “How 5G is likely to put weather forecasting at risk” Web Article/">
+  <link rel="canonical" href="https://tardis012.github.io/2019/05/06/Python package learning-SciPy/">
 
 
 
 
 
-  <title>Study Note for "How 5G is likely to put weather forecasting at risk" Web Article | 小zのGarden</title>
+  <title>Python package learning-SciPy | 小zのGarden</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/04/22/Study Note for “How 5G is likely to put weather forecasting at risk” Web Article/">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/06/Python package learning-SciPy/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tardis012">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Study Note for "How 5G is likely to put weather forecasting at risk" Web Article</h1>
+          <h1 class="post-title" itemprop="name headline">Python package learning-SciPy</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-22T18:34:58+08:00">
-                2019-04-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-06T15:34:24+08:00">
+                2019-05-06
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Major/" itemprop="url" rel="index">
-                    <span itemprop="name">Major</span>
+                  <a href="/categories/Statistics-and-Machine-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Statistics and Machine learning</span>
                   </a>
                 </span>
 
@@ -356,13 +356,102 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为网页文章 <a href="https://hackaday.com/2019/04/16/5g-buildout-likely-to-put-weather-forecasting-at-risk/" target="_blank" rel="noopener">How 5G is likely to put weather forecasting at risk!</a> 的阅读笔记。</p>
-<p>觉得从电磁波频谱的角度思考挺有意思的，就翻译了一下。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为Python包-SciPy的学习总结。</p>
 <a id="more"></a>
-<h3 id="Article-Abstract"><a href="#Article-Abstract" class="headerlink" title="Article Abstract"></a>Article Abstract</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;作者提出5G蜂窝网络(5G cellular networks)的推出可能会影响到天气预报模型的输入数据质量。</p>
-<h3 id="Article-Content"><a href="#Article-Content" class="headerlink" title="Article Content"></a>Article Content</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;天气主要是气团差异的结果。大气压力、温度、湿度，分别由太阳的能量输入决定，以复杂方式组合决定云的形成时间、风向。远程感知这些差异是准确预报天气的关键。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;观测天气的卫星大部分是被动传感器平台，测量下方物体反射或发射的能量，通过用不同的波长观测地球来收集温度和湿度的数据（大气压力主要通过surface measurements和radiosondes测量）。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;温度主要在可见光和红外光的波长下测量，水蒸气有点难以测量，涉及到微波。微波辐射计作为<strong>无源</strong>微波接收机，通过查看在不同波长下接收的信号和添加有关信号极化的信息，微波辐射测量可以告诉我们在大气层的垂直柱内发生了什么。对于水蒸气，23.8GHz非常有用，由于接近的频率有可能从5G获得干扰，在5G噪音海洋中丢失微弱但可靠的水汽信号是天气预报员面临的基本问题。</p>
+<h2 id="Overview-of-SciPy"><a href="#Overview-of-SciPy" class="headerlink" title="Overview of SciPy"></a>Overview of SciPy</h2><p><u><em>SciPy</em></u> is an extensive library for applied mathematics and scientific computation. The following is <u>the complete list of all the modules available</u> in the library (Martins L F, 2014).</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Functionality</th>
+<th>Functionality(ch)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cluster</td>
+<td>Clustering algorithms</td>
+<td>聚类算法</td>
+</tr>
+<tr>
+<td>constants</td>
+<td>Physical and mathematical constants</td>
+<td>物理和数学常量</td>
+</tr>
+<tr>
+<td>fftpack</td>
+<td>Fast Fourier Transform</td>
+<td>傅立叶变换</td>
+</tr>
+<tr>
+<td>integrate</td>
+<td>Integration and ordinary differential equations</td>
+<td>积分和常微分方程</td>
+</tr>
+<tr>
+<td>interpolate</td>
+<td>Interpolation and splines</td>
+<td>插值</td>
+</tr>
+<tr>
+<td>io</td>
+<td>Input and output</td>
+<td>数据输入输出</td>
+</tr>
+<tr>
+<td>linalg</td>
+<td>Linear algebra</td>
+<td>线性代数程序</td>
+</tr>
+<tr>
+<td><strong>ndimage</strong></td>
+<td>Image processing</td>
+<td>多维图像处理</td>
+</tr>
+<tr>
+<td>odr</td>
+<td>Orthogonal distance regression</td>
+<td>正交距离回归</td>
+</tr>
+<tr>
+<td><strong>optimize</strong></td>
+<td>Optimization and root-finding</td>
+<td>优化</td>
+</tr>
+<tr>
+<td>signal</td>
+<td>Signal processing</td>
+<td>信号处理</td>
+</tr>
+<tr>
+<td>sparse</td>
+<td>Sparse matrices</td>
+<td>稀疏矩阵</td>
+</tr>
+<tr>
+<td><strong>spatial</strong></td>
+<td>Spatial data structures</td>
+<td>空间数据结构和算法</td>
+</tr>
+<tr>
+<td>special</td>
+<td>Special functions</td>
+<td>一些特殊的数学函数</td>
+</tr>
+<tr>
+<td><strong>stats</strong></td>
+<td>Statistical distributions</td>
+<td>统计</td>
+</tr>
+<tr>
+<td>weave</td>
+<td>C/C++ integration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li>Martins L F. IPython notebook essentials[M]. Packt Publishing Ltd, 2014.</li>
+</ul>
 
       
     </div>
@@ -380,7 +469,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Rainfall/" rel="tag"># Rainfall</a>
+            <a href="/tags/Machine-learning/" rel="tag"># Machine learning</a>
           
         </div>
       
@@ -393,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/16/Study Note for “Structural Health Monitoring of Large Civil Engineering Structures” Book/" rel="next" title="Study Note for " structural="" health="" monitoring="" of="" large="" civil="" engineering="" structures"="" book"="">
-                <i class="fa fa-chevron-left"></i> Study Note for "Structural Health Monitoring of Large Civil Engineering Structures" Book
+              <a href="/2019/05/04/Explore how to calculate distance measure between arrays in Python/" rel="next" title="Explore how to calculate distance measure between arrays in Python">
+                <i class="fa fa-chevron-left"></i> Explore how to calculate distance measure between arrays in Python
               </a>
             
           </div>
@@ -402,10 +491,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/28/R new package recommended from Jan to Mar 2019/" rel="prev" title="R new package recommended from Jan to Mar 2019">
-                R new package recommended from Jan to Mar 2019 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article-Abstract"><span class="nav-number">2.</span> <span class="nav-text">Article Abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article-Content"><span class="nav-number">3.</span> <span class="nav-text">Article Content</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-SciPy"><span class="nav-number">2.</span> <span class="nav-text">Overview of SciPy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
