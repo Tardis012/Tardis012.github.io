@@ -83,22 +83,22 @@
 
 
 
-<meta name="description" content="前言本篇为近期关于概率论基础知识的学习笔记。">
+<meta name="description" content="[TOC] 前言本篇为近期关于概率论基础知识的学习笔记。">
 <meta name="keywords" content="Statistics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Study Note on the basic knowledge of Probability Theory">
 <meta property="og:url" content="https://tardis012.github.io/2019/04/29/Study Note on the basic knowledge of Probability Theory/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为近期关于概率论基础知识的学习笔记。">
+<meta property="og:description" content="[TOC] 前言本篇为近期关于概率论基础知识的学习笔记。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_5.png">
-<meta property="og:updated_time" content="2019-05-02T13:04:53.014Z">
+<meta property="og:updated_time" content="2019-05-06T06:51:58.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study Note on the basic knowledge of Probability Theory">
-<meta name="twitter:description" content="前言本篇为近期关于概率论基础知识的学习笔记。">
+<meta name="twitter:description" content="[TOC] 前言本篇为近期关于概率论基础知识的学习笔记。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_2.png">
 
 
@@ -361,8 +361,10 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为近期关于概率论基础知识的学习笔记。</p>
+        <p>[TOC]</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇为近期关于概率论基础知识的学习笔记。</p>
 <a id="more"></a>
+<p>Statistical methods are built on the foundation provided by probability theory, with which we can model uncertainty and incomplete information using probabilistic, random variables. </p>
 <h3 id="Construction-of-a-probability-space"><a href="#Construction-of-a-probability-space" class="headerlink" title="Construction of a probability space"></a>Construction of a probability space</h3><p>Probability provides a logical framework for quantifying uncertainty and randomness in a principled way. The mathematical framework for probability is built around <em>sets</em>.</p>
 <p>Modern probability is based on a set of axioms proposed by Kolmogorov (Jacod and Protter, 2004, Chapter 1 and 2) that introduce the three concepts of <strong><em>state space, event space and probability measure</em></strong>.</p>
 <ol>
@@ -419,33 +421,36 @@
 <li>The randomness comes from the fact that we have a random experiment (with probabilities described by the probability function P); <u>the mapping itself is deterministic</u>.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_1.png" alt="StudyNote1forProbabilityTopic_1"></p>
+<h4 id="Definition-of-probability-distribution"><a href="#Definition-of-probability-distribution" class="headerlink" title="Definition of probability distribution"></a>Definition of probability distribution</h4><p>Probability distribution function describes the distribution law of random variable values.</p>
 <h4 id="Nomenclature-for-probability-distributions"><a href="#Nomenclature-for-probability-distributions" class="headerlink" title="Nomenclature for probability distributions"></a>Nomenclature for probability distributions</h4><table>
 <thead>
 <tr>
-<th></th>
+<th style="text-align:center">Type of random variable</th>
 <th style="text-align:center">“Point probability”</th>
 <th>“Interval probability”</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Discrete</td>
+<td style="text-align:center">Discrete</td>
 <td style="text-align:center">$P(x=X)$  Probability mass function</td>
 <td>Not applicable</td>
 </tr>
 <tr>
-<td>Continuous</td>
+<td style="text-align:center">Continuous</td>
 <td style="text-align:center">$p(x)$  Probability density function</td>
 <td>$P(x \leqslant \mathrm{X})$  Cumulative distribution function</td>
 </tr>
 </tbody>
 </table>
-<h4 id="Table-of-distributions"><a href="#Table-of-distributions" class="headerlink" title="Table of distributions"></a>Table of distributions</h4><ul>
-<li>Discrete Distributions</li>
+<p>We will be using the expression <strong>“probability distribution”</strong> not only for discrete distributions but also for continuous probability density functions, although this is technically incorrect. However, this is consistent with the majority of machine learning literature(Marc Peter Deisenroth, 2018).</p>
+<p>Remark: 在我后面的博客中，用 ”概率分布“ &amp; “probability distribution” 统一代指离散随机变量的Probability mass function和连续随机变量的Probability density function。</p>
+<h4 id="Example-of-probability-distributions"><a href="#Example-of-probability-distributions" class="headerlink" title="Example of probability distributions"></a>Example of probability distributions</h4><ul>
+<li>For discrete random variable (PMF)</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_4.png" alt="StudyNote1forProbabilityTopic_4"></p>
 <ul>
-<li>Continuous Distributions</li>
+<li>For continuous random variable (PDF)</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_5.png" alt="StudyNote1forProbabilityTopic_5"></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
@@ -643,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Construction-of-a-probability-space"><span class="nav-number">2.</span> <span class="nav-text">Construction of a probability space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-probability"><span class="nav-number">3.</span> <span class="nav-text">Conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-Conditional-probability"><span class="nav-number">3.1.</span> <span class="nav-text">Definition of Conditional probability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-main-theorems"><span class="nav-number">3.2.</span> <span class="nav-text">Two main theorems</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random-variables-and-their-distributions"><span class="nav-number">4.</span> <span class="nav-text">Random variables and their distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-random-variable"><span class="nav-number">4.1.</span> <span class="nav-text">Definition of random variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nomenclature-for-probability-distributions"><span class="nav-number">4.2.</span> <span class="nav-text">Nomenclature for probability distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Table-of-distributions"><span class="nav-number">4.3.</span> <span class="nav-text">Table of distributions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Construction-of-a-probability-space"><span class="nav-number">2.</span> <span class="nav-text">Construction of a probability space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-probability"><span class="nav-number">3.</span> <span class="nav-text">Conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-Conditional-probability"><span class="nav-number">3.1.</span> <span class="nav-text">Definition of Conditional probability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-main-theorems"><span class="nav-number">3.2.</span> <span class="nav-text">Two main theorems</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random-variables-and-their-distributions"><span class="nav-number">4.</span> <span class="nav-text">Random variables and their distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-random-variable"><span class="nav-number">4.1.</span> <span class="nav-text">Definition of random variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition-of-probability-distribution"><span class="nav-number">4.2.</span> <span class="nav-text">Definition of probability distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nomenclature-for-probability-distributions"><span class="nav-number">4.3.</span> <span class="nav-text">Nomenclature for probability distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-of-probability-distributions"><span class="nav-number">4.4.</span> <span class="nav-text">Example of probability distributions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
