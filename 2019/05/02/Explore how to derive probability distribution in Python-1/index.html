@@ -92,7 +92,7 @@
 <meta property="og:description" content="[TOC] 前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记 (1/3)。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/StudyNote1forProbabilityTopic_6.png">
-<meta property="og:updated_time" content="2019-05-07T14:26:56.676Z">
+<meta property="og:updated_time" content="2019-05-16T08:47:25.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Explore how to derive probability distribution in Python-1">
 <meta name="twitter:description" content="[TOC] 前言本篇为近期学习如何采用Python进行概率分布拟合的总结笔记 (1/3)。">
@@ -361,10 +361,7 @@
         <p>[TOC]</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为近期学习如何采用Python进行概率分布拟合的总结笔记 (1/3)。</p>
 <a id="more"></a>
-<h2 id="Description-of-this-blog-post-content"><a href="#Description-of-this-blog-post-content" class="headerlink" title="Description of this blog post content"></a>Description of this blog post content</h2><h3 id="Probability-distribution"><a href="#Probability-distribution" class="headerlink" title="Probability distribution"></a>Probability distribution</h3><ul>
-<li>My related blog post: <a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>  Recommended reading order: read first.</li>
-</ul>
-<p>In the previous blog post(<a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>), the naming of the probability distribution has been given as follows. </p>
+<h2 id="Description-of-this-blog-post-content"><a href="#Description-of-this-blog-post-content" class="headerlink" title="Description of this blog post content"></a>Description of this blog post content</h2><h3 id="Probability-distribution"><a href="#Probability-distribution" class="headerlink" title="Probability distribution"></a>Probability distribution</h3><p>In my previous blog post(<a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>), the naming of the probability distribution has been given as follows. </p>
 <table>
 <thead>
 <tr>
@@ -387,10 +384,7 @@
 </tbody>
 </table>
 <p>本文中用 ”概率分布“ &amp; “probability distribution” 统一代指离散随机变量的Probability mass function和连续随机变量的Probability density function，不再赘述。</p>
-<h3 id="Difference-between-Frequentist-probability-and-Bayesian-probability"><a href="#Difference-between-Frequentist-probability-and-Bayesian-probability" class="headerlink" title="Difference between Frequentist probability and Bayesian probability"></a>Difference between Frequentist probability and Bayesian probability</h3><ul>
-<li>My related blog post: <a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>  Recommended reading order: read first.</li>
-</ul>
-<p>Frequentist probability and Bayesian probability represents two different interpretation ways of probability . In the previous blog post(<a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>), the difference between Frequentist probability and Bayesian probability has been explained.</p>
+<h3 id="Difference-between-Frequentist-probability-and-Bayesian-probability"><a href="#Difference-between-Frequentist-probability-and-Bayesian-probability" class="headerlink" title="Difference between Frequentist probability and Bayesian probability"></a>Difference between Frequentist probability and Bayesian probability</h3><p>Frequentist probability and Bayesian probability represents two different interpretation ways of probability . In my previous blog post(<a href="https://tardis012.github.io/2019/04/29/Study%20Note%20on%20the%20basic%20knowledge%20of%20Probability%20Theory/">Study Note on the basic knowledge of Probability Theory</a>), the difference between Frequentist probability and Bayesian probability has been explained.</p>
 <h3 id="Difference-between-parametric-statistics-and-nonparametric-statistics"><a href="#Difference-between-parametric-statistics-and-nonparametric-statistics" class="headerlink" title="Difference between parametric statistics and nonparametric statistics"></a>Difference between parametric statistics and nonparametric statistics</h3><p>Parametric statistics is a branch of statistics which assumes that sample data comes from a population that can be adequately modelled by a probability distribution that has a fixed set of parameters</p>
 <p>Nonparametric statistics is based on either being distribution-free or having a specified distribution but with the distribution’s parameters unspecified.</p>
 <p>Both of them belong to the content of <em>statistical inference</em>.</p>
@@ -403,7 +397,7 @@
 <li>Bayesian probability + parametric statistics</li>
 <li>Bayesian probability + nonparametric statistics</li>
 </ol>
-<h2 id="Derive-probability-distribution-from-perspective-of-Frequentist-probability-and-parametric-statistics"><a href="#Derive-probability-distribution-from-perspective-of-Frequentist-probability-and-parametric-statistics" class="headerlink" title="Derive probability distribution from perspective of Frequentist probability and parametric statistics"></a>Derive probability distribution from perspective of Frequentist probability and parametric statistics</h2><h3 id="Introduction-of-the”stats”-module-in-Python"><a href="#Introduction-of-the”stats”-module-in-Python" class="headerlink" title="Introduction of the”stats” module in Python"></a>Introduction of the”stats” module in Python</h3><p>The “stats”  module is a submodule of the SciPy package in Python. Detailed introduction of SciPy was listed in this blog post (<a href="https://tardis012.github.io/2019/05/07/Algorithm%20package%20or%20framework%20related%20to%20statistics%20and%20machine%20learning-1/">Algorithm package or framework related to statistics and machine learning-1</a>).</p>
+<h2 id="Derive-probability-distribution-from-perspective-of-Frequentist-probability-and-parametric-statistics"><a href="#Derive-probability-distribution-from-perspective-of-Frequentist-probability-and-parametric-statistics" class="headerlink" title="Derive probability distribution from perspective of Frequentist probability and parametric statistics"></a>Derive probability distribution from perspective of Frequentist probability and parametric statistics</h2><h3 id="Introduction-of-the”stats”-module-in-Python"><a href="#Introduction-of-the”stats”-module-in-Python" class="headerlink" title="Introduction of the”stats” module in Python"></a>Introduction of the”stats” module in Python</h3><p>The “stats”  module is a submodule of the SciPy package in Python. Detailed introduction of SciPy package was listed in this blog post (<a href="https://tardis012.github.io/2019/05/07/Algorithm%20package%20or%20framework%20related%20to%20statistics%20and%20machine%20learning-1/">Algorithm package or framework related to statistics and machine learning-1</a>).</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入模块</span></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br></pre></td></tr></table></figure>
 <p>There are two general distribution classes that have been implemented for encapsulating continuous random variables and discrete random variables. A summary of selected methods for discrete and continuous random variables is given in the following table.</p>
 <table>
@@ -689,7 +683,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
