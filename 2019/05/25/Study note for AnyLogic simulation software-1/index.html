@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="Simulation,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 前言本篇为AnyLogic仿真软件的学习总结笔记(1/2)。 具体为：工具栏中的Agent palette学习。">
+<meta name="keywords" content="Simulation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Study note for AnyLogic simulation software-1">
+<meta property="og:url" content="https://tardis012.github.io/2019/05/25/Study note for AnyLogic simulation software-1/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="[TOC] 前言本篇为AnyLogic仿真软件的学习总结笔记(1/2)。 具体为：工具栏中的Agent palette学习。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://github.com/Tardis012/MyBlogPicture/blob/master/Study%20note%20for%20AnyLogic%20simulation%20software_1.png?raw=true">
+<meta property="og:updated_time" content="2019-05-27T12:54:55.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Study note for AnyLogic simulation software-1">
+<meta name="twitter:description" content="[TOC] 前言本篇为AnyLogic仿真软件的学习总结笔记(1/2)。 具体为：工具栏中的Agent palette学习。">
+<meta name="twitter:image" content="https://github.com/Tardis012/MyBlogPicture/blob/master/Study%20note%20for%20AnyLogic%20simulation%20software_1.png?raw=true">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tardis012.github.io/2019/05/25/Study note for AnyLogic simulation software-1/">
+
+
+
+
+
+  <title>Study note for AnyLogic simulation software-1 | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/25/Study note for AnyLogic simulation software-1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Study note for AnyLogic simulation software-1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-25T16:48:38+08:00">
+                2019-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Major/" itemprop="url" rel="index">
+                    <span itemprop="name">Major</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为AnyLogic仿真软件的学习总结笔记(1/2)。</p>
+<p>具体为：工具栏中的Agent palette学习。</p>
+<a id="more"></a>
+<h2 id="工具栏学习-Agent-palette"><a href="#工具栏学习-Agent-palette" class="headerlink" title="工具栏学习-Agent palette"></a>工具栏学习-Agent palette</h2><h3 id="The-Agent-palette-overview"><a href="#The-Agent-palette-overview" class="headerlink" title="The Agent palette overview"></a>The Agent palette overview</h3><p>The <strong>Agent</strong> palette contains general elements used for defining dynamics of the model, its structure and data. </p>
+<p><img src="https://github.com/Tardis012/MyBlogPicture/blob/master/Study%20note%20for%20AnyLogic%20simulation%20software_1.png?raw=true" alt="Agent palette"></p>
+<h3 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h3><p>有3种选择：建立Agent群、建立单个Agent、建立Agent type。</p>
+<p>建立Agent群：</p>
+<ol>
+<li>可以使用参数作为Agent群中Agent的个数。运行中如果需要增删Agent群中Agent的个数，修改该参数并不会调整，而是需要使用更改处理程序来处理Agent的创建和销毁。</li>
+<li>建立Agent群后，可以用编号索引到单个Agent，从0 to people.size() – 1。</li>
+</ol>
+<h3 id="Parameter"><a href="#Parameter" class="headerlink" title="Parameter"></a>Parameter</h3><p>参数和变量的区别：(1) 参数通常用于静态描述对象。参数通常是单次仿真中的常量，只有在需要调整模型行为时才会更改参数。(2) 变量表示模型状态，在仿真过程中可能会发生变化。</p>
+<h4 id="General-properties"><a href="#General-properties" class="headerlink" title="General properties"></a>General properties</h4><ol>
+<li>类型定义</li>
+</ol>
+<p>可以使用“Type”按钮组中的相应选项选择最常用的类型之一（int，double，boolean，String等）。如果需要定义其他Java类的参数，请选择“Other”选项，然后在右侧的编辑框中键入所需的类名。</p>
+<p>You can define parameters of your own classes, defined elsewhere in your model.</p>
+<p>If System dynamics array is enabled, type is automatically defined as HyperArray. </p>
+<p>So long as parameters are frequently used in system dynamics models, and sometimes these models operate with arrays, AnyLogic supports creating parameters of array type. </p>
+<p>If you want to make the parameter a hyperarray used in system dynamics, select the System dynamics array check box, then go to the Dimensions table and select the dimensions of this array. To define default values of array elements, click the Edit… button and initialize the array as described here.</p>
+<ol start="2">
+<li>单位定义</li>
+</ol>
+<p>可以使用“Unit”按钮组中的相应选项定义参数的单位。</p>
+<ol start="3">
+<li>默认值设定</li>
+</ol>
+<p>在”Default value”编辑框中指定参数的默认值。之后可以使用set_parameterName（<em> new value </em>）函数在仿真期间更改参数的值。如果未指定默认值，则应用Java规则，例如，double类型的参数设置为0，boolean类型的参数为false。</p>
+<h4 id="Value-editor"><a href="#Value-editor" class="headerlink" title="Value editor"></a>Value editor</h4><p>……</p>
+<h4 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h4><p>……</p>
+<h3 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h3><p>事件是在模型中安排某些操作的最简单方法。因此，事件通常用于模拟延迟和超时。有时您使用状态图中的定时转换执行相同操作，但事件可能更有效。</p>
+<h4 id="General-properties-1"><a href="#General-properties-1" class="headerlink" title="General properties"></a>General properties</h4><p>There are three types of events:</p>
+<ul>
+<li><a href="http://127.0.0.1:1924/help/topic/com.anylogic.help/html/statecharts/Timeout_Event.html" target="_blank" rel="noopener">Timeout triggered event</a>. It  is used when you need to schedule an action at some particular moment of time (or some particular date).The event occurs exactly in timeout time after it is started. Timeout triggered event has even more features: you can specify that it expires either once or cyclically, or is fully controlled by the user. 如果为该类事件，可以设置3种不同的模式。还有一系列的设置等……</li>
+<li><a href="http://127.0.0.1:1924/help/topic/com.anylogic.help/html/statecharts/Condition_Event.html" target="_blank" rel="noopener">Condition triggered event</a>. It is used when you want to monitor a certain condition and execute an action when this condition becomes true.</li>
+<li><a href="http://127.0.0.1:1924/help/topic/com.anylogic.help/html/statecharts/Rate_Event.html" target="_blank" rel="noopener">Rate triggered event</a>. It is used to model a stream of independent events (Poisson stream). It is frequently needed to model arrivals: e.g. customer arrivals in queueing systems, transaction arrivals in server-based network models, etc.</li>
+</ul>
+<h4 id="Mode"><a href="#Mode" class="headerlink" title="Mode"></a>Mode</h4><p>……</p>
+<h4 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h4><p>……</p>
+<h3 id="Dynamic-Event"><a href="#Dynamic-Event" class="headerlink" title="Dynamic Event"></a>Dynamic Event</h3><p>动态事件和事件之间的区别在于动态事件在执行操作后会自行删除，而用户控制的事件会存活并可以重新启动。</p>
+<p>动态事件的主要好处是可以在模型中同时调度同一动态事件的多个实例。动态事件的另一个特性是能够使用某些特定数据初始化动态事件的每个实例。在计划动态事件的新实例时，您可以使用事件的参数传递所需的数据。可以在动态事件的操作中访问这些参数。</p>
+<p>但是，动态事件不能直接用作事件，因此我们建议仅在以下情况下使用它们：</p>
+<ul>
+<li>When you expect several events, performing similar actions, to be scheduled at the same time in your model.</li>
+<li>When the action of your dynamic event depends on some specific information.</li>
+</ul>
+<h4 id="Action-1"><a href="#Action-1" class="headerlink" title="Action"></a>Action</h4><p>……</p>
+<h4 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h4><p>……</p>
+<h3 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h3><p><strong>Variables are generally used to store the results of model simulation or to model some data units or object characteristics, changing over time.</strong> </p>
+<p>变量通常用于存储模型仿真结果，或者用于某些数据单元或对象特征的建模，随时间的推移而变化。</p>
+<p>AnyLogic supports two types of variables – variables and collections. </p>
+<h4 id="General-properties-2"><a href="#General-properties-2" class="headerlink" title="General properties"></a>General properties</h4><p>Type</p>
+<p>……</p>
+<p>Initial value</p>
+<p>……</p>
+<h4 id="Advanced-1"><a href="#Advanced-1" class="headerlink" title="Advanced"></a>Advanced</h4><p>……</p>
+<h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><p>…………</p>
+<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><h4 id="General-properties-3"><a href="#General-properties-3" class="headerlink" title="General properties"></a>General properties</h4><p>函数：仅操作 or 有返回值（设定返回值类型）。</p>
+<h4 id="Arguments-1"><a href="#Arguments-1" class="headerlink" title="Arguments"></a>Arguments</h4><p>在这里可以为函数定义一些可选参数，以便传递函数计算所需的一些额外输入数据。</p>
+<h4 id="Function-body"><a href="#Function-body" class="headerlink" title="Function body"></a>Function body</h4><p>在这里输入函数体。如果函数返回一些值，则最后一行应该是返回表达式。</p>
+<p>使用Java编写函数。</p>
+<h4 id="Advanced-2"><a href="#Advanced-2" class="headerlink" title="Advanced"></a>Advanced</h4><p>Static – If selected, the function is static. A static function does not need creating any instances of the agent type, in whose code it is defined. Static function defined in the MyClass agent type can be accessed from any place of the model as MyClass.function().</p>
+<p>Access – The access type of the function. There are four access types:</p>
+<ul>
+<li>public - the function can be accessed from anywhere </li>
+<li>private – the function can be accessed from this agent class only</li>
+<li>protected - the function can be accessed from this agent class and its subclasses</li>
+<li>default - the function can be accessed anywhere within this model. </li>
+</ul>
+<p>System dynamics units – If selected, you will be able to specify measurement units for the value returned by this function in the edit box to the right. Having specified units for elements of your model, you may perform unit checking to find out dimension inconsistencies in the model. </p>
+<h4 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h4><p>默认情况下，可以从模型的任何位置调用函数。您可以通过更改函数的访问类型来限制函数的访问范围。</p>
+<p>调用函数请写入函数名称，后跟括号。</p>
+<p>如果函数有参数，则需要在括号内传递由逗号分隔的参数值。必须按照函数属性的Arguments部分的函数参数表中定义的顺序提供这些值。</p>
+<h3 id="Table-Function"><a href="#Table-Function" class="headerlink" title="Table Function"></a>Table Function</h3><p>AnyLogic根据给定的数据和选择的插值类型构建表函数。可能需要表函数来定义复杂的非线性关系。</p>
+<h4 id="General-properties-4"><a href="#General-properties-4" class="headerlink" title="General properties"></a>General properties</h4><p>Interpolation – Specifies how the table function is interpolated:</p>
+<ul>
+<li>None – no interpolation applied.</li>
+<li>Step – step interpolation.</li>
+<li>Linear – linear interpolation.</li>
+<li>Spline – 4th order spline interpolation.</li>
+<li>Approximation – The resulting function is a polynomial of Order you specify in the edit-box on the right, formed in order the sum of the root-mean-square error in the points is minimal. </li>
+</ul>
+<p>Out of range – Specifies how the table function’s behavior in infeasible area (when its argument is out of range):</p>
+<ul>
+<li>Error – runtime error is raised.</li>
+<li>Nearest – the function is extrapolated by using the nearest valid argument.</li>
+<li>Repeating – the function is extrapolated by making it periodic with the function range as a period.</li>
+<li>Custom – the function returns a custom value, defined in the Value field to the right.</li>
+<li>Extrapolate – the function is extrapolated outside the range in accordance to the interpolation type. </li>
+</ul>
+<h4 id="Table-data"><a href="#Table-data" class="headerlink" title="Table data"></a>Table data</h4><p>……</p>
+<h4 id="Advanced-3"><a href="#Advanced-3" class="headerlink" title="Advanced"></a>Advanced</h4><p>……</p>
+<h3 id="Custom-distribution"><a href="#Custom-distribution" class="headerlink" title="Custom distribution"></a>Custom distribution</h3><p>……</p>
+<h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p>AnyLogic provides users with a Schedule - a special element allowing to define how some value changes in time according to the defined (optionally cyclic) pattern. </p>
+<p>Schedule is frequently used to define:<br>•Timetable for a pool of resources defined with the ResourcePool.<br>•Agent generation times, or time pattern of agent arrival rate in the block Source.<br>•Pedestrian generation times, or time pattern (e.g. daily) of pedestrian arrival rate in the block PedSource.</p>
+<p>Moreover, you can use schedule in none AnyLogic objects but work with it programmatically, obtaining its value using the corresponding API.</p>
+<p>……</p>
+<h3 id="Port"><a href="#Port" class="headerlink" title="Port"></a>Port</h3><p>端口在消息传递机制中起着核心作用。端口是双向的，消息通过端口发送和接收。</p>
+<p>……</p>
+<h3 id="Connector"><a href="#Connector" class="headerlink" title="Connector"></a>Connector</h3><p>要建立对象间的交互，您需要将Agent的有效接口元素与Connector连接起来。Connector是连接两个Port或两个variable的一条线。</p>
+<p>连接两个端口意味着消息将在它们之间传递。</p>
+<p>连接变量意味着它们在任何时刻都有相同的值（一个变量的变化将立即传播到另一个变量，声明为外部变量）。</p>
+<p>……</p>
+<h3 id="Link-to-Agents"><a href="#Link-to-Agents" class="headerlink" title="Link to Agents"></a>Link to Agents</h3><p>与Agent交互相关。</p>
+<p>……</p>
+<h3 id="绘制状态图的组件"><a href="#绘制状态图的组件" class="headerlink" title="绘制状态图的组件"></a>绘制状态图的组件</h3><p>……</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Simulation/" rel="tag"># Simulation</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/21/Explore basic branches of mathematics and their roles/" rel="next" title="Explore basic branches of mathematics and their roles">
+                <i class="fa fa-chevron-left"></i> Explore basic branches of mathematics and their roles
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <p class="site-description motion-element" itemprop="description">What's Past is Prologue.<br>版权声明：本博客为博主原创文章，未经博主允许不得转载。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Tardis012" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:blossfeldiana@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具栏学习-Agent-palette"><span class="nav-number">2.</span> <span class="nav-text">工具栏学习-Agent palette</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Agent-palette-overview"><span class="nav-number">2.1.</span> <span class="nav-text">The Agent palette overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Agent"><span class="nav-number">2.2.</span> <span class="nav-text">Agent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameter"><span class="nav-number">2.3.</span> <span class="nav-text">Parameter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-properties"><span class="nav-number">2.3.1.</span> <span class="nav-text">General properties</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Value-editor"><span class="nav-number">2.3.2.</span> <span class="nav-text">Value editor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced"><span class="nav-number">2.3.3.</span> <span class="nav-text">Advanced</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Event"><span class="nav-number">2.4.</span> <span class="nav-text">Event</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-properties-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">General properties</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mode"><span class="nav-number">2.4.2.</span> <span class="nav-text">Mode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Action"><span class="nav-number">2.4.3.</span> <span class="nav-text">Action</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Event"><span class="nav-number">2.5.</span> <span class="nav-text">Dynamic Event</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Action-1"><span class="nav-number">2.5.1.</span> <span class="nav-text">Action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Arguments"><span class="nav-number">2.5.2.</span> <span class="nav-text">Arguments</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variable"><span class="nav-number">2.6.</span> <span class="nav-text">Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-properties-2"><span class="nav-number">2.6.1.</span> <span class="nav-text">General properties</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced-1"><span class="nav-number">2.6.2.</span> <span class="nav-text">Advanced</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection"><span class="nav-number">2.7.</span> <span class="nav-text">Collection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">2.8.</span> <span class="nav-text">Function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-properties-3"><span class="nav-number">2.8.1.</span> <span class="nav-text">General properties</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Arguments-1"><span class="nav-number">2.8.2.</span> <span class="nav-text">Arguments</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Function-body"><span class="nav-number">2.8.3.</span> <span class="nav-text">Function body</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced-2"><span class="nav-number">2.8.4.</span> <span class="nav-text">Advanced</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的调用"><span class="nav-number">2.8.5.</span> <span class="nav-text">函数的调用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Table-Function"><span class="nav-number">2.9.</span> <span class="nav-text">Table Function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-properties-4"><span class="nav-number">2.9.1.</span> <span class="nav-text">General properties</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Table-data"><span class="nav-number">2.9.2.</span> <span class="nav-text">Table data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced-3"><span class="nav-number">2.9.3.</span> <span class="nav-text">Advanced</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-distribution"><span class="nav-number">2.10.</span> <span class="nav-text">Custom distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Schedule"><span class="nav-number">2.11.</span> <span class="nav-text">Schedule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Port"><span class="nav-number">2.12.</span> <span class="nav-text">Port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connector"><span class="nav-number">2.13.</span> <span class="nav-text">Connector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Link-to-Agents"><span class="nav-number">2.14.</span> <span class="nav-text">Link to Agents</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制状态图的组件"><span class="nav-number">2.15.</span> <span class="nav-text">绘制状态图的组件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-palette"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
