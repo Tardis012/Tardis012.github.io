@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Statistics,">
+  <meta name="keywords" content="Rainfall,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="[TOC] 前言本篇为如何采用Python进行概率分布拟合的总结笔记 (3/3)。">
-<meta name="keywords" content="Statistics">
+<meta name="description" content="[TOC] 前言​        本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 ​        之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
+<meta name="keywords" content="Rainfall">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Explore how to derive probability distribution in Python-3">
-<meta property="og:url" content="https://tardis012.github.io/2019/05/07/Explore how to derive probability distribution in Python-3/index.html">
+<meta property="og:title" content="Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article">
+<meta property="og:url" content="https://tardis012.github.io/2019/05/29/Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="[TOC] 前言本篇为如何采用Python进行概率分布拟合的总结笔记 (3/3)。">
+<meta property="og:description" content="[TOC] 前言​        本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 ​        之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-25T08:55:33.920Z">
+<meta property="og:updated_time" content="2019-05-29T14:13:24.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Explore how to derive probability distribution in Python-3">
-<meta name="twitter:description" content="[TOC] 前言本篇为如何采用Python进行概率分布拟合的总结笔记 (3/3)。">
+<meta name="twitter:title" content="Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article">
+<meta name="twitter:description" content="[TOC] 前言​        本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 ​        之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tardis012.github.io/2019/05/07/Explore how to derive probability distribution in Python-3/">
+  <link rel="canonical" href="https://tardis012.github.io/2019/05/29/Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article/">
 
 
 
 
 
-  <title>Explore how to derive probability distribution in Python-3 | 小zのGarden</title>
+  <title>Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article | 小zのGarden</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/07/Explore how to derive probability distribution in Python-3/">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/29/Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tardis012">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Explore how to derive probability distribution in Python-3</h1>
+          <h1 class="post-title" itemprop="name headline">Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-07T12:03:28+08:00">
-                2019-05-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-29T21:39:07+08:00">
+                2019-05-29
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Statistics-and-Machine-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Statistics and Machine learning</span>
+                  <a href="/categories/Major/" itemprop="url" rel="index">
+                    <span itemprop="name">Major</span>
                   </a>
                 </span>
 
@@ -357,11 +357,19 @@
 
       
         <p>[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为如何采用Python进行概率分布拟合的总结笔记 (3/3)。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​        本篇为网页文章 <a href="http://www.kexuejia.net.cn/bianji/commonns/ShowDetailPage.action?type=3&amp;id=6751&amp;uid=35&amp;code=061SGKa309UZTI1o0wb30fzza30SGKa8&amp;state=kxj" target="_blank" rel="noopener">5G将干扰天气预报，造成难以估量的损失？</a> 的阅读笔记。</p>
+<p>​        之前在博客中写过<a href="https://tardis012.github.io/2019/04/22/Study%20Note%20for%20%E2%80%9CHow%205G%20is%20likely%20to%20put%20weather%20forecasting%20at%20risk%E2%80%9D%20Web%20Article/">Study Note for “How 5G is likely to put weather forecasting at risk” Web Article</a>，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。</p>
 <a id="more"></a>
-<p>In my previous blog post(<a href="https://tardis012.github.io/2019/05/02/Explore%20how%20to%20estimate%20probability%20distribution%20in%20Python-1/">Explore how to derive probability distribution in Python-1</a>)(<a href="https://tardis012.github.io/2019/05/06/Explore%20how%20to%20estimate%20probability%20distribution%20in%20Python-2/">Explore how to derive probability distribution in Python-2</a>), how to derive probability distribution from three perspectives (Frequentist probability&amp;parametric statistics, Bayesian probability&amp;parametric statistics, Frequentist probability&amp;nonparametric statistics) has been written.</p>
-<p>The detailed study notes of derive probability distribution from perspective of Bayesian probability and nonparametric statistics are shown in this article.</p>
-<h2 id="Derive-probability-distribution-from-perspective-of-Bayesian-probability-and-nonparametric-statistics"><a href="#Derive-probability-distribution-from-perspective-of-Bayesian-probability-and-nonparametric-statistics" class="headerlink" title="Derive probability distribution from perspective of Bayesian probability and nonparametric statistics"></a>Derive probability distribution from perspective of Bayesian probability and nonparametric statistics</h2>
+<h2 id="气象卫星探测原理"><a href="#气象卫星探测原理" class="headerlink" title="气象卫星探测原理"></a>气象卫星探测原理</h2><p>​        气象预报当中的卫星探测原理就是接受不同波长的电磁波，然后再根据电磁波的差异，对云、地表等进行区分，达到气象探测或者监测预报的目的。</p>
+<h2 id="5G对气象预报造成干扰的原因"><a href="#5G对气象预报造成干扰的原因" class="headerlink" title="5G对气象预报造成干扰的原因"></a>5G对气象预报造成干扰的原因</h2><p>​        气象观测最重要的就是数据。</p>
+<p>​        频段接近的情况下，部署的5G网络传输时的电磁波可能会干扰气象数据的采集。</p>
+<h2 id="5G频段"><a href="#5G频段" class="headerlink" title="5G频段"></a>5G频段</h2><p>​        5G频段可分为低、中、高频段。频段大致分布在450MHz到6GHz，以及24.25GHz到52.6GHz之间。</p>
+<h2 id="5G频段-in-USA"><a href="#5G频段-in-USA" class="headerlink" title="5G频段 in USA"></a>5G频段 in USA</h2><p>​        美国联邦通信委员会已经开始将接近23.8GHz的频率拍卖给5G网络供应商，这一频率正是水蒸气发出微弱信号的频率。除了23.8GHz的频段，用于研究雨雪天气的36-37GHz频段、测量大气温度的50GHz频段，以及分析云和冰的86-92GHz频段都在拍卖行列当中。</p>
+<h2 id="5G频段-in-China"><a href="#5G频段-in-China" class="headerlink" title="5G频段 in China"></a>5G频段 in China</h2><p>​        每个国家使用的5G频率都不一样。与美国即将拍卖的5G频段相比，我国目前使用的频段还比较低。</p>
+<p>​        2018年年底，工信部向中国电信、中国移动、中国联通发放了5G系统中低频段试验频率使用许可。其中，中国电信和中国联通获得3.5GHz频段试验频率使用许可，中国移动获得的则是2.6GHz和4.9GHz频段试验频率使用许可。</p>
+<p>​        我国而言，目前风云气象卫星使用的频段是137GHz和1700GHz，与5G信号的2.6GHz到4.9GHz相比，差距还比较明显，相互之间暂时不会产生干扰。</p>
+<h2 id="频率干扰解决方案"><a href="#频率干扰解决方案" class="headerlink" title="频率干扰解决方案"></a>频率干扰解决方案</h2><p>​        “滤波器”和“隔离带”都是很好的方式。前者安装在接收终端，可以有效过滤，增加接收端的“定向性”，就会屏蔽掉“杂音”，获得想要的信号和其承载的信息。后者缩减了带宽，也就保留了相互之间不重叠干扰的安全距离。</p>
+
       
     </div>
     
@@ -378,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+            <a href="/tags/Rainfall/" rel="tag"># Rainfall</a>
           
         </div>
       
@@ -391,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/06/Explore how to derive probability distribution in Python-2/" rel="next" title="Explore how to derive probability distribution in Python-2">
-                <i class="fa fa-chevron-left"></i> Explore how to derive probability distribution in Python-2
+              <a href="/2019/05/28/Explore how to write software developer guide from LSST/" rel="next" title="Explore how to write software developer guide from LSST">
+                <i class="fa fa-chevron-left"></i> Explore how to write software developer guide from LSST
               </a>
             
           </div>
@@ -400,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/07/Study note on algorithm package or framework related to statistics and machine learning-1/" rel="prev" title="Study note on algorithm package or framework related to statistics and machine learning-1">
-                Study note on algorithm package or framework related to statistics and machine learning-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -551,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Derive-probability-distribution-from-perspective-of-Bayesian-probability-and-nonparametric-statistics"><span class="nav-number">2.</span> <span class="nav-text">Derive probability distribution from perspective of Bayesian probability and nonparametric statistics</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#气象卫星探测原理"><span class="nav-number">2.</span> <span class="nav-text">气象卫星探测原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G对气象预报造成干扰的原因"><span class="nav-number">3.</span> <span class="nav-text">5G对气象预报造成干扰的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段"><span class="nav-number">4.</span> <span class="nav-text">5G频段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段-in-USA"><span class="nav-number">5.</span> <span class="nav-text">5G频段 in USA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段-in-China"><span class="nav-number">6.</span> <span class="nav-text">5G频段 in China</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#频率干扰解决方案"><span class="nav-number">7.</span> <span class="nav-text">频率干扰解决方案</span></a></li></ol></div>
             
 
           </div>
