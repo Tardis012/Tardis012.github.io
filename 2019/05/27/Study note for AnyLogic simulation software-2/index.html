@@ -92,7 +92,7 @@
 <meta property="og:description" content="[TOC] 前言本篇为AnyLogic仿真软件的学习总结笔记(2/6)。 具体为：工具栏中的Process Modeling Library palette学习。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20note%20for%20AnyLogic%20simulation%20software_2.png">
-<meta property="og:updated_time" content="2019-05-27T17:18:53.967Z">
+<meta property="og:updated_time" content="2019-06-01T05:13:09.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study note for AnyLogic simulation software-2">
 <meta name="twitter:description" content="[TOC] 前言本篇为AnyLogic仿真软件的学习总结笔记(2/6)。 具体为：工具栏中的Process Modeling Library palette学习。">
@@ -364,7 +364,163 @@
 <a id="more"></a>
 <h2 id="工具栏学习-Process-Modeling-Library-palette"><a href="#工具栏学习-Process-Modeling-Library-palette" class="headerlink" title="工具栏学习-Process Modeling Library palette"></a>工具栏学习-Process Modeling Library palette</h2><h3 id="The-Process-Modeling-Library-palette-overview"><a href="#The-Process-Modeling-Library-palette-overview" class="headerlink" title="The Process Modeling Library palette overview"></a>The Process Modeling Library palette overview</h3><p>AnyLogic Process Modeling Library supports discrete-event, or, to be more precise, process-centric modeling paradigm.</p>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20note%20for%20AnyLogic%20simulation%20software_2.png" alt="process modeling library"></p>
-<p>%%%已写。</p>
+<h3 id="Process-Modeling-Library-Blocks"><a href="#Process-Modeling-Library-Blocks" class="headerlink" title="Process Modeling Library Blocks"></a>Process Modeling Library Blocks</h3><table>
+<thead>
+<tr>
+<th>Block name</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>Generates agents.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Sink.html" target="_blank" rel="noopener">Sink</a></td>
+<td>Disposes incoming agents.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Delay.html" target="_blank" rel="noopener">Delay</a></td>
+<td>Delays agents by the specified delay time.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Queue.html" target="_blank" rel="noopener">Queue</a></td>
+<td>Stores agents in the specified order.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/SelectOutput.html" target="_blank" rel="noopener">SelectOutput</a></td>
+<td>Forwards the agent to one of the output ports depending on the condition.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/SelectOutput5.html" target="_blank" rel="noopener">SelectOutput5</a></td>
+<td>Routes the incoming agents to one of the five output ports depending on (probabilistic or deterministic) conditions.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Hold.html" target="_blank" rel="noopener">Hold</a></td>
+<td>Blocks/unblocks the agent flow.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Match.html" target="_blank" rel="noopener">Match</a></td>
+<td>Finds a match between two agents from different inputs, then outputs them.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Split.html" target="_blank" rel="noopener">Split</a></td>
+<td>For each incoming agent (“original”) creates one or several other agents-copies.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Combine.html" target="_blank" rel="noopener">Combine</a></td>
+<td>Waits for two agents, then produces a new agent from them.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Assembler.html" target="_blank" rel="noopener">Assembler</a></td>
+<td>Assembles a certain number of agents from several sources (5 or less)  into a single agent.</td>
+</tr>
+<tr>
+<td>MoveTo</td>
+<td>Moves an agent from its current location to new location.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Conveyor.html" target="_blank" rel="noopener">Conveyor</a></td>
+<td>Moves agents at a certain speed, preserving order and space between them.</td>
+</tr>
+</tbody>
+</table>
+<p>继续：</p>
+<table>
+<thead>
+<tr>
+<th>Block name</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ResourcePool</td>
+<td>Provides resource units that are seized and released by agents.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Seize.html" target="_blank" rel="noopener">Seize</a></td>
+<td>Seizes the number of units of the specified resource required by the agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Release.html" target="_blank" rel="noopener">Release</a></td>
+<td>Releases resource units previously seized by the agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Service.html" target="_blank" rel="noopener">Service</a></td>
+<td>Seizes resource units for the agent, delays it, and releases the seized units.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceSendTo.html" target="_blank" rel="noopener">ResourceSendTo</a></td>
+<td>Sends a set of portable and/or moving resources to specified location.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceTaskStart.html" target="_blank" rel="noopener">ResourceTaskStart</a></td>
+<td>Defines the start of the flowchart branch modeling the task process for resource units (usually it is a resource preparation process).</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceTaskEnd.html" target="_blank" rel="noopener">ResourceTaskEnd</a></td>
+<td>Defines the end of the flowchart branch modeling the task process for resource unit(s) (usually it is a wrap-up process).</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceTask.html" target="_blank" rel="noopener">ResourceTask</a></td>
+<td>Defines some custom task for resources that cannot be defined using the provided standard patterns for failures, maintenance, breaks.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Enter.html" target="_blank" rel="noopener">Enter</a></td>
+<td>Inserts agents created elsewhere into the flowchart.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Exit.html" target="_blank" rel="noopener">Exit</a></td>
+<td>Accepts incoming agents.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Batch.html" target="_blank" rel="noopener">Batch</a></td>
+<td>Accumulates agents, then outputs them contained in a new agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Unbatch.html" target="_blank" rel="noopener">Unbatch</a></td>
+<td>Extracts all agents contained in the incoming agent and outputs them.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Dropoff.html" target="_blank" rel="noopener">Dropoff</a></td>
+<td>Extracts the selected agents from the contents of the incoming agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/Pickup.html" target="_blank" rel="noopener">Pickup</a></td>
+<td>Adds the selected agents to the contents of the incoming agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/RestrictedAreaStart.html" target="_blank" rel="noopener">RestrictedAreaStart</a></td>
+<td>Limits number of agents in a part of flowchart between corresponding area start and area end blocks.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/RestrictedAreaEnd.html" target="_blank" rel="noopener">RestrictedAreaEnd</a></td>
+<td>Ends an area started with RestrictedAreaStart block.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/TimeMeasureStart.html" target="_blank" rel="noopener">TimeMeasureStart</a></td>
+<td><strong>TimeMeasureStart</strong> as well as <a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/TimeMeasureEnd.html" target="_blank" rel="noopener"><strong>TimeMeasureEnd</strong></a> compose a pair of objects measuring the time the agents spend between them, such as “time in system”, “length of stay”, etc.   This object remembers the time when an agent goes through.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/TimeMeasureEnd.html" target="_blank" rel="noopener">TimeMeasureEnd</a></td>
+<td><strong>TimeMeasureEnd</strong> as well as <strong>TimeMeasureStart</strong> compose a pair of objects measuring the time the agents spend between them.   For each incoming agent this object measures the time it spent since it has been through one of the corresponding <a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/TimeMeasureStart.html" target="_blank" rel="noopener"><strong>TimeMeasureStart</strong></a> objects.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceAttach.html" target="_blank" rel="noopener">ResourceAttach</a></td>
+<td>Attaches a set of portable and/or moving resources to the agent.</td>
+</tr>
+<tr>
+<td><a href="http://127.0.0.1:10245/help/topic/com.anylogic.help/html/_ProcessModeling/ResourceDetach.html" target="_blank" rel="noopener">ResourceDetach</a></td>
+<td>Detaches previously attached resources from the agent.</td>
+</tr>
+</tbody>
+</table>
+<p>还有一小部分没有列出。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li>Anylogic官方Help文档</li>
+</ul>
 
       
     </div>
@@ -555,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具栏学习-Process-Modeling-Library-palette"><span class="nav-number">2.</span> <span class="nav-text">工具栏学习-Process Modeling Library palette</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Process-Modeling-Library-palette-overview"><span class="nav-number">2.1.</span> <span class="nav-text">The Process Modeling Library palette overview</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具栏学习-Process-Modeling-Library-palette"><span class="nav-number">2.</span> <span class="nav-text">工具栏学习-Process Modeling Library palette</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Process-Modeling-Library-palette-overview"><span class="nav-number">2.1.</span> <span class="nav-text">The Process Modeling Library palette overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-Modeling-Library-Blocks"><span class="nav-number">2.2.</span> <span class="nav-text">Process Modeling Library Blocks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
