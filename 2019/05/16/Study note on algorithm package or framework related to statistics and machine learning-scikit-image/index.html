@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (1/8)。 2019年目标：会调用这些常用框架进行计算，了解基础机器学习算法、深度学习算法背后的数学原理。 Topic:  the SciPy package.">
+<meta name="description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (6/8)。 Topic: the scikit-image package.">
 <meta name="keywords" content="Package">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Study note on algorithm package or framework related to statistics and machine learning-1">
-<meta property="og:url" content="https://tardis012.github.io/2019/05/07/Study note on algorithm package or framework related to statistics and machine learning-1/index.html">
+<meta property="og:title" content="Study note on algorithm package or framework related to statistics and machine learning-scikit-image">
+<meta property="og:url" content="https://tardis012.github.io/2019/05/16/Study note on algorithm package or framework related to statistics and machine learning-scikit-image/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (1/8)。 2019年目标：会调用这些常用框架进行计算，了解基础机器学习算法、深度学习算法背后的数学原理。 Topic:  the SciPy package.">
+<meta property="og:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (6/8)。 Topic: the scikit-image package.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-02T14:54:50.951Z">
+<meta property="og:updated_time" content="2019-06-06T13:11:38.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Study note on algorithm package or framework related to statistics and machine learning-1">
-<meta name="twitter:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (1/8)。 2019年目标：会调用这些常用框架进行计算，了解基础机器学习算法、深度学习算法背后的数学原理。 Topic:  the SciPy package.">
+<meta name="twitter:title" content="Study note on algorithm package or framework related to statistics and machine learning-scikit-image">
+<meta name="twitter:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (6/8)。 Topic: the scikit-image package.">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tardis012.github.io/2019/05/07/Study note on algorithm package or framework related to statistics and machine learning-1/">
+  <link rel="canonical" href="https://tardis012.github.io/2019/05/16/Study note on algorithm package or framework related to statistics and machine learning-scikit-image/">
 
 
 
 
 
-  <title>Study note on algorithm package or framework related to statistics and machine learning-1 | 小zのGarden</title>
+  <title>Study note on algorithm package or framework related to statistics and machine learning-scikit-image | 小zのGarden</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/07/Study note on algorithm package or framework related to statistics and machine learning-1/">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/16/Study note on algorithm package or framework related to statistics and machine learning-scikit-image/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tardis012">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Study note on algorithm package or framework related to statistics and machine learning-1</h1>
+          <h1 class="post-title" itemprop="name headline">Study note on algorithm package or framework related to statistics and machine learning-scikit-image</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-07T22:16:07+08:00">
-                2019-05-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-16T16:42:34+08:00">
+                2019-05-16
               </time>
             
 
@@ -356,112 +356,33 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (1/8)。</p>
-<p>2019年目标：会调用这些常用框架进行计算，了解基础机器学习算法、深度学习算法背后的数学原理。</p>
-<p>Topic:  the <code>SciPy</code> package.</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (6/8)。</p>
+<p>Topic: the <code>scikit-image</code> package.</p>
 <a id="more"></a>
-<h2 id="Four-basic-concepts"><a href="#Four-basic-concepts" class="headerlink" title="Four basic concepts"></a>Four basic concepts</h2><ul>
-<li>Module-模块：比如Numpy。</li>
-<li>Package-包：比如Pandas、<u>SciPy、Scikit-learn、PyMC</u>、Pylearn2。</li>
-<li>Library-库。</li>
-<li>Framework-框架 ：比如<u>TensorFlow</u>、<u>Keras</u>、<u>MXNet</u>、<u>PyTorch</u>、Caffe。</li>
+<h2 id="Overview-of-scikit-image-package"><a href="#Overview-of-scikit-image-package" class="headerlink" title="Overview of scikit-image package"></a>Overview of scikit-image package</h2><p><code>scikit-image</code>是用于image processing（图像处理）的开源Python 包，使用原生的 NumPy 数组作为图像对象。</p>
+<h2 id="Modules-in-scikit-image-package"><a href="#Modules-in-scikit-image-package" class="headerlink" title="Modules in scikit-image package"></a>Modules in scikit-image package</h2><ul>
+<li>color</li>
+<li>data</li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.draw.html" target="_blank" rel="noopener">draw</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.exposure.html" target="_blank" rel="noopener">exposure</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.external.html" target="_blank" rel="noopener">external</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.feature.html" target="_blank" rel="noopener">feature</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.filters.html" target="_blank" rel="noopener">filters</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.future.html" target="_blank" rel="noopener">future</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.graph.html" target="_blank" rel="noopener">graph</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.io.html" target="_blank" rel="noopener">io</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.measure.html" target="_blank" rel="noopener">measure</a></li>
+<li>morphology</li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.novice.html" target="_blank" rel="noopener">novice</a></li>
+<li>restoration</li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html" target="_blank" rel="noopener">segmentation</a></li>
+<li><a href="https://scikit-image.org/docs/stable/api/skimage.transform.html" target="_blank" rel="noopener">transform</a></li>
+<li>util</li>
+<li>viewer</li>
 </ul>
-<p>模块层级最小，框架层级最大。</p>
-<h3 id="Remark"><a href="#Remark" class="headerlink" title="Remark:"></a>Remark:</h3><p>Package和Library查资料的时候发现经常混用，除引用时参考原文表述之外，本文其余地方一律不采用Library的说法。</p>
-<p>More content can refer to this two article: <a href="https://knowpapa.com/modpaclib-py/" target="_blank" rel="noopener">“Modules vs Packages vs Libraries in Python”</a> and <a href="https://www.cnblogs.com/JetpropelledSnake/p/8905699.html" target="_blank" rel="noopener">“Python入门之面向对象module，library，package之间区别”</a> and <a href="https://cloud.tencent.com/developer/article/1178651" target="_blank" rel="noopener">“机器学习库/包的比较”</a> .</p>
-<h2 id="Overview-of-SciPy-package"><a href="#Overview-of-SciPy-package" class="headerlink" title="Overview of SciPy package"></a>Overview of SciPy package</h2><p><u><em>SciPy</em></u> is an extensive library for applied mathematics and scientific computation based on Python. The following is <u>the complete list of all the modules available</u> in the library (Martins L F, 2014).</p>
-<h2 id="Modules-in-the-SciPy-package"><a href="#Modules-in-the-SciPy-package" class="headerlink" title="Modules in the SciPy package"></a>Modules in the SciPy package</h2><table>
-<thead>
-<tr>
-<th>Module</th>
-<th>Functionality</th>
-<th>Functionality(ch)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cluster</td>
-<td>Clustering algorithms</td>
-<td>聚类算法</td>
-</tr>
-<tr>
-<td>constants</td>
-<td>Physical and mathematical constants</td>
-<td>物理和数学常量</td>
-</tr>
-<tr>
-<td>fftpack</td>
-<td>Fast Fourier Transform</td>
-<td>傅立叶变换</td>
-</tr>
-<tr>
-<td>integrate</td>
-<td>Integration and ordinary differential equations</td>
-<td>积分和常微分方程</td>
-</tr>
-<tr>
-<td>interpolate</td>
-<td>Interpolation and splines</td>
-<td>插值</td>
-</tr>
-<tr>
-<td>io</td>
-<td>Input and output</td>
-<td>数据输入输出</td>
-</tr>
-<tr>
-<td>linalg</td>
-<td>Linear algebra</td>
-<td>线性代数程序</td>
-</tr>
-<tr>
-<td><strong>ndimage</strong></td>
-<td>Image processing</td>
-<td>多维图像处理</td>
-</tr>
-<tr>
-<td>odr</td>
-<td>Orthogonal distance regression</td>
-<td>正交距离回归</td>
-</tr>
-<tr>
-<td><strong>optimize</strong></td>
-<td>Optimization and root-finding</td>
-<td>优化</td>
-</tr>
-<tr>
-<td>signal</td>
-<td>Signal processing</td>
-<td>信号处理</td>
-</tr>
-<tr>
-<td>sparse</td>
-<td>Sparse matrices</td>
-<td>稀疏矩阵</td>
-</tr>
-<tr>
-<td><strong>spatial</strong></td>
-<td>Spatial data structures</td>
-<td>空间数据结构和算法</td>
-</tr>
-<tr>
-<td>special</td>
-<td>Special functions</td>
-<td>一些特殊的数学函数</td>
-</tr>
-<tr>
-<td><strong>stats</strong></td>
-<td>Statistical distributions</td>
-<td>统计</td>
-</tr>
-<tr>
-<td>weave</td>
-<td>C/C++ integration</td>
-</tr>
-</tbody>
-</table>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>Martins L F. IPython notebook essentials[M]. Packt Publishing Ltd, 2014.</li>
+<li>API Reference for skimage 0.15.0 <a href="https://scikit-image.org/docs/stable/api/api.html" target="_blank" rel="noopener">https://scikit-image.org/docs/stable/api/api.html</a></li>
+<li>scikit-image 教程 <a href="https://cloud.tencent.com/developer/doc/1221" target="_blank" rel="noopener">https://cloud.tencent.com/developer/doc/1221</a></li>
 </ul>
 
       
@@ -493,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/07/Explore how to derive probability distribution in Python-3/" rel="next" title="Explore how to derive probability distribution in Python-3">
-                <i class="fa fa-chevron-left"></i> Explore how to derive probability distribution in Python-3
+              <a href="/2019/05/16/Study note on algorithm package or framework related to statistics and machine learning-Keras/" rel="next" title="Study note on algorithm package or framework related to statistics and machine learning-Keras">
+                <i class="fa fa-chevron-left"></i> Study note on algorithm package or framework related to statistics and machine learning-Keras
               </a>
             
           </div>
@@ -503,8 +424,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/08/Study note on algorithm package or framework related to statistics and machine learning-2/" rel="prev" title="Study note on algorithm package or framework related to statistics and machine learning-2">
-                Study note on algorithm package or framework related to statistics and machine learning-2 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/16/Study note on algorithm package or framework related to statistics and machine learning-PyMC3/" rel="prev" title="Study note on algorithm package or framework related to statistics and machine learning-PyMC3">
+                Study note on algorithm package or framework related to statistics and machine learning-PyMC3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -653,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Four-basic-concepts"><span class="nav-number">2.</span> <span class="nav-text">Four basic concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Remark"><span class="nav-number">2.1.</span> <span class="nav-text">Remark:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-SciPy-package"><span class="nav-number">3.</span> <span class="nav-text">Overview of SciPy package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modules-in-the-SciPy-package"><span class="nav-number">4.</span> <span class="nav-text">Modules in the SciPy package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-scikit-image-package"><span class="nav-number">2.</span> <span class="nav-text">Overview of scikit-image package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modules-in-scikit-image-package"><span class="nav-number">3.</span> <span class="nav-text">Modules in scikit-image package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
