@@ -91,12 +91,12 @@
 <meta property="og:site_name" content="小zのGarden">
 <meta property="og:description" content="[TOC] 前言最近处理数据时，需要从一个软件导出文件，”点击“菜单和”另存为“的操作要重复很多次，师弟推荐的一个python包-PyAutoGUI上手快，能编程实现自动点击菜单导出的功能，解放生产力~ PyAutoGUI可以模拟鼠标和键盘的操作，本篇介绍PyAutoGUI的基础功能。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://tardis012.github.io/2019/06/07/A%20way%20to%20control%20mouse%20and%20keyboard/assets/TIM截图20190607152458.png">
-<meta property="og:updated_time" content="2019-06-08T09:43:02.723Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A%20way%20to%20control%20mouse%20and%20keyboard_1.png">
+<meta property="og:updated_time" content="2019-06-08T12:21:57.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A way to control mouse and keyboard">
 <meta name="twitter:description" content="[TOC] 前言最近处理数据时，需要从一个软件导出文件，”点击“菜单和”另存为“的操作要重复很多次，师弟推荐的一个python包-PyAutoGUI上手快，能编程实现自动点击菜单导出的功能，解放生产力~ PyAutoGUI可以模拟鼠标和键盘的操作，本篇介绍PyAutoGUI的基础功能。">
-<meta name="twitter:image" content="https://tardis012.github.io/2019/06/07/A%20way%20to%20control%20mouse%20and%20keyboard/assets/TIM截图20190607152458.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A%20way%20to%20control%20mouse%20and%20keyboard_1.png">
 
 
 
@@ -364,7 +364,7 @@
 <a id="more"></a>
 <h2 id="Introduction-of-PyAutoGUI-package"><a href="#Introduction-of-PyAutoGUI-package" class="headerlink" title="Introduction of PyAutoGUI package"></a>Introduction of PyAutoGUI package</h2><h3 id="安装与导入"><a href="#安装与导入" class="headerlink" title="安装与导入"></a>安装与导入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## cmd窗口安装</span></span><br><span class="line">pip install pyautogui </span><br><span class="line"><span class="comment">## python文件内导入</span></span><br><span class="line"><span class="keyword">import</span> pyautogui</span><br></pre></td></tr></table></figure>
 <h3 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 默认情况下启用故障安全功能。如果失去控制并需要停止当前的PyAutoGUI功能，快速移动鼠标到左上角。</span></span><br><span class="line">pyautogui.FAILSAFE = <span class="keyword">True</span>  </span><br><span class="line">pyautogui.FAILSAFE = <span class="keyword">False</span> <span class="comment"># 如果要关掉，设为false。建议打开此功能。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 可以在所有PyAutoGUI函数之后添加延迟。默认情况下，暂停设置为0.1秒。</span></span><br><span class="line">pyautogui.PAUSE = <span class="number">2.5</span> <span class="comment">#比如设置为2.5秒</span></span><br></pre></td></tr></table></figure>
-<h3 id="屏幕鼠标位置的平面坐标系"><a href="#屏幕鼠标位置的平面坐标系" class="headerlink" title="屏幕鼠标位置的平面坐标系"></a>屏幕鼠标位置的平面坐标系</h3><p><img src="assets/TIM截图20190607152458.png" alt="TIM截图20190607152458"></p>
+<h3 id="屏幕鼠标位置的平面坐标系"><a href="#屏幕鼠标位置的平面坐标系" class="headerlink" title="屏幕鼠标位置的平面坐标系"></a>屏幕鼠标位置的平面坐标系</h3><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A%20way%20to%20control%20mouse%20and%20keyboard_1.png" alt=""></p>
 <p>左上角坐标为(0,0)，右下角坐标与屏幕分辨率有关。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 返回屏幕分辨率大小</span></span><br><span class="line">pyautogui.size()</span><br><span class="line"><span class="comment">## 返回鼠标所处位置坐标</span></span><br><span class="line">pyautogui.position()</span><br></pre></td></tr></table></figure>
 <h3 id="鼠标操作"><a href="#鼠标操作" class="headerlink" title="鼠标操作"></a>鼠标操作</h3><h4 id="鼠标移动"><a href="#鼠标移动" class="headerlink" title="鼠标移动"></a>鼠标移动</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 按绝对坐标移动</span></span><br><span class="line">pyautogui.moveTo(<span class="number">100</span>, <span class="number">200</span>)   </span><br><span class="line">pyautogui.moveTo(<span class="keyword">None</span>, <span class="number">500</span>)  <span class="comment"># None可以传递当前鼠标光标位置</span></span><br><span class="line">pyautogui.moveTo(<span class="number">600</span>, <span class="keyword">None</span>)</span><br><span class="line">pyautogui.moveTo(<span class="number">100</span>, <span class="number">200</span>, <span class="number">2</span>) <span class="comment"># 设定移动持续时间为2s，默认为0.1s。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 按相对坐标移动</span></span><br><span class="line">pyautogui.move(<span class="number">0</span>, <span class="number">50</span>)       <span class="comment"># move the mouse down 50 pixels.</span></span><br><span class="line">pyautogui.move(<span class="number">-30</span>, <span class="number">0</span>)      <span class="comment"># move the mouse left 30 pixels.</span></span><br><span class="line">pyautogui.move(<span class="number">-30</span>, <span class="keyword">None</span>)   <span class="comment"># move the mouse left 30 pixels.</span></span><br></pre></td></tr></table></figure>
@@ -426,6 +426,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/08/Study Note for “2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications” Paper/" rel="prev" title="Study Note for " 2016-a="" review="" of="" machine="" vision-based="" structural="" health="" monitoring="" methodologies="" and="" applications"="" paper"="">
+                Study Note for "2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications" Paper <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
