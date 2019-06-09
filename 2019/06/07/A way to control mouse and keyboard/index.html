@@ -92,7 +92,7 @@
 <meta property="og:description" content="[TOC] 前言最近处理数据时，需要从一个软件导出文件，”点击“菜单和”另存为“的操作要重复很多次，师弟推荐的一个python包-PyAutoGUI上手快，能编程实现自动点击菜单导出的功能，解放生产力~ PyAutoGUI可以模拟鼠标和键盘的操作，本篇介绍PyAutoGUI的基础功能。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A%20way%20to%20control%20mouse%20and%20keyboard_1.png">
-<meta property="og:updated_time" content="2019-06-09T13:31:10.680Z">
+<meta property="og:updated_time" content="2019-06-09T13:35:07.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A way to control mouse and keyboard">
 <meta name="twitter:description" content="[TOC] 前言最近处理数据时，需要从一个软件导出文件，”点击“菜单和”另存为“的操作要重复很多次，师弟推荐的一个python包-PyAutoGUI上手快，能编程实现自动点击菜单导出的功能，解放生产力~ PyAutoGUI可以模拟鼠标和键盘的操作，本篇介绍PyAutoGUI的基础功能。">
@@ -385,7 +385,10 @@
 <p>可传递的字符串KEYBOARD_KEYS同上。</p>
 <h2 id="My-demo"><a href="#My-demo" class="headerlink" title="My demo"></a>My demo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyautogui</span><br><span class="line">print(<span class="string">"开始啦"</span>)</span><br><span class="line">pyautogui.PAUSE = <span class="number">0.5</span> </span><br><span class="line">pyautogui.FAILSAFE = <span class="keyword">True</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">1001</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        pyautogui.click(x=<span class="number">20</span>, y=<span class="number">40</span>)</span><br><span class="line">        pyautogui.moveTo(<span class="number">50</span>, <span class="number">90</span>)</span><br><span class="line">        pyautogui.click()</span><br><span class="line">        pyautogui.press(<span class="string">'enter'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        pyautogui.press(<span class="string">'down'</span>)</span><br><span class="line">        pyautogui.click(x=<span class="number">20</span>, y=<span class="number">40</span>) </span><br><span class="line">        pyautogui.click(x=<span class="number">50</span>, y=<span class="number">90</span>)</span><br><span class="line">        pyautogui.press(<span class="string">'enter'</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><p align="left">Welcome to PyAutoGUI’s documentation!</p><br><a href="https://pyautogui.readthedocs.io/en/latest/introduction.html" target="_blank" rel="noopener">https://pyautogui.readthedocs.io/en/latest/introduction.html</a></li>
+<li><p align="left">Welcome to PyAutoGUI’s documentation!</p>
+
+<p><a href="https://pyautogui.readthedocs.io/en/latest/introduction.html" target="_blank" rel="noopener">https://pyautogui.readthedocs.io/en/latest/introduction.html</a></p>
+</li>
 <li><p align="left">Python直接控制鼠标键盘</p>
 
 <p><a href="https://www.cnblogs.com/fanghao/p/8453207.html?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">https://www.cnblogs.com/fanghao/p/8453207.html?tdsourcetag=s_pctim_aiomsg</a></p>
