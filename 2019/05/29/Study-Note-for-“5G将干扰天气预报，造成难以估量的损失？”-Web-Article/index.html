@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="Rainfall,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 前言本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
+<meta name="keywords" content="Rainfall">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article">
+<meta property="og:url" content="https://tardis012.github.io/2019/05/29/Study-Note-for-“5G将干扰天气预报，造成难以估量的损失？”-Web-Article/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="[TOC] 前言本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%20%E2%80%9C5G%E5%B0%86%E5%B9%B2%E6%89%B0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%EF%BC%8C%E9%80%A0%E6%88%90%E9%9A%BE%E4%BB%A5%E4%BC%B0%E9%87%8F%E7%9A%84%E6%8D%9F%E5%A4%B1%EF%BC%9F%E2%80%9D%20Web%20Article_1.jpg">
+<meta property="og:updated_time" content="2019-06-01T12:27:54.102Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article">
+<meta name="twitter:description" content="[TOC] 前言本篇为网页文章 5G将干扰天气预报，造成难以估量的损失？ 的阅读笔记。 之前在博客中写过Study Note for “How 5G is likely to put weather forecasting at risk” Web Article，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%20%E2%80%9C5G%E5%B0%86%E5%B9%B2%E6%89%B0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%EF%BC%8C%E9%80%A0%E6%88%90%E9%9A%BE%E4%BB%A5%E4%BC%B0%E9%87%8F%E7%9A%84%E6%8D%9F%E5%A4%B1%EF%BC%9F%E2%80%9D%20Web%20Article_1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tardis012.github.io/2019/05/29/Study-Note-for-“5G将干扰天气预报，造成难以估量的损失？”-Web-Article/">
+
+
+
+
+
+  <title>Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/29/Study-Note-for-“5G将干扰天气预报，造成难以估量的损失？”-Web-Article/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Study Note for “5G将干扰天气预报，造成难以估量的损失？” Web Article</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-29T21:39:07+08:00">
+                2019-05-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Major/" itemprop="url" rel="index">
+                    <span itemprop="name">Major</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为网页文章 <a href="http://www.kexuejia.net.cn/bianji/commonns/ShowDetailPage.action?type=3&amp;id=6751&amp;uid=35&amp;code=061SGKa309UZTI1o0wb30fzza30SGKa8&amp;state=kxj" target="_blank" rel="noopener">5G将干扰天气预报，造成难以估量的损失？</a> 的阅读笔记。</p>
+<p>之前在博客中写过<a href="https://tardis012.github.io/2019/04/22/Study%20Note%20for%20%E2%80%9CHow%205G%20is%20likely%20to%20put%20weather%20forecasting%20at%20risk%E2%80%9D%20Web%20Article/">Study Note for “How 5G is likely to put weather forecasting at risk” Web Article</a>，正好今天看到文章推送，增加了一些5G对天气预报影响的后续分析。</p>
+<a id="more"></a>
+<h2 id="气象卫星探测原理"><a href="#气象卫星探测原理" class="headerlink" title="气象卫星探测原理"></a>气象卫星探测原理</h2><p>气象预报当中的卫星探测原理就是接受不同波长的电磁波，然后再根据电磁波的差异，对云、地表等进行区分，达到气象探测或者监测预报的目的。</p>
+<h2 id="5G对气象预报造成干扰的原因"><a href="#5G对气象预报造成干扰的原因" class="headerlink" title="5G对气象预报造成干扰的原因"></a>5G对气象预报造成干扰的原因</h2><p>频段接近的情况下，部署的5G网络传输时的电磁波可能会干扰气象数据的采集。</p>
+<h2 id="5G频段"><a href="#5G频段" class="headerlink" title="5G频段"></a>5G频段</h2><p>5G频段可分为低、中、高频段。频段大致分布在450MHz到6GHz，以及24.25GHz到52.6GHz之间。</p>
+<h2 id="5G频段-in-USA"><a href="#5G频段-in-USA" class="headerlink" title="5G频段 in USA"></a>5G频段 in USA</h2><p>美国联邦通信委员会已经开始将接近23.8GHz的频率拍卖给5G网络供应商，这一频率正是水蒸气发出微弱信号的频率。除了23.8GHz的频段，用于研究雨雪天气的36-37GHz频段、测量大气温度的50GHz频段，以及分析云和冰的86-92GHz频段都在拍卖行列当中。</p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%20%E2%80%9C5G%E5%B0%86%E5%B9%B2%E6%89%B0%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%EF%BC%8C%E9%80%A0%E6%88%90%E9%9A%BE%E4%BB%A5%E4%BC%B0%E9%87%8F%E7%9A%84%E6%8D%9F%E5%A4%B1%EF%BC%9F%E2%80%9D%20Web%20Article_1.jpg" alt=""></p>
+<h2 id="5G频段-in-China"><a href="#5G频段-in-China" class="headerlink" title="5G频段 in China"></a>5G频段 in China</h2><p>每个国家使用的5G频率都不一样。与美国即将拍卖的5G频段相比，我国目前使用的频段还比较低。</p>
+<p>2018年年底，工信部向中国电信、中国移动、中国联通发放了5G系统中低频段试验频率使用许可。其中，中国电信和中国联通获得3.5GHz频段试验频率使用许可，中国移动获得的则是2.6GHz和4.9GHz频段试验频率使用许可。</p>
+<p>我国风云气象卫星目前使用的频段是137GHz和1700GHz，与5G信号的2.6GHz到4.9GHz相比，差距还比较明显，相互之间暂时不会产生干扰。</p>
+<h2 id="频率干扰解决方案"><a href="#频率干扰解决方案" class="headerlink" title="频率干扰解决方案"></a>频率干扰解决方案</h2><p>“滤波器”和“隔离带”都是很好的方式。前者安装在接收终端，可以有效过滤，增加接收端的“定向性”，就会屏蔽掉“杂音”，获得想要的信号和其承载的信息。后者缩减了带宽，也就保留了相互之间不重叠干扰的安全距离。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Rainfall/" rel="tag"># Rainfall</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/28/Summary-of-Discrete-event-simulation-softwares-or-packages/" rel="next" title="Summary of Discrete event simulation softwares or packages">
+                <i class="fa fa-chevron-left"></i> Summary of Discrete event simulation softwares or packages
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/01/Summary-of-papers-on-Agent-Based-Modelling-and-Simulation-topic/" rel="prev" title="Summary of papers on Agent Based Modelling and Simulation topic">
+                Summary of papers on Agent Based Modelling and Simulation topic <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <p class="site-description motion-element" itemprop="description">What's Past is Prologue.<br>版权声明：本博客为博主原创文章，未经博主允许不得转载。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Tardis012" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:blossfeldiana@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#气象卫星探测原理"><span class="nav-number">2.</span> <span class="nav-text">气象卫星探测原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G对气象预报造成干扰的原因"><span class="nav-number">3.</span> <span class="nav-text">5G对气象预报造成干扰的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段"><span class="nav-number">4.</span> <span class="nav-text">5G频段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段-in-USA"><span class="nav-number">5.</span> <span class="nav-text">5G频段 in USA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频段-in-China"><span class="nav-number">6.</span> <span class="nav-text">5G频段 in China</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#频率干扰解决方案"><span class="nav-number">7.</span> <span class="nav-text">频率干扰解决方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-palette"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

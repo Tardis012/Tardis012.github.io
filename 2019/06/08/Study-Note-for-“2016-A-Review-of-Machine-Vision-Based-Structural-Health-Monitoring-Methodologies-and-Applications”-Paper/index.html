@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="Structural Health Monitoring,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 前言本篇为论文A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications(2016)的阅读笔记。">
+<meta name="keywords" content="Structural Health Monitoring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Study Note for &quot;2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications&quot; Paper">
+<meta property="og:url" content="https://tardis012.github.io/2019/06/08/Study-Note-for-“2016-A-Review-of-Machine-Vision-Based-Structural-Health-Monitoring-Methodologies-and-Applications”-Paper/index.html">
+<meta property="og:site_name" content="小zのGarden">
+<meta property="og:description" content="[TOC] 前言本篇为论文A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications(2016)的阅读笔记。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%202016-A%20Review%20of%20Machine%20Vision-Based%20Structural%20Health%20Monitoring%20Methodologies%20and%20Applications%20Paper_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%202016-A%20Review%20of%20Machine%20Vision-Based%20Structural%20Health%20Monitoring%20Methodologies%20and%20Applications%20Paper_2.png">
+<meta property="og:updated_time" content="2019-06-09T13:20:30.271Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Study Note for &quot;2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications&quot; Paper">
+<meta name="twitter:description" content="[TOC] 前言本篇为论文A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications(2016)的阅读笔记。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%202016-A%20Review%20of%20Machine%20Vision-Based%20Structural%20Health%20Monitoring%20Methodologies%20and%20Applications%20Paper_1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tardis012.github.io/2019/06/08/Study-Note-for-“2016-A-Review-of-Machine-Vision-Based-Structural-Health-Monitoring-Methodologies-and-Applications”-Paper/">
+
+
+
+
+
+  <title>Study Note for "2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications" Paper | 小zのGarden</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小zのGarden</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/06/08/Study-Note-for-“2016-A-Review-of-Machine-Vision-Based-Structural-Health-Monitoring-Methodologies-and-Applications”-Paper/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tardis012">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小zのGarden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Study Note for "2016-A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications" Paper</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-08T19:42:38+08:00">
+                2019-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Major/" itemprop="url" rel="index">
+                    <span itemprop="name">Major</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为论文A Review of Machine Vision-Based Structural Health Monitoring Methodologies and Applications(2016)的阅读笔记。</p>
+<a id="more"></a>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>本论文旨在全面回顾基于机器视觉的土木工程基础设施监测。</p>
+<p>结构健康监测(SHM)技术的出现，是为了保障工程结构的运行安全，通过部署各种传感器，监测各种物理量，评估结构的状态和性能，指导日常的检查和维护。<strong>对于大规模SHM系统，来自机械、电磁学、光学、热学、化学等多个领域的新型传感技术为准确获取反映真实环境和结构条件的大量原始数据做出了巨大贡献。</strong>在过去的三十年里，世界范围内的研究人员在这方面投入了相当多的精力。</p>
+<p>随着光学器件和计算机科学的飞速发展，<strong>基于机器视觉的传感与监控技术</strong>已经成为一个前沿的研究领域，越来越受到土木工程界的重视。这主要是因为它<strong>具有非接触式、远距离、高精度、多点抗电磁干扰、大范围结构测量/监测等独特的优点</strong>。到目前为止，许多基于视觉的分析方法已经发展起来，用于结构位移测量、应变/应力监测、振动响应监测、裂纹或缺陷检测以及表征等。</p>
+<h2 id="机器视觉技术的应用"><a href="#机器视觉技术的应用" class="headerlink" title="机器视觉技术的应用"></a>机器视觉技术的应用</h2><p>基于视觉的测量系统一般由图像采集装置(数码相机、镜头和图像采集器)、计算机和图像处理软件平台组成。在这些构件中，图像处理软件平台作为关键部件，与具体算法相结合，获得结构监测中的力学参数。</p>
+<h3 id="二维-2D-结构位移监测"><a href="#二维-2D-结构位移监测" class="headerlink" title="二维(2D)结构位移监测"></a>二维(2D)结构位移监测</h3><p>利用图像序列、模式匹配算法、边缘检测算法等图像处理技术，可以得到预定义目标的结构位移。这可用于获得某一结构上几个选定点的动位移，以供结构监测用。</p>
+<p>如图1所示，包含预定义目标的图像被数码相机捕获。利用数字图像处理和模式匹配算法对目标进行跟踪，得到结构在目标位置的位移。在这种情况下，通过适当的图像处理方法，如数字图像相关、平均位移跟踪算法、CamShift跟踪算法和Lucas-Kanade方法，<strong>可以用一台数码相机获得水平位移和垂直位移，称为二维(2D)位移</strong>。</p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%202016-A%20Review%20of%20Machine%20Vision-Based%20Structural%20Health%20Monitoring%20Methodologies%20and%20Applications%20Paper_1.png" alt=""></p>
+<p>图1. 基于二维视觉的位移测量方法</p>
+<p>基于视觉的结构位移测量方法的最大优点是，在采集到的图像中，测量目标可以是多个。</p>
+<h3 id="三维结构位移监测"><a href="#三维结构位移监测" class="headerlink" title="三维结构位移监测"></a>三维结构位移监测</h3><p><strong>仅用一个摄像机捕获的图像序列就可以获得2D（或平面内）结构位移。结合两个或多个数码相机，从两个拍摄角度拍摄两个不同的图像序列，利用视觉重建技术可以实现某一结构上选定点的三维（平面内和平面外）结构位移。</strong></p>
+<p>如图2所示，当使用两个摄像机同时捕获目标并确定两个摄像机（照相机a和照相机b）之间的几何关系时，目标在三个坐标方向上的位移称为三维位移，通过重建两个确定的摄像机坐标（平面a和平面b的坐标）上的位置变化以及两个摄像机之间的关系，可以得到实际的空间位移。</p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20Note%20for%202016-A%20Review%20of%20Machine%20Vision-Based%20Structural%20Health%20Monitoring%20Methodologies%20and%20Applications%20Paper_2.png" alt=""></p>
+<p>图2. 基于三维视觉的位移测量方法</p>
+<h3 id="结构应变与应力监测"><a href="#结构应变与应力监测" class="headerlink" title="结构应变与应力监测"></a>结构应变与应力监测</h3><p>利用机器视觉系统获得的结构位移，以及结构位移与应变应力之间的关系，可以获得结构的应变和应力。</p>
+<h3 id="振动监测与动态特性识别"><a href="#振动监测与动态特性识别" class="headerlink" title="振动监测与动态特性识别"></a>振动监测与动态特性识别</h3><p>高采样率的高速摄像机可获得结构位移，满足结构振动监测和结构固有频率、模态阻尼比、模态形状等动力特性识别的需要。</p>
+<p>基于视觉的动态监测方法可以给出稳定的信号输入，可与现有的基于振动的分析方法相结合，应用视觉技术进行结构动力参数辨识及损伤诊断。</p>
+<p>由于摄像机-目标运动产生的运动模糊，将视觉技术应用于振动目标测量时，运动模糊可能会导致系统误差和测量数据不完整。近年来，人们致力于研究去模糊和去噪算法以及模糊图像分析方法。</p>
+<h3 id="裂纹检测与表征"><a href="#裂纹检测与表征" class="headerlink" title="裂纹检测与表征"></a>裂纹检测与表征</h3><p>利用先进的图像处理技术，可以从钢、混凝土结构的裂缝、剥落等图像中分析结构表面特征。</p>
+<h3 id="集成技术"><a href="#集成技术" class="headerlink" title="集成技术"></a>集成技术</h3><p>通过与其他传感方法的集成，将机器视觉技术扩展到更具体的应用领域。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>虽然基于视觉的SHM技术已经取得了很大的进展和成就，但仍然存在一些关键的局限性和挑战。例如：(1) 目前的研究大多是通过实验室测试进行的，采用缩放的物理模型，由于现场条件复杂，研究成果可能无法在现场连续监测中实现；(2) 视觉设备采集的图像质量受到周围环境条件（如光的变化）的显著影响，雨、雪、雾、地面振动的边缘遮挡；(3) 作为一项跨学科、前沿的技术，土木工程与光电子工程研究者之间建立科学有效的合作机制仍面临着巨大的挑战。</p>
+<h2 id="其他类似研究"><a href="#其他类似研究" class="headerlink" title="其他类似研究"></a>其他类似研究</h2><ol>
+<li>Wu和Casciati(2014)简要介绍了基于视觉的结构监测定位系统。</li>
+<li>Jiang等(2008)综述了近距离摄影测量在桥梁变形和几何测量中的发展和应用。</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li>Ye X W, Dong C Z, Liu T. A review of machine vision-based structural health monitoring: Methodologies and applications[J]. Journal of Sensors, 2016, 2016.</li>
+<li>L. J.Wu and F. Casciati, “Local positioning systems versus structural monitoring: a review,” Structural Control and Health Monitoring, vol. 21, no. 9, pp. 1209–1221, 2014.</li>
+<li>R. N. Jiang, D. V. J´auregui, and K. R. White, “Close-range photogrammetry applications in bridge measurement: literature review,” Measurement, vol. 41, no. 8, pp. 823–834, 2008.</li>
+<li>C. Koch, K. Georgieva, V. Kasireddy, B. Akinci, and P. Fieguth, “A review on computer vision based defect detection and condition assessment of concrete and asphalt civil infrastructure,” Advanced Engineering Informatics, vol. 29, no. 2, pp. 196–210, 2015.</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Structural-Health-Monitoring/" rel="tag"># Structural Health Monitoring</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/07/A-way-to-control-mouse-and-keyboard/" rel="next" title="A way to control mouse and keyboard">
+                <i class="fa fa-chevron-left"></i> A way to control mouse and keyboard
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tardis012</p>
+              <p class="site-description motion-element" itemprop="description">What's Past is Prologue.<br>版权声明：本博客为博主原创文章，未经博主允许不得转载。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Tardis012" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:blossfeldiana@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器视觉技术的应用"><span class="nav-number">3.</span> <span class="nav-text">机器视觉技术的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二维-2D-结构位移监测"><span class="nav-number">3.1.</span> <span class="nav-text">二维(2D)结构位移监测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三维结构位移监测"><span class="nav-number">3.2.</span> <span class="nav-text">三维结构位移监测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构应变与应力监测"><span class="nav-number">3.3.</span> <span class="nav-text">结构应变与应力监测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#振动监测与动态特性识别"><span class="nav-number">3.4.</span> <span class="nav-text">振动监测与动态特性识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裂纹检测与表征"><span class="nav-number">3.5.</span> <span class="nav-text">裂纹检测与表征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成技术"><span class="nav-number">3.6.</span> <span class="nav-text">集成技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他类似研究"><span class="nav-number">5.</span> <span class="nav-text">其他类似研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-palette"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tardis012</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
