@@ -83,20 +83,23 @@
 
 
 
-<meta name="description" content="前言本篇为传感器类型的学习总结笔记。">
+<meta name="description" content="[TOC] 前言本篇为传感器类型的学习总结笔记。">
 <meta name="keywords" content="Structural Health Monitoring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Study note on Sensor types topic">
 <meta property="og:url" content="https://tardis012.github.io/2019/06/10/Study-note-on-Sensor-types-topic/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为传感器类型的学习总结笔记。">
+<meta property="og:description" content="[TOC] 前言本篇为传感器类型的学习总结笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.jpg">
-<meta property="og:updated_time" content="2019-06-11T07:04:56.313Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.png">
+<meta property="og:image" content="https://tardis012.github.io/2019/06/10/Study-note-on-Sensor-types-topic/assets/Study-note-on-Sensor-types-topic_2-1560586179567.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_4.png">
+<meta property="og:updated_time" content="2019-06-15T08:11:39.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Study note on Sensor types topic">
-<meta name="twitter:description" content="前言本篇为传感器类型的学习总结笔记。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.jpg">
+<meta name="twitter:description" content="[TOC] 前言本篇为传感器类型的学习总结笔记。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.png">
 
 
 
@@ -358,17 +361,29 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为传感器类型的学习总结笔记。</p>
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为传感器类型的学习总结笔记。</p>
 <a id="more"></a>
-<h2 id="Sensors"><a href="#Sensors" class="headerlink" title="Sensors"></a>Sensors</h2><p>在传感器中包含着两个必不可少的概念：一是拾取信息；二是把拾取到的信息进行变换，变换成一种与被测量不仅有确定函数关系，而且便于传输和处理的量。</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>传感器是一种能感知某一被测量（物理信息、化学信息和生物信息），并能将被测信息转换成与之相对应的其他量（电量、光学量、机械量等）的器件或装置。这种发生能量转换的过程称之为“传感”。</p>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ol>
-<li>传感是一个含义宽广而笼统的名词，一切获取信息的仪表器件（如敏感元件探测器、转换器及一次仪表等）都可称为传感器。</li>
-<li>工程检测中最需要的是把非电量转换成电量，所以人们习惯上又称传感器是一种把被测的非电量转换成电量的装置。</li>
+<h2 id="Sensors"><a href="#Sensors" class="headerlink" title="Sensors"></a>Sensors</h2><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.png" alt=""></p>
+<p>图1. 传感器系统</p>
+<h3 id="传感器的概念"><a href="#传感器的概念" class="headerlink" title="传感器的概念"></a>传感器的概念</h3><p>我国国家标准 GB 7665—1987 规定：“传感器(sensor)是能感受规定的测量量并按一定规律转换成可用输出信号的器件或装置”。</p>
+<h4 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h4><ol>
+<li>传感器首先是一种测量器件或装置，它的作用体现在测量上。</li>
+<li>传感器输入：“规定的测量量”一般是指非电量信号，主要包括各种物理量、化学量和生物量等，在工程中常需要测量的非电量信号有力、压力、温度、流量、位移、速度、加速度、转速、浓度等。正是由于这类非电量信号不能像电信号那样可由电工仪表和电子仪器直接测量，所以就需要利用传感器技术实现由非电量到电量的转换。</li>
+<li>传感器输出：“可用输出信号”是指便于传输、转换及处理的信号，主要包括气、光和电等信号，现在一般就是指电信号(如电压、电流、电势及各种电参数等)，而</li>
+<li>传感器的输入和输出信号应该具有明确的对应关系（确定函数关系），并且应保证一定的精度。</li>
+<li>关于“传感器”这个词，目前国外还有许多提法，如变换器(transducer)、转换器(converter)、检测器(detector)和变送器(transmitter)等，而根据我们国家的规定，传感器定名为sensor；当传感器的输出信号为标准信号(1V～5V、4mA～20mA)时，称为变送器(transmitter)，二者不要混淆。</li>
 </ol>
-<h2 id="Two-classification-methods-for-sensors"><a href="#Two-classification-methods-for-sensors" class="headerlink" title="Two classification methods for sensors"></a>Two classification methods for sensors</h2><p>One classification is based on the nature of the quantity that is measured. </p>
-<p>Another category is based on the physical principles or technologies that are used in the sensor itself.</p>
-<h3 id="Sensor-Classification-Based-on-the-Measured"><a href="#Sensor-Classification-Based-on-the-Measured" class="headerlink" title="Sensor Classification Based on the Measured"></a>Sensor Classification Based on the Measured</h3><p>De Silva和Clarence W在2017年出版的书籍《Sensor systems: fundamentals and applications》中列举如下。</p>
+<h3 id="传感器的组成"><a href="#传感器的组成" class="headerlink" title="传感器的组成"></a>传感器的组成</h3><p>传感器通常由敏感元件、转换元件及测量电路组成，有时还加上辅助电源，如图2所示。</p>
+<p><img src="assets/Study-note-on-Sensor-types-topic_2-1560586179567.png" alt=""></p>
+<p>图2. 传感器的组成框图</p>
+<p>敏感元件是指传感器中能直接感受被测量的变化，并输出与被测量成确定关系的某一物理量的元件。敏感元件是传感器的核心，也是研究、设计和制作传感器的关键。</p>
+<p>转换元件是指传感器中能将敏感元件输出的物理量转换成适于传输或测量的电信号的部分。</p>
+<p>测量电路又称转换电路或信号调理电路，它的作用是将转换元件输出的电信号进行进一步的转换和处理，如放大、滤波、线性化、补偿等，以获得更好的品质特性，便于后续电路实现显示、记录、处理及控制等功能。</p>
+<h2 id="Classification-methods-for-sensors"><a href="#Classification-methods-for-sensors" class="headerlink" title="Classification methods for sensors"></a>Classification methods for sensors</h2><p>传感器的分类方法很多，至今尚无统一规定。</p>
+<h3 id="按工作原理分类"><a href="#按工作原理分类" class="headerlink" title="按工作原理分类"></a>按工作原理分类</h3><p>这是传感器最常见的分类方法，这种分类方法将物理、化学、生物等学科的原理、规律和效应作为分类的依据，有利于对传感器工作原理的阐述和对传感器的深入研究与分析。</p>
+<p>按照传感器工作原理的不同，传感器可分为电参数式传感器(包括电阻式、电感式和电容式传感器)、压电式传感器、光电式传感器(包括一般光电式、光纤式、激光式和红外式传感器等)、热电式传感器、半导体式传感器、波式和辐射式传感器等。这些类型的传感器大部分是分别基于其各自的物理效应原理命名的。</p>
+<h3 id="按被测量分类"><a href="#按被测量分类" class="headerlink" title="按被测量分类"></a><strong>按被测量分类</strong></h3><p>De Silva和Clarence W在2017年出版的书籍《Sensor systems: fundamentals and applications》中列举如下。</p>
 <ol>
 <li>Biomedical: Motion, force, blood composition, blood pressure, temperature, flow rate, urine composition, excretion composition, ECG, breathing sound, pulse, x-ray image, ultrasonic image.</li>
 <li>Chemical: Organic compounds, inorganic compounds, concentration, heat transfer rate, temperature, pressure, flow rate, humidity.</li>
@@ -377,10 +392,35 @@
 <li>Thermofluid: Flow rate, heat transfer rate, infrared waves, pressure, temperature, humidity, liquid level, density, viscosity, Reynolds number, thermal conductivity, heat transfer coefficient, Biot number, image.</li>
 </ol>
 <p>传感器专家网上的文章<a href="https://www.sensorexpert.com.cn/article/1282.html" target="_blank" rel="noopener">《传感器概述：认识传感器的第一步》</a>中列举如下。</p>
-<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_1.jpg" alt=""></p>
-<p>图1. 常见的被测参数</p>
-<h3 id="Sensor-Classification-Based-on-Sensor-Technology"><a href="#Sensor-Classification-Based-on-Sensor-Technology" class="headerlink" title="Sensor Classification Based on Sensor Technology"></a>Sensor Classification Based on Sensor Technology</h3><p>Some classes of sensors based on their physical principles and technologies are active, analog, digital, electric, IC, mechanical, optical, passive, piezoelectric, piezoresistive, and photoelastic.</p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_3.jpg" alt=""></p>
+<p>图3. 常见的被测参数</p>
+<p><strong>赵玉刚和邱东主编的《传感器基础》一书中列举如下。</strong></p>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study-note-on-Sensor-types-topic_4.png" alt=""></p>
+<p>图4. 基本被测量和派生被测量</p>
+<h4 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h4><p><strong>个人最喜欢第3个说明（图4），将基本被测量和派生被测量分开且对应，清晰明了。</strong></p>
+<h3 id="按结构分类"><a href="#按结构分类" class="headerlink" title="按结构分类"></a>按结构分类</h3><p>按传感器的结构构成可分为结构型、物性型和复合型传感器。</p>
+<p>结构型传感器是依靠传感器结构参数(如形状、尺寸等)的变化，利用某些物理规律，实现信号的变换，从而检测出测量，它是目前应用最多、最普遍的传感器。这类传感器的特点是其性能以传感器中元件相对结构(位置)的变化为基础，而与其材料特性关系不大。</p>
+<p>物性型传感器则是利用某些功能材料本身所具有的内在特性及效应将被测量直接转换成电量的传感器。例如，热电偶传感器就是利用金属导体材料的温差电动势效应和不同金属导体间的接触电动势效应实现对温度的测量的；而利用压电晶体制成的压力传感器则是利用压电材料本身所具有的压电效应实现对压力的测量。这类传感器的“敏感元件”就是材料本身，无所谓“结构变化”，因此，通常具有响应速度快的特点，而且易于实现小型化、集成化和智能化。</p>
+<p>复合型传感器则是结构型和物性型传感器的组合，同时兼有二者的特征。</p>
+<h3 id="按能量转换关系分类"><a href="#按能量转换关系分类" class="headerlink" title="按能量转换关系分类"></a>按能量转换关系分类</h3><p>按照传感器的能量转换情况，传感器可分为能量控制型和能量转换型传感器两大类。</p>
+<p>所谓能量控制型传感器是指其变换的能量是由外部电源供给的，而外界的变化（即传感器输入量的变化）只起到控制的作用。如电阻、电感、电容等电参数传感器、霍耳传感器等都属于这一类传感器。</p>
+<p>能量转换型传感器，主要由能量变换元件构成，它不需要外电源。如基于压电效应、热电效应、光电效应等的传感器都属于此类传感器。</p>
+<h3 id="其他分类方式"><a href="#其他分类方式" class="headerlink" title="其他分类方式"></a>其他分类方式</h3><p>根据被测量的性质，可以将传感器分成物理型、化学型和生物型传感器三大类。</p>
+<p>根据传感器的使用材料，也可以将传感器分为半导体传感器、陶瓷传感器、金属材料传感器、复合材料传感器、高分子材料传感器等。</p>
+<p>根据应用领域的不同，还可分为工业用、农用、民用、医用及军用等不同类型。</p>
+<p>根据具体的使用目的，又可分为测量用、监视用、检查用、诊断用、控制用和分析用传感器等。</p>
+<h2 id="删除的之前的博文内容"><a href="#删除的之前的博文内容" class="headerlink" title="删除的之前的博文内容"></a>删除的之前的博文内容</h2><p><del>在传感器中包含着两个必不可少的概念：一是拾取信息；二是把拾取到的信息进行变换，变换成一种与被测量不仅有确定函数关系，而且便于传输和处理的量。</del></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><del>定义</del></h3><p><del>传感器是一种能感知某一被测量（物理信息、化学信息和生物信息），并能将被测信息转换成与之相对应的其他量（电量、光学量、机械量等）的器件或装置。这种发生能量转换的过程称之为“传感”。</del></p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a><del>补充</del></h3><ol>
+<li><del>传感是一个含义宽广而笼统的名词，一切获取信息的仪表器件（如敏感元件探测器、转换器及一次仪表等）都可称为传感器。</del></li>
+<li><del>工程检测中最需要的是把非电量转换成电量，所以人们习惯上又称传感器是一种把被测的非电量转换成电量的装置。</del></li>
+</ol>
+<p><del>One classification is based on the nature of the quantity that is measured.</del> </p>
+<p><del>Another category is based on the physical principles or technologies that are used in the sensor itself.</del></p>
+<h3 id="Sensor-Classification-Based-on-the-Measured"><a href="#Sensor-Classification-Based-on-the-Measured" class="headerlink" title="Sensor Classification Based on the Measured"></a><del>Sensor Classification Based on the Measured</del></h3><h3 id="Sensor-Classification-Based-on-Sensor-Technology"><a href="#Sensor-Classification-Based-on-Sensor-Technology" class="headerlink" title="Sensor Classification Based on Sensor Technology"></a><del>Sensor Classification Based on Sensor Technology</del></h3><p><del>Some classes of sensors based on their physical principles and technologies are active, analog, digital, electric, IC, mechanical, optical, passive, piezoelectric, piezoresistive, and photoelastic.</del></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><p>赵玉刚, 邱东. 传感器基础[M]. 北京大学出版社, 2006.</p>
+</li>
 <li><p>De Silva, Clarence W. Sensor systems: fundamentals and applications[C]. CRC Press, Taylor &amp; Francis Group, 2017. (Chapter 8.1.2)</p>
 </li>
 <li><p align="left">传感器概述：认识传感器的第一步<br><a href="https://www.sensorexpert.com.cn/article/1282.html" target="_blank" rel="noopener">https://www.sensorexpert.com.cn/article/1282.html</a></p></li>
@@ -571,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sensors"><span class="nav-number">2.</span> <span class="nav-text">Sensors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">2.2.</span> <span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-classification-methods-for-sensors"><span class="nav-number">3.</span> <span class="nav-text">Two classification methods for sensors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sensor-Classification-Based-on-the-Measured"><span class="nav-number">3.1.</span> <span class="nav-text">Sensor Classification Based on the Measured</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sensor-Classification-Based-on-Sensor-Technology"><span class="nav-number">3.2.</span> <span class="nav-text">Sensor Classification Based on Sensor Technology</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sensors"><span class="nav-number">2.</span> <span class="nav-text">Sensors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传感器的概念"><span class="nav-number">2.1.</span> <span class="nav-text">传感器的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Note"><span class="nav-number">2.1.1.</span> <span class="nav-text">Note</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传感器的组成"><span class="nav-number">2.2.</span> <span class="nav-text">传感器的组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification-methods-for-sensors"><span class="nav-number">3.</span> <span class="nav-text">Classification methods for sensors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按工作原理分类"><span class="nav-number">3.1.</span> <span class="nav-text">按工作原理分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按被测量分类"><span class="nav-number">3.2.</span> <span class="nav-text">按被测量分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Remark"><span class="nav-number">3.2.1.</span> <span class="nav-text">Remark</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按结构分类"><span class="nav-number">3.3.</span> <span class="nav-text">按结构分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按能量转换关系分类"><span class="nav-number">3.4.</span> <span class="nav-text">按能量转换关系分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他分类方式"><span class="nav-number">3.5.</span> <span class="nav-text">其他分类方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除的之前的博文内容"><span class="nav-number">4.</span> <span class="nav-text">删除的之前的博文内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">4.2.</span> <span class="nav-text">补充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sensor-Classification-Based-on-the-Measured"><span class="nav-number">4.3.</span> <span class="nav-text">Sensor Classification Based on the Measured</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sensor-Classification-Based-on-Sensor-Technology"><span class="nav-number">4.4.</span> <span class="nav-text">Sensor Classification Based on Sensor Technology</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
