@@ -95,8 +95,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_5.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_4.png">
-<meta property="og:updated_time" content="2019-06-24T07:19:39.857Z">
+<meta property="og:updated_time" content="2019-06-24T11:50:55.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I have already decided which deep learning framework to learn">
 <meta name="twitter:description" content="[TOC] 前言本篇记录定下来主攻PyTorch深度学习框架的原因。">
@@ -365,16 +366,23 @@
         <p>[TOC]</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录定下来主攻PyTorch深度学习框架的原因。</p>
 <a id="more"></a>
-<h2 id="深度学习概念"><a href="#深度学习概念" class="headerlink" title="深度学习概念"></a>深度学习概念</h2><p>深度学习的概念源于人工神经网络的研究，以深度神经网络为基本模型（深度可以理解为多层），通过组合低层特征形成更加抽象的高层表示，以发现数据的分布式特征表示。深度学习模型的典型例子是前馈深度网络或多层感知机（multilayer perceptron, MLP）。</p>
+<h2 id="深度学习概念"><a href="#深度学习概念" class="headerlink" title="深度学习概念"></a>深度学习概念</h2><p>深度学习的概念源于人工神经网络的研究，<strong>以深度神经网络为基本模型（深度可以理解为多层）</strong>，通过组合低层特征形成更加抽象的高层表示，以发现数据的分布式特征表示。深度学习模型的典型例子是前馈深度网络或多层感知机（multilayer perceptron, MLP）。</p>
 <p><img src="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png" alt="img"></p>
 <p align="left">图1. 神经网络架构展示<br>（<a href="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png）" target="_blank" rel="noopener">http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png）</a></p>
 
 <h2 id="深度学习框架"><a href="#深度学习框架" class="headerlink" title="深度学习框架"></a>深度学习框架</h2><p>之前为了了解package和framework的概念区别、目前有哪些好用的机器学习算法package、目前有哪些流行的深度学习框架，写了8篇博文（Study note on algorithm package or framework related to statistics and machine learning系列）。</p>
-<h3 id="深度学习框架有哪些"><a href="#深度学习框架有哪些" class="headerlink" title="深度学习框架有哪些"></a>深度学习框架有哪些</h3><p>TensorFlow是Google Brain的研究员和工程师们开发出来的。</p>
-<p>PyTorch是一个基于Torch的Python开源深度学习框架，主要由Facebook的人工智能研究小组开发。</p>
-<p>MXNet是小团体一起合力做出来的平台。</p>
-<p>Keras以 TensorFlow, CNTK, 或 Theano 作为底层，上层提供简单接口，主要由François Chollet一个人做的。</p>
-<p>还有CNTK、Theano、Caffe等。</p>
+<h3 id="深度学习框架有哪些"><a href="#深度学习框架有哪些" class="headerlink" title="深度学习框架有哪些"></a>深度学习框架有哪些</h3><ol>
+<li><p>TensorFlow是Google Brain的研究员和工程师们开发出来的。</p>
+</li>
+<li><p>PyTorch是一个基于Torch的Python开源深度学习框架，主要由Facebook的人工智能研究小组开发。</p>
+</li>
+<li><p>MXNet是小团体一起合力做出来的平台（已被作为亚马逊Amazon官方深度学习框架）。</p>
+</li>
+<li><p>Keras以 TensorFlow, CNTK, 或 Theano 作为底层，上层提供简单接口，主要由François Chollet一个人做的（已被谷歌收购）。</p>
+</li>
+<li><p>还有CNTK（微软开发，比较小众）、Theano（已停止开发）、Caffe（华人开发的）、Chainer（日本的）等。</p>
+</li>
+</ol>
 <blockquote>
 <p><strong>Reference</strong></p>
 <p>自己的这4篇博客里有4个框架的组成模块、官方文档地址。</p>
@@ -394,13 +402,19 @@
 <li>张军阳, 王慧丽, 郭阳, et al. 深度学习相关研究综述[J]. 计算机应用研究, 2018, v.35；No.321(07):7-14+22.</li>
 </ul>
 </blockquote>
-<h3 id="选PyTorch的原因"><a href="#选PyTorch的原因" class="headerlink" title="选PyTorch的原因"></a>选PyTorch的原因</h3><ol>
+<h3 id="选PyTorch的原因"><a href="#选PyTorch的原因" class="headerlink" title="选PyTorch的原因"></a>选PyTorch的原因</h3><p>2019年5月推出PyTorch 1.1版本。</p>
+<ol>
+<li>目前比较火的深度学习框架是TensorFlow和PyTorch（如果要用TensorFlow，推荐用TensorFlow 2，不是TensorFlow 1）。</li>
 <li>PyTorch更有利于研究人员、爱好者、小规模项目等快速搞出原型。而TensorFlow更适合大规模部署，特别是需要跨平台和嵌入式部署时。</li>
-<li></li>
+<li>易用性高。</li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_1.png" alt=""></p>
-<ol start="3">
-<li><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_3.png" alt=""></p>
+<ol start="4">
+<li>采用Python语言、动态图机制、网络构建灵活、拥有强大的社群。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_3.png" alt=""></p>
+<ol start="5">
+<li><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_5.png" alt=""></p>
 </li>
 </ol>
 <blockquote>
