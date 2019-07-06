@@ -91,18 +91,17 @@
 <meta property="og:site_name" content="小zのGarden">
 <meta property="og:description" content="[TOC] 前言本篇记录定下来主攻PyTorch深度学习框架的原因。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_3.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_5.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_6.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_7.png">
-<meta property="og:updated_time" content="2019-06-24T19:06:39.461Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_8.png">
+<meta property="og:updated_time" content="2019-07-06T14:57:25.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I have already decided which deep learning framework to learn">
 <meta name="twitter:description" content="[TOC] 前言本篇记录定下来主攻PyTorch深度学习框架的原因。">
-<meta name="twitter:image" content="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_2.png">
 
 
 
@@ -365,28 +364,10 @@
 
       
         <p>[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇记录定下来主攻PyTorch深度学习框架的原因。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇记录定下来主攻PyTorch深度学习框架的原因。</p>
 <a id="more"></a>
-<h2 id="深度学习概念"><a href="#深度学习概念" class="headerlink" title="深度学习概念"></a>深度学习概念</h2><p>深度学习的概念源于人工神经网络的研究，<strong>以深度神经网络为基本模型（深度可以理解为多层）</strong>，通过组合低层特征形成更加抽象的高层表示，以发现数据的分布式特征表示。深度学习模型的典型例子是前馈深度网络或多层感知机（multilayer perceptron, MLP）。</p>
-<p><img src="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png" alt="img"></p>
-<p align="left">图1. 神经网络架构展示<br>（<a href="http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png）" target="_blank" rel="noopener">http://www.asimovinstitute.org/wp-content/uploads/2019/04/NeuralNetworkZoo20042019.png）</a></p>
-
-<h2 id="深度学习框架"><a href="#深度学习框架" class="headerlink" title="深度学习框架"></a>深度学习框架</h2><p>之前为了了解package和framework的概念区别、目前有哪些好用的机器学习算法package、目前有哪些流行的深度学习框架，写了8篇博文（Study note on algorithm package or framework related to statistics and machine learning系列）。</p>
-<h3 id="深度学习框架有哪些"><a href="#深度学习框架有哪些" class="headerlink" title="深度学习框架有哪些"></a>深度学习框架有哪些</h3><ol>
-<li><p>TensorFlow是Google Brain的研究员和工程师们开发出来的。</p>
-</li>
-<li><p>PyTorch是一个基于Torch的Python开源深度学习框架，主要由Facebook的人工智能研究小组开发。</p>
-</li>
-<li><p>MXNet是小团体一起合力做出来的平台（已被作为亚马逊Amazon官方深度学习框架）。</p>
-</li>
-<li><p>Keras以 TensorFlow, CNTK, 或 Theano 作为底层，上层提供简单接口，主要由François Chollet一个人做的（已被谷歌收购）。</p>
-</li>
-<li><p>还有CNTK（微软开发，比较小众）、Theano（已停止开发）、Caffe（华人开发的）、Chainer（日本的）等。</p>
-</li>
-</ol>
+<h1 id="Previous-blog-posts"><a href="#Previous-blog-posts" class="headerlink" title="Previous blog posts"></a>Previous blog posts</h1><p>之前为了了解package和framework的概念区别、目前有哪些好用的机器学习算法package、目前有哪些流行的深度学习框架，写了8篇博文（Study note on algorithm package or framework related to statistics and machine learning系列）。其中<strong>4篇博文涉及深度学习框架，列出了各个框架的组成模块、官方文档地址</strong>。</p>
 <blockquote>
-<p><strong>Reference</strong></p>
-<p>自己的这4篇博客里有4个框架的组成模块、官方文档地址。</p>
 <ul>
 <li><a href="https://tardis012.github.io/2019/05/09/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-TensorFlow/">https://tardis012.github.io/2019/05/09/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-TensorFlow/</a></li>
 <li><a href="https://tardis012.github.io/2019/05/14/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-PyTorch/">https://tardis012.github.io/2019/05/14/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-PyTorch/</a></li>
@@ -394,8 +375,20 @@
 <li><a href="https://tardis012.github.io/2019/05/16/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-Keras/">https://tardis012.github.io/2019/05/16/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-Keras/</a></li>
 </ul>
 </blockquote>
+<h1 id="深度学习框架"><a href="#深度学习框架" class="headerlink" title="深度学习框架"></a>深度学习框架</h1><h2 id="深度学习框架有哪些"><a href="#深度学习框架有哪些" class="headerlink" title="深度学习框架有哪些"></a>深度学习框架有哪些</h2><h3 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h3><p>TensorFlow是由Google Brain的研究员和工程师们开发出来的。</p>
+<p>TensorFlow的名字来源于其计算过程中的操作对象为多维数组，即张量（Tensor）。</p>
+<h3 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h3><p>PyTorch是由Facebook、NVIDIA、Twitter 等公司开发维护的Python深度学习框架，其前身为Lua 语言的Torch。</p>
+<h3 id="MXNet"><a href="#MXNet" class="headerlink" title="MXNet"></a>MXNet</h3><p>MXNet由亚马逊、华盛顿大学和卡内基梅隆大学等开发维护。</p>
+<h3 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h3><p>Keras <u>以TensorFlow, CNTK, 或 Theano 作为底层，上层提供简单接口</u>，主要由François Chollet一个人做的（已被谷歌收购）。</p>
+<h3 id="CNTK"><a href="#CNTK" class="headerlink" title="CNTK"></a>CNTK</h3><p>CNTK由微软开发，<u>比较小众</u>。</p>
+<h3 id="Caffe"><a href="#Caffe" class="headerlink" title="Caffe"></a>Caffe</h3><p>Caffe全称为Convolutional Architecture for Fast Feature Embedding，是一个卷积网络模型的计算框架，所要实现的网络结构可以在配置文件中指定，不需要编码。Caffe 是用C++和Python 实现，由华人开发的，<u>主要用于计算机视觉</u>。</p>
+<h3 id="Theano"><a href="#Theano" class="headerlink" title="Theano"></a>Theano</h3><p>Theano是蒙特利尔大学开发的Python 工具包，<u>目前已停止维护</u>。</p>
+<h3 id="Chainer"><a href="#Chainer" class="headerlink" title="Chainer"></a>Chainer</h3><p>Chainer是一个最早采用动态计算图的神经网络框架，其核心开发团队来自日本的一家机器学习创业公司Preferred Networks。</p>
+<h3 id="PaddlePaddle"><a href="#PaddlePaddle" class="headerlink" title="PaddlePaddle"></a>PaddlePaddle</h3><p>PaddlePaddle是百度开发的。</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>和Tensorflow、Theano、Caffe等框架使用的静态计算图相比，动态计算图可以在运行时动态地构建计算图，因此非常很适合进行一些复杂的决策或推理任务。</p>
+<p>Chainer、PyTorch使用动态计算图。</p>
 <p><strong>题外话</strong>：怯魅~</p>
-<h3 id="深度学习框架使用的语言"><a href="#深度学习框架使用的语言" class="headerlink" title="深度学习框架使用的语言"></a>深度学习框架使用的语言</h3><p>表1. 深度学习框架的底层语言和操作语言</p>
+<h2 id="深度学习框架使用的语言"><a href="#深度学习框架使用的语言" class="headerlink" title="深度学习框架使用的语言"></a>深度学习框架使用的语言</h2><p>表1. 深度学习框架的底层语言和操作语言</p>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_2.png" alt=""></p>
 <blockquote>
 <p><strong>Reference</strong></p>
@@ -403,7 +396,7 @@
 <li>张军阳, 王慧丽, 郭阳, et al. 深度学习相关研究综述[J]. 计算机应用研究, 2018, v.35；No.321(07):7-14+22.</li>
 </ul>
 </blockquote>
-<h3 id="选PyTorch的原因"><a href="#选PyTorch的原因" class="headerlink" title="选PyTorch的原因"></a>选PyTorch的原因</h3><p>2019年5月推出PyTorch 1.1版本。</p>
+<h1 id="选PyTorch的原因"><a href="#选PyTorch的原因" class="headerlink" title="选PyTorch的原因"></a>选PyTorch的原因</h1><p>2019年5月推出了<strong>PyTorch 1.1</strong>版本。</p>
 <ol>
 <li><strong>目前比较火的深度学习框架是TensorFlow和PyTorch</strong>（如果要用TensorFlow，推荐用TensorFlow 2，不是TensorFlow 1）。</li>
 <li>PyTorch更有利于研究人员、爱好者、小规模项目等快速搞出原型。而TensorFlow更适合大规模部署，特别是需要跨平台和嵌入式部署时。</li>
@@ -411,7 +404,7 @@
 </ol>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_1.png" alt=""></p>
 <ol start="4">
-<li><u>采用Python语言</u>、<u>动态图机制</u>、<u>网络构建灵活</u>、拥有强大的社群。</li>
+<li><strong>采用Python语言、动态图机制、网络构建灵活</strong>、拥有强大的社群。</li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_3.png" alt=""></p>
 <ol start="5">
@@ -426,18 +419,20 @@
 <li>听说你急缺论文大礼包？（更新ing）<a href="https://zhuanlan.zhihu.com/p/69358248" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/69358248</a></li>
 </ul>
 </blockquote>
-<h3 id="PyTorch安装"><a href="#PyTorch安装" class="headerlink" title="PyTorch安装"></a>PyTorch安装</h3><p>在官网上点击操作系统、Python版本、是否支持GPU等选项后，将得到的命令在cmd环境下运行即可安装。</p>
+<h1 id="PyTorch安装"><a href="#PyTorch安装" class="headerlink" title="PyTorch安装"></a>PyTorch安装</h1><p>在官网上点击操作系统、Python版本、是否支持GPU等选项后，将得到的命令在cmd环境下运行即可安装。</p>
 <p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_6.png" alt=""></p>
-<p>图2. PyTorch安装命令获取</p>
+<p>图1. PyTorch安装命令获取</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### cmd下安装</span></span><br><span class="line">pip3 install https://download.pytorch.org/whl/cpu/torch<span class="number">-1.1</span><span class="number">.0</span>-cp36-cp36m-win_amd64.whl</span><br><span class="line">pip3 install https://download.pytorch.org/whl/cpu/torchvision<span class="number">-0.3</span><span class="number">.0</span>-cp36-cp36m-win_amd64.whl</span><br><span class="line"></span><br><span class="line"><span class="comment">### python内运行</span></span><br><span class="line"><span class="keyword">import</span> torch <span class="comment">#不报错说明安装成功。若报错，可尝试升级Numpy。</span></span><br><span class="line">print(torch.__version__)  <span class="comment">#查看pytorch版本</span></span><br><span class="line">print(<span class="string">'gpu'</span>,torch.cuda.is_available())  <span class="comment">#查看电脑是否支持Cuda版。电脑若有NVIDIA GPU，在安装时可以选择安装Cuda版，没有则选None。</span></span><br></pre></td></tr></table></figure>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>Ubuntu是基于linux内核的桌面PC操作系统，易用性强、使用人数多、教程多、生态好、各个深度学习框架的官方支持好（比如TensorFlow GPU只介绍了在 Ubuntu 下的安装方法）。</p>
-<p>为了能够使用大多数深度学习工程师开源的代码，建议使用 Ubuntu 作为运行代码的机器。</p>
-<p>备用参考：</p>
+<h1 id="补充-1"><a href="#补充-1" class="headerlink" title="补充"></a>补充</h1><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>Ubuntu是基于linux内核的桌面PC操作系统，易用性强、使用人数多、教程多、生态好、各个深度学习框架的官方支持好（比如TensorFlow GPU只介绍了在 Ubuntu 下的安装方法）。</p>
+<p>为了能够使用大多数深度学习工程师开源的代码，<u>建议使用 Ubuntu 作为运行代码的机器</u>。</p>
+<blockquote>
+<p><strong>Additional Reference</strong></p>
 <ul>
 <li>如何配置一台深度学习工作站? <a href="https://dl.ypw.io/how-to-build-deep-learning-workstation" target="_blank" rel="noopener">https://dl.ypw.io/how-to-build-deep-learning-workstation</a></li>
 <li>如何安装 Ubuntu <a href="https://dl.ypw.io/how-to-install-ubuntu" target="_blank" rel="noopener">https://dl.ypw.io/how-to-install-ubuntu</a></li>
 </ul>
-<p><strong>题外话：</strong> 我先用windows系统，Ubuntu不会。</p>
+</blockquote>
+<p><strong>题外话：</strong> 我先用windows系统，Ubuntu不会，啦啦啦~~~</p>
 <h2 id="深度学习应用场景"><a href="#深度学习应用场景" class="headerlink" title="深度学习应用场景"></a>深度学习应用场景</h2><p>从目前的情况来看，深度学习效果最好的事情还是这两件：<strong>图像识别、语音识别</strong>。下一步：可解释性。</p>
 <blockquote>
 <p><strong>Reference</strong></p>
@@ -446,14 +441,16 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="深度学习被包含在机器学习的范畴内"><a href="#深度学习被包含在机器学习的范畴内" class="headerlink" title="深度学习被包含在机器学习的范畴内"></a>深度学习被包含在机器学习的范畴内</h2><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_7.png" alt=""></p>
-<p>图3. 深度学习与一些常见概念的关系</p>
+<h2 id="深度学习是机器学习的一个分支"><a href="#深度学习是机器学习的一个分支" class="headerlink" title="深度学习是机器学习的一个分支"></a>深度学习是机器学习的一个分支</h2><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/I-have-already-decided-which-deep-learning-framework-to-learn_8.png" alt=""></p>
+<p>图2. 深度学习与一些常见概念的关系</p>
 <blockquote>
 <p><strong>Reference</strong></p>
 <ul>
 <li>《深度学习》中文版，2017.</li>
 </ul>
 </blockquote>
+<h2 id="深度学习以神经网络为主要模型，但神经网络和深度学习并不等价"><a href="#深度学习以神经网络为主要模型，但神经网络和深度学习并不等价" class="headerlink" title="深度学习以神经网络为主要模型，但神经网络和深度学习并不等价"></a>深度学习以神经网络为主要模型，但神经网络和深度学习并不等价</h2><p>深度学习可以采用神经网络模型，也可以采用其它模型。</p>
+<p>深度学习主要以神经网络模型为基础，原因是神经网络模型可以使用误差反向传播算法，从而可以比较好地解决贡献度分配问题。</p>
 
       
     </div>
@@ -640,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习概念"><span class="nav-number">2.</span> <span class="nav-text">深度学习概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习框架"><span class="nav-number">3.</span> <span class="nav-text">深度学习框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#深度学习框架有哪些"><span class="nav-number">3.1.</span> <span class="nav-text">深度学习框架有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度学习框架使用的语言"><span class="nav-number">3.2.</span> <span class="nav-text">深度学习框架使用的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选PyTorch的原因"><span class="nav-number">3.3.</span> <span class="nav-text">选PyTorch的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PyTorch安装"><span class="nav-number">3.4.</span> <span class="nav-text">PyTorch安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">4.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习应用场景"><span class="nav-number">5.</span> <span class="nav-text">深度学习应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习被包含在机器学习的范畴内"><span class="nav-number">6.</span> <span class="nav-text">深度学习被包含在机器学习的范畴内</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Previous-blog-posts"><span class="nav-number">2.</span> <span class="nav-text">Previous blog posts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深度学习框架"><span class="nav-number">3.</span> <span class="nav-text">深度学习框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习框架有哪些"><span class="nav-number">3.1.</span> <span class="nav-text">深度学习框架有哪些</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TensorFlow"><span class="nav-number">3.1.1.</span> <span class="nav-text">TensorFlow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PyTorch"><span class="nav-number">3.1.2.</span> <span class="nav-text">PyTorch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MXNet"><span class="nav-number">3.1.3.</span> <span class="nav-text">MXNet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keras"><span class="nav-number">3.1.4.</span> <span class="nav-text">Keras</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CNTK"><span class="nav-number">3.1.5.</span> <span class="nav-text">CNTK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Caffe"><span class="nav-number">3.1.6.</span> <span class="nav-text">Caffe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Theano"><span class="nav-number">3.1.7.</span> <span class="nav-text">Theano</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chainer"><span class="nav-number">3.1.8.</span> <span class="nav-text">Chainer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PaddlePaddle"><span class="nav-number">3.1.9.</span> <span class="nav-text">PaddlePaddle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">3.1.10.</span> <span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习框架使用的语言"><span class="nav-number">3.2.</span> <span class="nav-text">深度学习框架使用的语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选PyTorch的原因"><span class="nav-number">4.</span> <span class="nav-text">选PyTorch的原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PyTorch安装"><span class="nav-number">5.</span> <span class="nav-text">PyTorch安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充-1"><span class="nav-number">6.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">6.1.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习应用场景"><span class="nav-number">6.2.</span> <span class="nav-text">深度学习应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习是机器学习的一个分支"><span class="nav-number">6.3.</span> <span class="nav-text">深度学习是机器学习的一个分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习以神经网络为主要模型，但神经网络和深度学习并不等价"><span class="nav-number">6.4.</span> <span class="nav-text">深度学习以神经网络为主要模型，但神经网络和深度学习并不等价</span></a></li></ol></li></ol></div>
             
 
           </div>
