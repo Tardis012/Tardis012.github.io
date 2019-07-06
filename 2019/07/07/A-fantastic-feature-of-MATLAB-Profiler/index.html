@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Simulation,">
+  <meta name="keywords" content="Software,">
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="前言本篇为AnyLogic仿真软件的学习总结笔记(4/6)。 具体为：工具栏中的Actionchart palette学习。">
-<meta name="keywords" content="Simulation">
+<meta name="description" content="[TOC] 前言久违的用了下MATLAB，虽然python方便调包，但要狂吹一下MATLAB Profiler这个功能，太强大了。 本篇介绍MATLAB Profiler的功能。">
+<meta name="keywords" content="Software">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Study note for AnyLogic simulation software-4">
-<meta property="og:url" content="https://tardis012.github.io/2019/05/27/Study-note-for-AnyLogic-simulation-software-4/index.html">
+<meta property="og:title" content="A fantastic feature of MATLAB-Profiler">
+<meta property="og:url" content="https://tardis012.github.io/2019/07/07/A-fantastic-feature-of-MATLAB-Profiler/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为AnyLogic仿真软件的学习总结笔记(4/6)。 具体为：工具栏中的Actionchart palette学习。">
+<meta property="og:description" content="[TOC] 前言久违的用了下MATLAB，虽然python方便调包，但要狂吹一下MATLAB Profiler这个功能，太强大了。 本篇介绍MATLAB Profiler的功能。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20note%20for%20AnyLogic%20simulation%20software_4.png">
-<meta property="og:updated_time" content="2019-06-01T05:27:39.512Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A-fantastic-feature-of-MATLAB-Profiler_1.png">
+<meta property="og:updated_time" content="2019-07-06T17:26:13.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Study note for AnyLogic simulation software-4">
-<meta name="twitter:description" content="前言本篇为AnyLogic仿真软件的学习总结笔记(4/6)。 具体为：工具栏中的Actionchart palette学习。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20note%20for%20AnyLogic%20simulation%20software_4.png">
+<meta name="twitter:title" content="A fantastic feature of MATLAB-Profiler">
+<meta name="twitter:description" content="[TOC] 前言久违的用了下MATLAB，虽然python方便调包，但要狂吹一下MATLAB Profiler这个功能，太强大了。 本篇介绍MATLAB Profiler的功能。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A-fantastic-feature-of-MATLAB-Profiler_1.png">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://tardis012.github.io/2019/05/27/Study-note-for-AnyLogic-simulation-software-4/">
+  <link rel="canonical" href="https://tardis012.github.io/2019/07/07/A-fantastic-feature-of-MATLAB-Profiler/">
 
 
 
 
 
-  <title>Study note for AnyLogic simulation software-4 | 小zのGarden</title>
+  <title>A fantastic feature of MATLAB-Profiler | 小zのGarden</title>
   
 
 
@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/27/Study-note-for-AnyLogic-simulation-software-4/">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/07/07/A-fantastic-feature-of-MATLAB-Profiler/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tardis012">
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Study note for AnyLogic simulation software-4</h1>
+          <h1 class="post-title" itemprop="name headline">A fantastic feature of MATLAB-Profiler</h1>
         
 
         <div class="post-meta">
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-27T21:11:55+08:00">
-                2019-05-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-07T00:05:45+08:00">
+                2019-07-07
               </time>
             
 
@@ -321,8 +321,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Major/" itemprop="url" rel="index">
-                    <span itemprop="name">Major</span>
+                  <a href="/categories/Improve-efficiency/" itemprop="url" rel="index">
+                    <span itemprop="name">Improve efficiency</span>
                   </a>
                 </span>
 
@@ -358,23 +358,23 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为AnyLogic仿真软件的学习总结笔记(4/6)。</p>
-<p>具体为：工具栏中的Actionchart palette学习。</p>
+        <p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>久违的用了下MATLAB，虽然python方便调包，但要狂吹一下MATLAB Profiler这个功能，太强大了。</p>
+<p>本篇介绍MATLAB Profiler的功能。</p>
 <a id="more"></a>
-<h2 id="工具栏学习-Actionchart-palette"><a href="#工具栏学习-Actionchart-palette" class="headerlink" title="工具栏学习-Actionchart palette"></a>工具栏学习-Actionchart palette</h2><h3 id="The-Actionchart-palette-overview"><a href="#The-Actionchart-palette-overview" class="headerlink" title="The Actionchart palette overview"></a>The Actionchart palette overview</h3><p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/Study%20note%20for%20AnyLogic%20simulation%20software_4.png" alt="actionchart"></p>
-<p>Actionchart中的结构化块图允许以结构化编程的方式图形化定义算法。</p>
-<p>We use widely known extension of an approach suggested by Dijkstra that splits algorithms into sub-sections with a single point of entry. <strong>It states that three ways of combining programs—sequencing, selection, and iteration—are sufficient to express any computable algorithm</strong>.</p>
-<ul>
-<li>Action chart：生成开头和结尾节点。</li>
-<li>Code：允许将执行某些操作的代码片段插入到Action chart中。</li>
-<li>Decision：根据条件对算法流进行路由的最简单方法。当控件到达Decision块时，如果满足为该块定义的条件，则采用true branch。否则，采用false branch 。</li>
-<li>Local Variable：声明局部变量。局部变量仅在从声明点开始的Action chart中可见。</li>
-<li>三种迭代循环：While Loop、Do While Loop、For Loop。</li>
-<li>Return</li>
-<li>Break</li>
-</ul>
+<h2 id="MATLAB-Profiler的功能"><a href="#MATLAB-Profiler的功能" class="headerlink" title="MATLAB Profiler的功能"></a>MATLAB Profiler的功能</h2><h3 id="分析函数之间的调用关系"><a href="#分析函数之间的调用关系" class="headerlink" title="分析函数之间的调用关系"></a>分析函数之间的调用关系</h3><p>当前函数的父函数、子函数有哪些？</p>
+<h3 id="分析函数被调用的次数"><a href="#分析函数被调用的次数" class="headerlink" title="分析函数被调用的次数"></a>分析函数被调用的次数</h3><p>当前函数被父函数调用的次数、当前函数调用各个子函数的次数？</p>
+<h3 id="分析程序耗用的时间"><a href="#分析程序耗用的时间" class="headerlink" title="分析程序耗用的时间"></a>分析程序耗用的时间</h3><ol>
+<li>查看每个函数耗用的时间。</li>
+<li>通过查看每个函数内所有代码行耗用的时间来找到耗时最长的代码行，便于针对性的优化程序。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Tardis012/MyBlogPicture/master/A-fantastic-feature-of-MATLAB-Profiler_1.png" alt=""></p>
+<p>图1. 部分探查结果示意</p>
+<p>图1中最左边红色数字为代码行的运行时间，中间蓝色数字为调用次数。</p>
+<h3 id="分析程序中所有的行是否被执行"><a href="#分析程序中所有的行是否被执行" class="headerlink" title="分析程序中所有的行是否被执行"></a>分析程序中所有的行是否被执行</h3><p>图1中显示为灰色的代码行未执行。</p>
+<h2 id="MATLAB-Profiler的具体使用"><a href="#MATLAB-Profiler的具体使用" class="headerlink" title="MATLAB Profiler的具体使用"></a>MATLAB Profiler的具体使用</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 打开Profiler</span></span><br><span class="line">profile on</span><br><span class="line"><span class="comment">% 运行要分析的程序</span></span><br><span class="line">mainCal  <span class="comment">% 例如要分析的程序名称为mainCal.m</span></span><br><span class="line"><span class="comment">% 查看并保存结果</span></span><br><span class="line">profile viewer</span><br><span class="line">p = profile(<span class="string">'info'</span>);</span><br><span class="line">profsave(p,<span class="string">'profile_results'</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>Anylogic Official Help documentation</li>
+<li><p align="left">MATLAB官方文档：探查以提升性能<br> <a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/profiling-for-improving-performance.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/matlab_prog/profiling-for-improving-performance.html</a></p></li>
 </ul>
 
       
@@ -393,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Simulation/" rel="tag"># Simulation</a>
+            <a href="/tags/Software/" rel="tag"># Software</a>
           
         </div>
       
@@ -406,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/27/Study-note-for-AnyLogic-simulation-software-3/" rel="next" title="Study note for AnyLogic simulation software-3">
-                <i class="fa fa-chevron-left"></i> Study note for AnyLogic simulation software-3
+              <a href="/2019/06/20/I-have-already-decided-which-deep-learning-framework-to-learn/" rel="next" title="I have already decided which deep learning framework to learn">
+                <i class="fa fa-chevron-left"></i> I have already decided which deep learning framework to learn
               </a>
             
           </div>
@@ -415,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/28/Study-note-for-AnyLogic-simulation-software-5/" rel="prev" title="Study note for AnyLogic simulation software-5">
-                Study note for AnyLogic simulation software-5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具栏学习-Actionchart-palette"><span class="nav-number">2.</span> <span class="nav-text">工具栏学习-Actionchart palette</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Actionchart-palette-overview"><span class="nav-number">2.1.</span> <span class="nav-text">The Actionchart palette overview</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB-Profiler的功能"><span class="nav-number">2.</span> <span class="nav-text">MATLAB Profiler的功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析函数之间的调用关系"><span class="nav-number">2.1.</span> <span class="nav-text">分析函数之间的调用关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析函数被调用的次数"><span class="nav-number">2.2.</span> <span class="nav-text">分析函数被调用的次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析程序耗用的时间"><span class="nav-number">2.3.</span> <span class="nav-text">分析程序耗用的时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析程序中所有的行是否被执行"><span class="nav-number">2.4.</span> <span class="nav-text">分析程序中所有的行是否被执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB-Profiler的具体使用"><span class="nav-number">3.</span> <span class="nav-text">MATLAB Profiler的具体使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
