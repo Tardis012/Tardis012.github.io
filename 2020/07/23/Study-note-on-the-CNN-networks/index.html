@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Package,">
+  <meta name="keywords" content="Practice,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (4/8)。 Topic: the PyTorch framework.">
-<meta name="keywords" content="Package">
+<meta name="description" content="本篇博文用于记录CNN系列的复现进度。">
+<meta name="keywords" content="Practice">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Study note on algorithm package or framework related to statistics and machine learning-PyTorch">
-<meta property="og:url" content="https://tardis012.github.io/2019/05/14/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-PyTorch/index.html">
+<meta property="og:title" content="Study note on the CNN networks">
+<meta property="og:url" content="https://tardis012.github.io/2020/07/23/Study-note-on-the-CNN-networks/index.html">
 <meta property="og:site_name" content="小zのGarden">
-<meta property="og:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (4/8)。 Topic: the PyTorch framework.">
+<meta property="og:description" content="本篇博文用于记录CNN系列的复现进度。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-24T14:26:54.089Z">
+<meta property="og:updated_time" content="2020-07-23T10:30:20.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Study note on algorithm package or framework related to statistics and machine learning-PyTorch">
-<meta name="twitter:description" content="前言本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (4/8)。 Topic: the PyTorch framework.">
+<meta name="twitter:title" content="Study note on the CNN networks">
+<meta name="twitter:description" content="本篇博文用于记录CNN系列的复现进度。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tardis012.github.io/2019/05/14/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-PyTorch/">
+  <link rel="canonical" href="https://tardis012.github.io/2020/07/23/Study-note-on-the-CNN-networks/">
 
 
 
 
 
-  <title>Study note on algorithm package or framework related to statistics and machine learning-PyTorch | 小zのGarden</title>
+  <title>Study note on the CNN networks | 小zのGarden</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2019/05/14/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-PyTorch/">
+    <link itemprop="mainEntityOfPage" href="https://tardis012.github.io/2020/07/23/Study-note-on-the-CNN-networks/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tardis012">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Study note on algorithm package or framework related to statistics and machine learning-PyTorch</h1>
+          <h1 class="post-title" itemprop="name headline">Study note on the CNN networks</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-14T15:12:25+08:00">
-                2019-05-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-23T18:27:59+08:00">
+                2020-07-23
               </time>
             
 
@@ -356,36 +356,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇为Statistics and Machine learning相关的算法包或框架的个人总结笔记 (4/8)。</p>
-<p>Topic: the <code>PyTorch</code> framework.</p>
-<a id="more"></a>
-<h2 id="Overview-of-PyTorch-framework"><a href="#Overview-of-PyTorch-framework" class="headerlink" title="Overview of PyTorch framework"></a>Overview of PyTorch framework</h2><p>PyTorch是一个基于Torch的Python开源<strong>深度学习</strong>框架，主要由<strong>Facebook</strong>的人工智能研究小组开发。</p>
-<p>PyTorch提供两个高级功能：</p>
-<ul>
-<li>具有强大的GPU加速的张量计算（如NumPy）</li>
-<li>包含自动求导系统的的深度神经网络</li>
-</ul>
-<p>PyTorch更有利于研究人员、爱好者、小规模项目等快速搞出原型。而TensorFlow更适合大规模部署，特别是需要跨平台和嵌入式部署时。</p>
-<h2 id="Modules-in-the-PyTorch-framework"><a href="#Modules-in-the-PyTorch-framework" class="headerlink" title="Modules in the PyTorch framework"></a>Modules in the PyTorch framework</h2><ul>
-<li>torch</li>
-<li>torch.Tensor</li>
-<li>torch.Storage</li>
-<li><strong>torch.nn</strong></li>
-<li>torch.nn.functional</li>
-<li>torch.nn.init</li>
-<li>torch.optim</li>
-<li><strong>torch.autograd</strong></li>
-<li>torch.multiprocessing</li>
-<li>torch.legacy</li>
-<li>torch.cuda</li>
-<li>torch.utils.ffi</li>
-<li>torch.utils.data</li>
-<li>torch.utils.model_zoo</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><p align="left">PyTorch中文文档<br> <a href="https://pytorch-cn.readthedocs.io/zh/latest/#_1" target="_blank" rel="noopener">https://pytorch-cn.readthedocs.io/zh/latest/#_1</a></p></li>
-<li>PyTorch还是TensorFlow？这有一份新手深度学习框架选择指南 <a href="https://zhuanlan.zhihu.com/p/28636490" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28636490</a></li>
-</ul>
+        <p>本篇博文用于记录CNN系列的复现进度。</p>
 
       
     </div>
@@ -403,7 +374,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Package/" rel="tag"># Package</a>
+            <a href="/tags/Practice/" rel="tag"># Practice</a>
           
         </div>
       
@@ -416,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-TensorFlow/" rel="next" title="Study note on algorithm package or framework related to statistics and machine learning-TensorFlow">
-                <i class="fa fa-chevron-left"></i> Study note on algorithm package or framework related to statistics and machine learning-TensorFlow
+              <a href="/2020/07/23/Common-Linux-commands/" rel="next" title="Common Linux commands">
+                <i class="fa fa-chevron-left"></i> Common Linux commands
               </a>
             
           </div>
@@ -425,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/16/Study-note-on-algorithm-package-or-framework-related-to-statistics-and-machine-learning-Keras/" rel="prev" title="Study note on algorithm package or framework related to statistics and machine learning-Keras">
-                Study note on algorithm package or framework related to statistics and machine learning-Keras <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -480,17 +447,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -566,22 +524,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview-of-PyTorch-framework"><span class="nav-number">2.</span> <span class="nav-text">Overview of PyTorch framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modules-in-the-PyTorch-framework"><span class="nav-number">3.</span> <span class="nav-text">Modules in the PyTorch framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
